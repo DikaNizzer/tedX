@@ -7,7 +7,7 @@
     <title>TedXUnair</title>
     <link rel="stylesheet" href="loader/style.css">
 </head>
-<body>
+<body style="background: #ffff">
     {{-- <div class="loader">
         <span>T</span>
         <span>E</span>
