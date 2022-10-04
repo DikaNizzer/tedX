@@ -101,14 +101,6 @@ class TextPart extends AbstractPart
         return $this;
     }
 
-    /**
-     * Gets the name of the file (used by FormDataPart).
-     */
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
     public function getBody(): string
     {
         if (null === $this->seekable) {
@@ -202,6 +194,7 @@ class TextPart extends AbstractPart
         // convert resources to strings for serialization
         if (null !== $this->seekable) {
             $this->body = $this->getBody();
+            $this->seekable = null;
         }
 
         $this->_headers = $this->getHeaders();
@@ -212,6 +205,7 @@ class TextPart extends AbstractPart
     public function __wakeup()
     {
         $r = new \ReflectionProperty(AbstractPart::class, 'headers');
+        $r->setAccessible(true);
         $r->setValue($this, $this->_headers);
         unset($this->_headers);
     }
