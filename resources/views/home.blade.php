@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="loader/style.css">
 </head>
 <body>
-    {{-- <div class="loader">
+    <div class="loader">
         <span>T</span>
         <span>E</span>
         <span>D</span>
@@ -18,10 +18,10 @@
         <span>A</span>
         <span>I</span>
         <span>R</span>
-    </div> --}}
+    </div>
 
 
 
-    <h1>SMANGATTT SEMWAAAA</h1>
+    {{-- <h1>SMANGATTT SEMWAAAA</h1> --}}
 </body>
 </html>
