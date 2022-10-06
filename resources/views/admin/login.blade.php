@@ -42,7 +42,7 @@
 
 <main class="login-body" data-vide-bg="admin/login/assets/img/login-bg.mp4">
     <!-- Login Admin -->
-    <form class="form-default" action="login-bg.mp4" method="POST">
+    <form class="form-default" action="dashboard" >
         
         <div class="login-form">
             <!-- logo-login -->
@@ -59,9 +59,9 @@
                 <input type="password" name="password" placeholder="Password">
             </div>
             <div class="form-input pt-30">
-                <a href="dashboard"><input type="submit" name="login" value="login"></a>
+                <input type="submit" name="submit" value="login">
             </div>
-           
+            <a href="#" class="form-input pt-30">Login</a>
             <!-- Forget Password -->
             <a href="#" class="forget">Forget Password</a>
             <!-- Forget Password -->
