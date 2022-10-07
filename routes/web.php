@@ -24,6 +24,11 @@ Route::get('/administrator', function () {
     return view('admin/login');
 });
 
+// ADMIN Login
+Route::get('/regis', function () {
+    return view('admin/regis');
+});
+
 // ADMIN Dashboard
 Route::get('/dashboard', function () {
     return view('admin/dashboard');
