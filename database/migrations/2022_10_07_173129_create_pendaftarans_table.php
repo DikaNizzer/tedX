@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('pendaftarans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('type');
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('metode_bayar', 45)->nullable();
             $table->timestamps();
+            $table->foreignId('event_id');
+            $table->foreignId('peserta_id')->nullable();
+            $table->foreignId('pembayaran_id')->nullable();
+            $table->foreignId('paket_id')->nullable();
         });
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('pendaftarans');
     }
 };

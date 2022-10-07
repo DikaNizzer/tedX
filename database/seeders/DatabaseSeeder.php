@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +22,13 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        //with parental package the type will set to 'admin' in db table instead of admin model namespace (App\Models\Admin)
+        Admin::create([
+            'name' => 'gamas',
+            'email' => 'gamas@gmail.com',
+            'type' => 'App\Models\Admin', 
+            'password' => Hash::make('123')
+        ]);
     }
 }

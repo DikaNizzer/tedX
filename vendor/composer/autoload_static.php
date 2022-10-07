@@ -102,6 +102,7 @@ class ComposerStaticInit7c37962e5f2e897676a0f76643bf8e3c
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
+            'Parental\\' => 9,
         ),
         'N' => 
         array (
@@ -363,6 +364,10 @@ class ComposerStaticInit7c37962e5f2e897676a0f76643bf8e3c
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
+        'Parental\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/calebporzio/parental/src',
+        ),
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
@@ -518,6 +523,12 @@ class ComposerStaticInit7c37962e5f2e897676a0f76643bf8e3c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
+        'App\\Models\\Event' => __DIR__ . '/../..' . '/app/Models/Event.php',
+        'App\\Models\\Paket' => __DIR__ . '/../..' . '/app/Models/Paket.php',
+        'App\\Models\\Pembayaran' => __DIR__ . '/../..' . '/app/Models/Pembayaran.php',
+        'App\\Models\\Pendaftaran' => __DIR__ . '/../..' . '/app/Models/Pendaftaran.php',
+        'App\\Models\\Peserta' => __DIR__ . '/../..' . '/app/Models/Peserta.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -3648,6 +3659,9 @@ class ComposerStaticInit7c37962e5f2e897676a0f76643bf8e3c
         'PHPUnit\\Util\\Xml\\SuccessfulSchemaDetectionResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/SuccessfulSchemaDetectionResult.php',
         'PHPUnit\\Util\\Xml\\ValidationResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/ValidationResult.php',
         'PHPUnit\\Util\\Xml\\Validator' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/Validator.php',
+        'Parental\\HasChildren' => __DIR__ . '/..' . '/calebporzio/parental/src/HasChildren.php',
+        'Parental\\HasParent' => __DIR__ . '/..' . '/calebporzio/parental/src/HasParent.php',
+        'Parental\\Providers\\NovaResourceProvider' => __DIR__ . '/..' . '/calebporzio/parental/src/Providers/NovaResourceProvider.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',
         'PharIo\\Manifest\\Author' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Author.php',
