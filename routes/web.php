@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,18 +21,22 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 // ADMIN Login
-Route::get('/administrator', function () {
-    return view('admin/login');
-});
+    // Route::get('/administrator', function () {
+    //     return view('admin/login');
+    // });
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 
-// ADMIN Login
-Route::get('/regis', function () {
-    return view('admin/regis');
-});
+// ADMIN Registration
+    // Route::get('/regis', function () {
+    //     return view('admin/regis');
+    // });
+Route::get('/regis', [RegisterController::class, 'index']);
+Route::post('/regis', [RegisterController::class, 'store']);
 
 // ADMIN Dashboard
-Route::get('/dashboard', function () {
-    return view('admin/dashboard');
-});
+    // Route::get('/dashboard', function () {
+    //     return view('admin/dashboard');
+    // });
+Route::get('/dashboard', [DashboardController::class, 'index']);

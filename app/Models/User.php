@@ -27,9 +27,15 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
 
+    //alias untuk kolom type daripada memakai valid namespace
     protected $childTypes = [
         'admin' => Admin::class,
         'peserta' => Peserta::class
+    ];
+
+    //default value untuk kolom type
+    protected $attributes = [
+        'type' => 'peserta'
     ];
 
     /**

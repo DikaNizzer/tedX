@@ -42,8 +42,8 @@
 
 <main class="login-body" data-vide-bg="admin/login/assets/img/login-bg.mp4">
     <!-- Login Admin -->
-    <form class="form-default" action="dashboard" >
-        
+    <form class="form-default" action="/login" method="POST" >
+        @csrf
         <div class="login-form">
             <!-- logo-login -->
             <div class="logo-login">
@@ -51,12 +51,12 @@
             </div>
             <h2>Login Here</h2>
             <div class="form-input">
-                <label for="name">Email</label>
-                <input  type="email" name="email" placeholder="Email">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email" id="email" required autofocus>
             </div>
             <div class="form-input">
-                <label for="name">Password</label>
-                <input type="password" name="password" placeholder="Password">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
             </div>
             <div class="form-input pt-30">
                 <input type="submit" name="submit" value="login">
@@ -116,5 +116,22 @@
     <script src="./admin/login/assets/js/plugins.js"></script>
     <script src="./admin/login/assets/js/main.js"></script>
     
+    <script>
+        let msg = '{{Session::get('alert')}}';
+        let loginErrMsg = '{{Session::get('loginErr')}}';
+
+        let exist = '{{Session::has('alert')}}';
+        let existLoginErr = '{{Session::has('loginErr')}}';
+        
+        if(exist){
+            alert(msg);
+        }
+
+        if(existLoginErr){
+            alert(loginErrMsg);
+        }
+
+    </script>
+
     </body>
 </html>
