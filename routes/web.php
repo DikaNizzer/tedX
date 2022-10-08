@@ -16,11 +16,14 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-// Client
+// Peserta
 Route::get('/', function () {
     return view('home');
 });
 
+
+
+// ADMIN
 // ADMIN Login
     // Route::get('/administrator', function () {
     //     return view('admin/login');

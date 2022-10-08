@@ -51,12 +51,11 @@
             <div class="logo-login">
                 <a href="index.html"><img src="admin/login/assets/img/logo/loder.png" alt=""></a>
             </div>
-            <h2>Registration Here</h2>
 
-            <div class="form-input">
+            {{-- <div class="form-input">
                 <label for="name">Full name</label>
                 <input  type="text" name="name" placeholder="Full name" required>
-            </div>
+            </div> --}}
             <div class="form-input">
                 <label for="name">Email Address</label>
                 <input type="email" name="email" placeholder="Email Address" required>
@@ -123,6 +122,18 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./admin/login/assets/js/plugins.js"></script>
     <script src="./admin/login/assets/js/main.js"></script>
+
+    <script>
+        let msg = '{{Session::get('alertfail')}}';
+
+        let exist = '{{Session::has('alertfail')}}';
+        
+        if(exist){
+            alert(msg);
+        }
+
+
+    </script>
     
     </body>
 </html>
