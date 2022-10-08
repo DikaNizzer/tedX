@@ -26,19 +26,8 @@ class RegisterController extends Controller
 
         $validated['password'] = Hash::make($validated['password']);
 
-        $user = User::create($validated);
-        // var_dump($user);
-        // exit();
+        User::create($validated);
+        return redirect('/login')->with('alert', 'registrasi berhasil. silahkan login!');
 
-        if(!is_null($user)) {
-            // Kalai Berhasil
-            return redirect('/login')->with('alert', 'registrasi berhasil. silahkan login!');
-        }else {
-            // Masih Belum jalan
-            return redirect('/regis')->with('alertfail', 'registrasi gagal!');
-        }
-
-        //sementara untuk mengetahui apakah regis berhasil atau tidak
-        // return redirect('/login')->with('alert', 'registrasi berhasil. silahkan login!');
     }
 }

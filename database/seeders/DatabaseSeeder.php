@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -24,11 +24,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         //with parental package the type will set to 'admin' in db table instead of admin model namespace (App\Models\Admin)
-        Admin::create([
-            'name' => 'gamas',
-            'email' => 'gamas@gmail.com',
-            'type' => 'App\Models\Admin', 
-            'password' => Hash::make('123')
-        ]);
+        
     }
 }

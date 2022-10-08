@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('pesertas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 45);
+            $table->string('nama', 45)->nullable();
             $table->string('fakultas', 45);
             $table->string('angkatan', 45);
             $table->foreignId('user_id');
