@@ -43,3 +43,11 @@ Route::post('/regis', [RegisterController::class, 'store']);
     //     return view('admin/dashboard');
     // });
 Route::get('/dashboard', [DashboardController::class, 'index']);
+
+Route::get('/subevent', function () {
+    return view('admin/sub_event');
+});
+
+Route::get('/mainevent', function () {
+    return view('admin/main_event');
+});
