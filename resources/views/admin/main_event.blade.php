@@ -14,7 +14,7 @@
                         <th>Nama</th>
                         <th>Email</th>
                         <th>Tanggal Pendaftaran</th>
-                        <th>Status</th>
+                        <th>Status Pembayaran</th>
                         <th>Detal</th>
                       </tr>
                     </thead>
@@ -25,7 +25,7 @@
                         <td>
                          email
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Verified</span></td>
+                        <td><span class="badge bg-label-primary me-1">Sudah Bayar</span></td>
                         <td>
                             <button type="button" class="btn rounded-pill btn-outline-info">Info</button>
                         </td>
@@ -39,7 +39,7 @@
                         <td>
                          email
                         </td>
-                        <td><span class="badge bg-label-warning me-1">Unverified</span></td>
+                        <td><span class="badge bg-label-warning me-1">Belum Bayar</span></td>
                         <td>
                             <button type="button" class="btn rounded-pill btn-outline-info">Info</button>
                         </td>

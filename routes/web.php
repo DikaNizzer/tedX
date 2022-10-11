@@ -31,6 +31,9 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 
+// LOGOUT
+Route::post('/logout', [LoginController::class, 'logout']);
+
 // ADMIN Registration
     // Route::get('/regis', function () {
     //     return view('admin/regis');
@@ -50,4 +53,8 @@ Route::get('/subevent', function () {
 
 Route::get('/mainevent', function () {
     return view('admin/main_event');
+});
+
+Route::get('/mainevent_bayar', function () {
+    return view('admin/pembayaran');
 });

@@ -162,7 +162,7 @@
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <a href="/mainevent_bayar" class="menu-link">
                       <div data-i18n="Notifications">pembayaran</div>
                     </a>
                   </li>
@@ -267,10 +267,14 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      {{-- <a class="dropdown-item" href="auth-login-basic.html"> --}}
                         <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
+                          <form action="/logout" method="POST">
+                            @csrf
+                            <button class="align-middle"><span class="align-middle">Log Out</span></button>
+                        </form>
+                        
+                      {{-- </a> --}}
                     </li>
                   </ul>
                 </li>
