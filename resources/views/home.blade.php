@@ -1,22 +1,19 @@
 @include('templates.header')
 @include('templates.navbar')
-@include('templates.footer')
-
 
 
 
 <section class="home" id="home">
-    {{-- <div class="row">
-        <div class="col-12">
-            <img src="images/home-bg-01.png" class="home-bg" height="200px" alt="">
-        </div>
-    </div> --}}
     <div class="home-header" >
-      <div class="row" style="padding:30px; margin:8%">
-        <div class="col-lg-6">
+      <div class="row" >
+        <div class="col-lg-5">
             <h1>Feel Safe with Uncertainty.</h1>
             <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam exercitationem illo quia architecto quibusdam laboriosam necessitatibus, ducimus, rem beatae tempora libero praesentium explicabo velit labore adipisci possimus aut assumenda illum.</h5>
-            <a type="button" class="btn get-started" href=""> GET STARTED</a>
+            <a type="button" class="btn get-started mt-4 mb-4" href=""> GET STARTED</a>
+        </div>
+        <div class="col-auto"></div>
+        <div class="col-lg-6 " style="margin-left:3%">
+          <img src="images/home-img.png"class="img-fluid home-img" style="margin:auto">
         </div>
       </div>
     </div>
@@ -26,3 +23,6 @@
 
     </div>
 </section>
+
+
+@include('templates.footer')

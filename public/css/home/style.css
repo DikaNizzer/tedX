@@ -66,7 +66,7 @@
 }
 
 body {
-	background-color: #ffffff;
+	background:linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);
 	font-family : "ubuntu";
 }
 
@@ -102,13 +102,19 @@ body {
 
 
 .home-header{
-    /* padding:70px;
-    margin:auto; */
+    padding:70px;
+    margin:auto;
     width:100%;
     height:auto;
     background-image: url(../../images/home-bg-01.png);
 	background-size:100%;
 	background-repeat: no-repeat;
+}
+
+.home-header .row{
+    padding:8px;
+    margin:auto;
+    margin-top:7%
 }
 
 @media (max-width: 986px) {
@@ -117,8 +123,30 @@ body {
         padding:10px;
 	}
 
+    .home-header .row{
+		margin:5%;
+        padding-top:35%;
+	}
+
+    .home-header h1{
+		font-size: 45px;
+	}
+
+    .home-header h5{
+		font-size: 14px;
+	}
+
 }
 
+
+
+.home-img{
+	min-height:auto;
+	width:90%;
+	top:100px;
+	z-index:10;
+	margin:auto;
+}
 
 .home-header h1{
     color:#ffff;
@@ -168,4 +196,21 @@ a:hover{
     position:absolute
 }
 
+
+.footer-top{
+    min-height:50px;
+    height:auto;
+    width:100%;
+    background-color: #ffffff00;
+    color:#ffff;
+    padding:15px;
+}
+
+.footer-top h5{
+    text-align:center;
+    font-size:14px;
+    font-weight:700;
+    justify-content:center;
+    margin:auto;
+}
 
