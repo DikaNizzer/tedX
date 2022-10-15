@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Home;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,9 @@ use App\Http\Controllers\DashboardController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/', [Home::class, 'home']);
 
 // Peserta
 Route::get('/', function () {
@@ -58,3 +63,4 @@ Route::get('/mainevent', function () {
 Route::get('/mainevent_bayar', function () {
     return view('admin/pembayaran');
 });
+
