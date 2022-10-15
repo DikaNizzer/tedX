@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "6a789b3c4ef962f7f39214d415e8eaa0",
     "packages": [
         {
             "name": "brick/math",
@@ -61,6 +61,65 @@
                 }
             ],
             "time": "2022-08-10T22:54:19+00:00"
+        },
+        {
+            "name": "calebporzio/parental",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/parental.git",
+                "reference": "c4f458f238f6cd117ac71781598bb747b6f1ef2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/parental/zipball/c4f458f238f6cd117ac71781598bb747b6f1ef2a",
+                "reference": "c4f458f238f6cd117ac71781598bb747b6f1ef2a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "illuminate/events": "^9.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Parental\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com",
+                    "homepage": "https://calebporzio.com/",
+                    "role": "author"
+                },
+                {
+                    "name": "Steve McDougall",
+                    "email": "juststevemcd@gmail.com",
+                    "homepage": "https://www.juststeveking.uk/",
+                    "role": "developer"
+                }
+            ],
+            "description": "A simple eloquent trait that allows relationships to be accessed through child models.",
+            "support": {
+                "source": "https://github.com/calebporzio/parental/tree/v1.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/calebporzio",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-22T07:00:48+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

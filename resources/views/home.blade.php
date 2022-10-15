@@ -1,3 +1,4 @@
+
 @include('templates.header')
 @include('templates.navbar')
 
@@ -26,3 +27,8 @@
 
 
 @include('templates.footer')
+
+
+
+
+
