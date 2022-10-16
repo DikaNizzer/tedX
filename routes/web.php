@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Home;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 
 
@@ -19,12 +19,12 @@ use App\Http\Controllers\DashboardController;
 */
 
 
-Route::get('/', [Home::class, 'home']);
+Route::get('/', [HomeController::class, 'home']);
 
 // Peserta
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 
 
