@@ -1,0 +1,32 @@
+1. Input User
+INSERT INTO `tedx`.`users` (`email`, `type`, `password`) 
+VALUES ('peserta@gmail.com', 'peserta', '$2y$10$eU/fXO7XOS9b5w7vkkZmu.LXYt2PqNMG7EYPlfrwBFJDiy1t9H1gy');
+
+2. Input Peserta
+INSERT INTO `tedx`.`pesertas` (`nama`, `fakultas`, `angkatan`, `user_id`) 
+VALUES ('peserta', 'vokasi', '20', '5');
+
+3. Input EVent
+INSERT INTO `tedx`.`events` (`nama_event`) VALUES ('Mainevent');
+INSERT INTO `tedx`.`events` (`nama_event`) VALUES ('Subevent');
+
+NOTE : Ada salah di table Pendaftaran
+ga pake idpembayaran
+
+4. Tambah status di pendaftarans
+
+5. Input Pendaftaran
+INSERT INTO `tedx`.`pendaftarans` (`status`, `event_id`, `peserta_id`) 
+VALUES ('0', '2', '2');
+
+STatus Pendaftaran : 
+0 : Baru masuk (default)
+1 : Berkas Lengkap
+2. Berkas Tidak Lengkap
+
+a. Select data pendaftaran where idvent = 2 atau yg subevents
+b. Update status
+c. Select detail dari pendaftarans
+d. Hitung jumlah pendaftaran dengan count di dashboard
+
+

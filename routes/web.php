@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SubeventController;
 use App\Http\Controllers\DashboardController;
 
 
@@ -52,9 +53,12 @@ Route::post('/regis', [RegisterController::class, 'store']);
     // });
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
-Route::get('/subevent', function () {
-    return view('admin/sub_event');
-});
+// Route::get('/subevent', function () {
+//     return view('admin/sub_event');
+// });
+
+// SUbevent
+Route::get('/subevent', [SubeventController::class, 'index']);
 
 Route::get('/mainevent', function () {
     return view('admin/main_event');
