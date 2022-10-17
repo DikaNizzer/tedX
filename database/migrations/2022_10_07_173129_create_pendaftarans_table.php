@@ -20,7 +20,6 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('event_id');
             $table->foreignId('peserta_id')->nullable();
-            $table->foreignId('pembayaran_id')->nullable();
             $table->foreignId('paket_id')->nullable();
         });
     }

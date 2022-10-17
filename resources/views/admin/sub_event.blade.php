@@ -21,7 +21,7 @@
                     <tbody class="table-border-bottom-0">
                       @foreach ($pendaftaran as $data)
                         <tr>
-                          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{$data->peserta->nama}}</strong></td>
+                          <td> <strong>{{$data->peserta->nama}}</strong></td>
                           <td>{{$data->peserta->email}}</td>
                           <td>
                           email

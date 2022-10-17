@@ -21,12 +21,17 @@ VALUES ('0', '2', '2');
 
 STatus Pendaftaran : 
 0 : Baru masuk (default)
-1 : Berkas Lengkap
+1 : Berkas Lengkap (verified)
 2. Berkas Tidak Lengkap
 
-a. Select data pendaftaran where idvent = 2 atau yg subevents
+Tugas Baru
+
+GAMAS
 b. Update status
 c. Select detail dari pendaftarans
+
+ILHAM
+a. Select data pendaftaran where idvent = 2 atau yg subevents 
 d. Hitung jumlah pendaftaran dengan count di dashboard
 
 
