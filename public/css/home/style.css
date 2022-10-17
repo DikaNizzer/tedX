@@ -214,3 +214,28 @@ a:hover{
     margin:auto;
 }
 
+
+.auth-modal{
+    border-radius:30px;
+    margin:auto
+}
+
+
+.auth-header{
+ border:none;
+}
+
+.auth-label{
+    font-size:14px;
+    font-weight:700;
+    color:#b50101;
+}
+
+.auth-form{
+    border-radius:40px;
+    border: 1px solid #e7e6e6;
+    font-size:14px;
+    height:40px;
+    color:#e7e6e6
+    /* background-color:#f4f4f4 */
+}

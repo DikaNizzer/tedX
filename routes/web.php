@@ -21,10 +21,7 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [Home::class, 'home']);
 
-// Peserta
-Route::get('/', function () {
-    return view('home');
-});
+
 
 
 
