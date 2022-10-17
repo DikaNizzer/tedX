@@ -24,13 +24,14 @@
         </div>
       </div>
     </div>
+    @include('templates.footer')
 </section>
 
 
 
 
 
-@include('templates.footer')
+
 
 
 

@@ -66,10 +66,14 @@
 }
 
 body {
-	background:linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);
+	background:#ffff;
 	font-family : "ubuntu";
 }
 
+
+.home{
+    background: linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);;
+}
 
 
 
