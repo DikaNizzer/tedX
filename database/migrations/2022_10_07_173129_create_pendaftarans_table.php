@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('pendaftarans', function (Blueprint $table) {
             $table->id();
             $table->string('metode_bayar', 45)->nullable();
+            $table->integer('status');
             $table->timestamps();
             $table->foreignId('event_id');
             $table->foreignId('peserta_id')->nullable();

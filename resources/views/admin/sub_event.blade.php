@@ -19,33 +19,42 @@
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
+                      @foreach ($pendaftaran as $data)
+                        <tr>
+                          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{$data->peserta->nama}}</strong></td>
+                          <td>{{$data->peserta->email}}</td>
+                          <td>
+                          email
+                          </td>
+                          <td><span class="badge bg-label-primary me-1"><?= $data->status ?></span></td>
+                          <td>
+                              <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
+                              data-bs-target="#modalCenter" >Info</button>
+                          </td>
+                        </tr>
+                      @endforeach
+                      
                       <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
-                        <td>Albert Cook</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Nama</strong></td>
+                        <td>email</td>
                         <td>
-                         email
+                        email
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Verified</span></td>
+                        <td>
+                          <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Unverified
+                          </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="javascript:void(0);">Unverified</a></li>
+                              <li><a class="dropdown-item" href="javascript:void(0);">Verified</a></li>
+                              <li><a class="dropdown-item" href="javascript:void(0);">Berkas Kurang / Salah</a></li>
+                            </ul>
+                        </td>
                         <td>
                             <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
                             data-bs-target="#modalCenter" >Info</button>
                         </td>
                       </tr>
 
-                      <tr>
-                        <td>
-                          <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
-                        </td>
-                        <td>Jerry Milton</td>
-                        <td>
-                         email
-                        </td>
-                        <td><span class="badge bg-label-warning me-1">Unverified</span></td>
-                        <td>
-                          <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                          data-bs-target="#modalCenter" >Info</button>
-                       </td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>
