@@ -2021,7 +2021,7 @@ progress {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #86b7fe;
+  /* border-color: #86b7fe; */
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
@@ -2843,12 +2843,12 @@ textarea.form-control-lg {
   }
 }
 :not(.btn-check) + .btn:hover, .btn:first-child:hover {
-  color: var(--bs-btn-hover-color);
+  color:#ffff;
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
 .btn:focus-visible {
-  color: var(--bs-btn-hover-color);
+  color: #ffff;
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
@@ -2860,7 +2860,7 @@ textarea.form-control-lg {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
-  color: var(--bs-btn-active-color);
+  color: #ffff;
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
