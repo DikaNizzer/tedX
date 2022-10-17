@@ -6,7 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SubeventController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\UserHomeController;
 
 /*
 |--------------------------------------------------------------------------

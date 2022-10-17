@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,6 +12,13 @@ class HomeController extends Controller
 			'title' => 'TEDx Universitas Airlangga',
 		];
 
+        
+
+        
+        
+        // return view('templates.header', $data);
+        // return view('templates.navbar');
+        // return view('templates.footer');
         return view('home', $data);
     }
 }
