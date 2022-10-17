@@ -22,6 +22,8 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [HomeController::class, 'home']);
 
+
+
 // Peserta
 // Route::get('/', function () {
 //     return view('home');

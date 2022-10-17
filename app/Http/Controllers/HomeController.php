@@ -11,11 +11,6 @@ class HomeController extends Controller
 			'title' => 'TEDx Universitas Airlangga',
 		];
 
-        
-
-        // return view('templates.header', $data);
-        // return view('templates.navbar');
-        // return view('templates.footer');
         return view('home', $data);
     }
 }
