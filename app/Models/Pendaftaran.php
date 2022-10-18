@@ -2,8 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Event;
+use App\Models\Paket;
+use App\Models\Peserta;
+use App\Models\Pembayaran;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Pendaftaran extends Model
 {

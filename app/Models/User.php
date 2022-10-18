@@ -3,16 +3,16 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\Peserta;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
-use Parental\HasChildren;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable ,HasChildren;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -26,17 +26,6 @@ class User extends Authenticatable
     // ];
 
     protected $guarded = ['id'];
-
-    //alias untuk kolom type daripada memakai valid namespace
-    protected $childTypes = [
-        'admin' => Admin::class,
-        'peserta' => Peserta::class
-    ];
-
-    //default value untuk kolom type
-    protected $attributes = [
-        'type' => 'peserta'
-    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -56,4 +45,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function peserta()
+    {
+        return $this->hasOne(Peserta::class);
+    }
 }

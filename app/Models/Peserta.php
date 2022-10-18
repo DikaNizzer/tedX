@@ -2,16 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 use Parental\HasParent;
+use App\Models\Pendaftaran;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Peserta extends User
+class Peserta extends Model
 {
-    use HasFactory, HasParent;
+    
+    protected $guarded = ['id'];
 
-    public function pendaftarans()
+    public function user()
     {
-        return $this->hasMany(Pendaftaran::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function pendaftaran()
+    {
+        return $this->hasOne(Pendaftaran::class);
     }
 }

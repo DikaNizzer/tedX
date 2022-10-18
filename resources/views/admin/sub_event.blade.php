@@ -19,14 +19,14 @@
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                      @foreach ($pendaftaran as $data)
+                      @foreach ($pendaftarans as $pendaftaran)
                         <tr>
-                          <td> <strong>{{$data->peserta->nama}}</strong></td>
-                          <td>{{$data->peserta->email}}</td>
+                          <td> <strong>{{$pendaftaran->peserta->nama}}</strong></td>
+                          <td>{{$pendaftaran->peserta->user->email}}</td>
                           <td>
                           email
                           </td>
-                          <td><span class="badge bg-label-primary me-1"><?= $data->status ?></span></td>
+                          <td><span class="badge bg-label-primary me-1"><?= $pendaftaran->status ?></span></td>
                           <td>
                               <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
                               data-bs-target="#modalCenter" >Info</button>
