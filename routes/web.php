@@ -69,4 +69,3 @@ Route::get('/mainevent', function () {
 Route::get('/mainevent_bayar', function () {
     return view('admin/pembayaran');
 });
-

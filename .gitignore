@@ -3,6 +3,11 @@
 /public/hot
 /public/storage
 /storage/*.key
+/storage/debugbar
+vendor/barryvdh/
+vendor/maximebf/
+
+
 
 .env
 .env.backup
