@@ -27,6 +27,10 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
 
+    protected $attributes = [
+        'type' => 'peserta'
+    ];
+
     /**
      * The attributes that should be hidden for serialization.
      *

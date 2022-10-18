@@ -15,6 +15,11 @@ class Pendaftaran extends Model
 
     protected $guarded = ['id'];
 
+    //default value
+    protected $attributes = [
+        'status' => 0
+    ];
+
     public function peserta()
     {
         return $this->belongsTo(Peserta::class);
