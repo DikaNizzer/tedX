@@ -5,11 +5,11 @@ let scrolled = false;
 let collapseOn = false;
 $(window).scroll(function () {
 	if ($(this).scrollTop() > 60) {
-		$("nav").addClass("bg-white shadow");
+		$("nav").addClass("bg-dark shadow");
 		scrolled = true;
 	} else {
 		if (collapseOn == false) {
-			$("nav").removeClass("bg-white shadow");
+			$("nav").removeClass("bg-dark shadow");
 		}
 		scrolled = false;
 	}
