@@ -12,10 +12,17 @@
             <h1 class="ml11 mb-4">
               <span class="text-wrapper">
                 <span class="line line1"></span>
-                <span class="letters">Feel Safe with Uncertainty</span>
+                <span class="letters">Epiphany on Ephemeral</span>
               </span>
             </h1>         
-            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam exercitationem illo quia architecto quibusdam laboriosam necessitatibus, ducimus, rem beatae tempora libero praesentium explicabo velit labore adipisci possimus aut assumenda illum.</h5>
+            <h5>Epiphany is associated with a life-changing realization and things that don't last forever are
+              ephemeral. It starts from the fact that our life is dynamic, sometimes we’ve been through the
+              happiest moment, and sometimes we have to accept that we lost something that we never
+              expected. That’s all part of the ups and downs in our life. Like it or not, we have to live it.
+              That’s why we believe that this phenomenon needs to be shared to level up our awareness
+              and readiness as humans to face this. Starting with ourselves first, we hope this value will be
+              spread then as wide as possible like the tagline of TEDx itself. How society will respond is up
+              to them to see this phenomenon from their views, every way is unique.</h5>
             <button class=" get-started mb-4 mt-4" data-bs-toggle="modal" data-bs-target="#registerModal"> GET STARTED</button>
         </div>
         <div class="col-auto"></div>
