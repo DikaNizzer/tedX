@@ -70,15 +70,10 @@
 			  <label for="exampleFormControlInput1" class="form-label auth-label">Confirm Password </label>
 			  <input class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
-  
 			<center><button type="submit" class="register" style="margin:auto" > GET STARTED</button></center>
 		  </form>
-  
-			  <h5 style="font-size:12px; text-align:center; margin-top:10px;">Already have an account? <span class="modal-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</span></h5>
-
-	
+			  <h5 style="font-size:12px; text-align:center; margin-top:10px;">Already have an account? <span class="modal-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</span></h5>	
 		</div>
-  
 	  </div>
 	</div>
   </div>

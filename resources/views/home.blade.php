@@ -36,11 +36,33 @@
 
 
 
+{{-- <button class=" get-started mb-4 mt-4" data-bs-toggle="modal" data-bs-target="#subeventModal"> Lauch modal</button> --}}
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="subeventModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" width="auto" height="auto">
+	  <div class="modal-content auth-modal">
+		<div class="modal-header auth-header">
+		  <div class="row" style="padding:5px">
+			<div class="col-10">
+			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
+			</div>
+			<div class="col-2 justify-content-end">
+			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
+			</div>
+		  </div>     
+		</div>
+		<div class="modal-body" style="padding:40px">
+		 <img src="images/subevent.jpg" style="margin:auto; width:100%; height:100%" alt="">
 
 
+
+		</div>
+	  </div>
+	</div>
+  </div>
 
 
 
