@@ -19,3 +19,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+.env
+composer.json
+composer.lock
