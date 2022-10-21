@@ -5,9 +5,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SubeventController;
-use App\Http\Controllers\MaineventController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserHomeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MaineventController;
+use App\Http\Controllers\DashboardSubeventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,7 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 // });
 
 // Subevent
-Route::get('/subevent', [SubeventController::class, 'index']);
+Route::resource('/subevents', DashboardSubeventController::class);
 
 // Mainevent
 Route::get('/mainevent', [MaineventController::class, 'index']);

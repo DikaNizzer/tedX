@@ -42,6 +42,10 @@ class ComposerStaticInit53e2c5f3789854aa2e85c1d0c273fe3e
         array (
             'voku\\' => 5,
         ),
+        'Z' => 
+        array (
+            'Znck\\Eloquent\\' => 14,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -177,6 +181,10 @@ class ComposerStaticInit53e2c5f3789854aa2e85c1d0c273fe3e
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'Znck\\Eloquent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/staudenmeir/belongs-to-through/src',
         ),
         'Whoops\\' => 
         array (
@@ -344,8 +352,8 @@ class ComposerStaticInit53e2c5f3789854aa2e85c1d0c273fe3e
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -527,6 +535,7 @@ class ComposerStaticInit53e2c5f3789854aa2e85c1d0c273fe3e
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'App\\Http\\Controllers\\MaineventController' => __DIR__ . '/../..' . '/app/Http/Controllers/MaineventController.php',
         'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Controllers\\SubeventController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubeventController.php',
         'App\\Http\\Controllers\\UserHomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserHomeController.php',
@@ -2066,6 +2075,7 @@ class ComposerStaticInit53e2c5f3789854aa2e85c1d0c273fe3e
         'Illuminate\\Database\\Events\\StatementPrepared' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/StatementPrepared.php',
         'Illuminate\\Database\\Events\\TransactionBeginning' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionBeginning.php',
         'Illuminate\\Database\\Events\\TransactionCommitted' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionCommitted.php',
+        'Illuminate\\Database\\Events\\TransactionCommitting' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionCommitting.php',
         'Illuminate\\Database\\Events\\TransactionRolledBack' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionRolledBack.php',
         'Illuminate\\Database\\Grammar' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Grammar.php',
         'Illuminate\\Database\\LazyLoadingViolationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/LazyLoadingViolationException.php',
@@ -5770,6 +5780,9 @@ class ComposerStaticInit53e2c5f3789854aa2e85c1d0c273fe3e
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'Znck\\Eloquent\\Relations\\BelongsToThrough' => __DIR__ . '/..' . '/staudenmeir/belongs-to-through/src/Relations/BelongsToThrough.php',
+        'Znck\\Eloquent\\Traits\\BelongsToThrough' => __DIR__ . '/..' . '/staudenmeir/belongs-to-through/src/Traits/BelongsToThrough.php',
+        'Znck\\Eloquent\\Traits\\HasTableAlias' => __DIR__ . '/..' . '/staudenmeir/belongs-to-through/src/Traits/HasTableAlias.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 

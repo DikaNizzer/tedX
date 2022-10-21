@@ -74,6 +74,28 @@
   
       <!-- Place this tag in your head or just before your close body tag. -->
       <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+      <!-- Show Modal AJAX -->
+      <script>
+
+        $(document).ready(function () {
+          
+          $('body').on('click', '#show-subevent', function () {
+            let pendaftaran_subevent_url = $(this).data('url');
+            console.log(pendaftaran_subevent_url)
+            $.get(pendaftaran_subevent_url, function (data) {
+              $('#showModal').modal('show');
+                $('#peserta-nama').val(data.nama);
+                $('#peserta-angkatan').val(data.angkatan);
+                $('#peserta-fakultas').val(data.fakultas);
+                
+            });
+          });
+
+        });
+
+      </script>
+
     </body>
   </html>
   

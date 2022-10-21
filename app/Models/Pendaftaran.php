@@ -8,10 +8,11 @@ use App\Models\Peserta;
 use App\Models\Pembayaran;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use \Znck\Eloquent\Traits\BelongsToThrough;
 
 class Pendaftaran extends Model
 {
-    use HasFactory;
+    use HasFactory, BelongsToThrough;
 
     protected $guarded = ['id'];
 
@@ -23,6 +24,11 @@ class Pendaftaran extends Model
     public function peserta()
     {
         return $this->belongsTo(Peserta::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsToThrough(User::class, Peserta::class);
     }
 
     public function pembayaran()

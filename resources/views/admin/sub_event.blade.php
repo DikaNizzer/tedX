@@ -1,6 +1,6 @@
 @include('admin/admin_header')
 
- <div class="content-wrapper">
+<div class="content-wrapper">
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row">
@@ -26,8 +26,8 @@
                           <td>{{$pendaftaran->peserta->user->created_at->diffForHumans()}}</td>
                           <td><span class="badge bg-label-primary me-1"><?= $pendaftaran->status ?></span></td>
                           <td>
-                              <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                              data-bs-target="#modalCenter-{{ $pendaftaran->peserta->id }}" >Info</button>
+                              <button type="button" id="show-subevent" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
+                              data-bs-target="#showModal" data-url="{{ route('subevents.show', $pendaftaran->peserta->id) }}">Info</button>
                           </td>
                         </tr>
                       @endforeach
@@ -63,8 +63,7 @@
 </div>
 
                         <!-- Modal -->
-                        @foreach ($pendaftarans as $pendaftaran)
-                            <div class="modal fade" id="modalCenter-{{ $pendaftaran->peserta->id }}" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade" id="showModal" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
@@ -79,28 +78,18 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col mb-3">
-                                            <label for="nameWithTitle" class="form-label">Nama</label>
-                                            <input type="text" id="nameWithTitle" class="form-control" value={{$pendaftaran->peserta->nama}} readonly/>
+                                            <label for="peserta-nama" class="form-label">Nama</label>
+                                            <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
                                         </div>
                                     </div>
                                     <div class="row g-2 mb-1">
                                         <div class="col mb-0">
-                                            <label for="emailWithTitle" class="form-label">Fakultas</label>
-                                            <input type="text" id="emailWithTitle" class="form-control" value="{{$pendaftaran->peserta->fakultas}}" readonly/>
+                                            <label for="peserta-fakultas" class="form-label">Fakultas</label>
+                                            <input type="text" id="peserta-fakultas" value="" class="form-control" readonly/>
                                         </div>
                                         <div class="col mb-0">
-                                            <label for="emailWithTitle" class="form-label">Angkatan</label>
-                                            <input type="text" id="emailWithTitle" class="form-control" value="{{$pendaftaran->peserta->angkatan}}" readonly/>
-                                        </div>
-                                    </div>
-                                    <div class="row g-2">
-                                        <div class="col mb-0">
-                                            <label for="emailWithTitle" class="form-label">Email</label>
-                                            <input type="text" id="emailWithTitle" class="form-control" value="{{$pendaftaran->peserta->user->email}}" readonly/>
-                                        </div>
-                                        <div class="col mb-0">
-                                            <label for="dobWithTitle" class="form-label">Waktu Pendaftaran</label>
-                                            <input type="text" id="dobWithTitle" class="form-control" value="{{$pendaftaran->peserta->created_at->diffForHumans()}}" readonly/>
+                                            <label for="peserta-angkatan" class="form-label">Angkatan</label>
+                                            <input type="text" id="peserta-angkatan" value="" class="form-control" readonly/>
                                         </div>
                                     </div>
                                 </div>
@@ -112,5 +101,5 @@
                                 </div>
                             </div>
                             </div>
-                        @endforeach
+                        
 @include('admin/admin_footer')

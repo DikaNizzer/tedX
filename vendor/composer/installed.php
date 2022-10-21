@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '85af1f69c6fda1a9d3dc7e357b5259c1680b3d32',
+        'reference' => '29f2829df4fb28a1b6a7fb9331230c1a2e923c0b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -385,7 +385,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '85af1f69c6fda1a9d3dc7e357b5259c1680b3d32',
+            'reference' => '29f2829df4fb28a1b6a7fb9331230c1a2e923c0b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -736,8 +736,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -976,6 +976,15 @@
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'staudenmeir/belongs-to-through' => array(
+            'pretty_version' => 'v2.12.1',
+            'version' => '2.12.1.0',
+            'reference' => '8316d274db603f63b16bb1c67379b0fa73209d98',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../staudenmeir/belongs-to-through',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v6.1.6',
