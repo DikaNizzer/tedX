@@ -65,6 +65,10 @@
 	margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
 	background:#ffff;
 	font-family : "ubuntu";
@@ -75,13 +79,15 @@ body {
     background: linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);;
 }
 
+.homePeserta{
+    background-color: #e9ecef;
+}
 
 
 .navbar{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
     background:#ffffff00
 }
-
 
 .btn-custom-daftar {
 	color: #ffff;
@@ -94,7 +100,7 @@ body {
 	font-weight:700;
 }
 
-.btn-custom-login {
+.btn-custom-login{
     background:linear-gradient(180deg, #D90000 0%, #B606BA 100%);
 	color: #ffff;
 	border-radius: 0px 30px 30px 30px;
@@ -104,14 +110,12 @@ body {
 	font-weight:700;
 }
 
-
-
 .home-header{
     padding:70px;
     margin:auto;
     width:100%;
     height:auto;
-    background-image: url(../../images/home-bg-01.png);
+    background-image: url('../../images/home-bg-01.png');
 	background-size:100%;
 	background-repeat: no-repeat;
 }
@@ -120,6 +124,45 @@ body {
     padding:8px;
     margin:auto;
     margin-top:7%
+}
+
+.hero-section{
+    padding: 10rem 0;
+    margin: auto;
+    height: 496px;
+    background-image:linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../../images/home-bg-01.png');
+    background-repeat: no-repeat;
+    /* border-radius: 0 0 72px 72px; */
+}
+
+.btn-custom-profile{
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background:linear-gradient(180deg, #D90000 0%, #B606BA 100%);
+	color: #ffff;
+	border-radius: 30px 30px 30px 30px;
+}
+
+.breadcrumb-box{
+    margin: auto;
+    padding: auto;
+    margin-top: 32px;
+}
+
+.breadcrumb-box .card{
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.116);
+    border: none;
+    border-radius: 10px;
+}
+
+.event .card{
+    border: none;
+    border-radius: 10px;
+}
+
+.event .card-02{
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.158);
 }
 
 @media (max-width: 986px) {
@@ -141,9 +184,12 @@ body {
 		font-size: 14px;
 	}
 
+    .hero-section{
+        padding-bottom: 6rem;
+        text-align: center;
+        /* border-radius: 0 0 56px 56px; */
+    }
 }
-
-
 
 .home-img{
 	min-height:auto;

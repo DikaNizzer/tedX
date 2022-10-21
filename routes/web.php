@@ -25,9 +25,8 @@ Route::get('/', [HomeController::class, 'home']);
 
 
 // Peserta
-// Route::get('/', function () {
-//     return view('home');
-// });
+// Peserta
+Route::get('/home', [UserHomeController::class, 'index']);
 
 
 
