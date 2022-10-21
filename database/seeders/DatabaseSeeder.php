@@ -22,40 +22,74 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-// INSERT INTO `tedx`.`users` (`email`, `type`, `password`) 
+// INSERT INTO `tedx`.`users` (`email`, `type`, `password`)
 // VALUES ('peserta@gmail.com', 'peserta', '$2y$10$eU/fXO7XOS9b5w7vkkZmu.LXYt2PqNMG7EYPlfrwBFJDiy1t9H1gy');
-        \App\Models\User::create([
-            'email' => 'peserta@gmail.com',
+        User::create([
+            'email' => 'Ilham@gmail.com',
+            'type' => 'peserta',
+            'password' => Hash::make('123')
+        ]);
+        User::create([
+            'email' => 'Gamas@gmail.com',
+            'type' => 'peserta',
+            'password' => Hash::make('123')
+        ]);
+        User::create([
+            'email' => 'Mei@gmail.com',
             'type' => 'peserta',
             'password' => Hash::make('123')
         ]);
 
-// INSERT INTO `tedx`.`pesertas` (`nama`, `fakultas`, `angkatan`, `user_id`) 
+// INSERT INTO `tedx`.`pesertas` (`nama`, `fakultas`, `angkatan`, `user_id`)
 // VALUES ('peserta', 'vokasi', '20', '5');
 
-        \App\Models\Peserta::create([
-            'nama' => 'peserta',
-            'fakultas' => 'vokasi',
+        Peserta::create([
+            'nama' => 'Ilham',
+            'fakultas' => 'Vokasi',
             'angkatan' => '20',
             'user_id' => 1
         ]);
+        Peserta::create([
+            'nama' => 'Gamas',
+            'fakultas' => 'FEB',
+            'angkatan' => '21',
+            'user_id' => 2
+        ]);
+        Peserta::create([
+            'nama' => 'Mei',
+            'fakultas' => 'FST',
+            'angkatan' => '22',
+            'user_id' => 3
+        ]);
 
-        \App\Models\Event::create([
+        Event::create([
             'nama_event' => 'Mainevent'
         ]);
 
-        \App\Models\Event::create([
+        Event::create([
             'nama_event' => 'Subevent'
         ]);
 
-// INSERT INTO `tedx`.`pendaftarans` (`status`, `event_id`, `peserta_id`) 
+// INSERT INTO `tedx`.`pendaftarans` (`status`, `event_id`, `peserta_id`)
 // VALUES ('0', '2', '2');
 
-        \App\Models\Pendaftaran::create([
+        Pendaftaran::create([
             'status' => '0',
             'event_id' => 2,
             'peserta_id' => 1
         ]);
+
+        Pendaftaran::create([
+            'status' => '0',
+            'event_id' => 2,
+            'peserta_id' => 2
+        ]);
+        Pendaftaran::create([
+            'status' => '0',
+            'event_id' => 2,
+            'peserta_id' => 3
+        ]);
+
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -63,6 +97,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         //with parental package the type will set to 'admin' in db table instead of admin model namespace (App\Models\Admin)
-        
+
     }
 }
