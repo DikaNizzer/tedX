@@ -6,7 +6,7 @@
         <div class="row">
             <!-- Striped Rows -->
               <div class="card">
-                <h5 class="card-header">Striped rows</h5>
+                <h5 class="card-header">Pendaftaran Sub Event</h5>
                 <div class="table-responsive text-nowrap">
                   <table class="table table-striped">
                     <thead>
@@ -15,7 +15,7 @@
                         <th>Email</th>
                         <th>Tanggal Pendaftaran</th>
                         <th>Status</th>
-                        <th>Detal</th>
+                        <th>Detail</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">

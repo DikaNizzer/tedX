@@ -39,10 +39,14 @@ class DatabaseSeeder extends Seeder
             'type' => 'peserta',
             'password' => Hash::make('123')
         ]);
+        User::create([
+            'email' => 'Hana@gmail.com',
+            'type' => 'peserta',
+            'password' => Hash::make('123')
+        ]);
 
 // INSERT INTO `tedx`.`pesertas` (`nama`, `fakultas`, `angkatan`, `user_id`)
 // VALUES ('peserta', 'vokasi', '20', '5');
-
         Peserta::create([
             'nama' => 'Ilham',
             'fakultas' => 'Vokasi',
@@ -61,7 +65,15 @@ class DatabaseSeeder extends Seeder
             'angkatan' => '22',
             'user_id' => 3
         ]);
+        Peserta::create([
+            'nama' => 'Hana',
+            'fakultas' => 'FK',
+            'angkatan' => '19',
+            'user_id' => 4
+        ]);
 
+// INSERT INTO `tedx`.`events` (`nama_event`)
+// VALUES ('subevent'/'mainevent');
         Event::create([
             'nama_event' => 'Mainevent'
         ]);
@@ -72,7 +84,6 @@ class DatabaseSeeder extends Seeder
 
 // INSERT INTO `tedx`.`pendaftarans` (`status`, `event_id`, `peserta_id`)
 // VALUES ('0', '2', '2');
-
         Pendaftaran::create([
             'status' => '0',
             'event_id' => 2,
@@ -88,6 +99,11 @@ class DatabaseSeeder extends Seeder
             'status' => '0',
             'event_id' => 2,
             'peserta_id' => 3
+        ]);
+        Pendaftaran::create([
+            'status' => '0',
+            'event_id' => 1,
+            'peserta_id' => 4
         ]);
 
 

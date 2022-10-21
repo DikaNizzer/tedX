@@ -12,7 +12,7 @@ class SubeventController extends Controller
     public function index()
     {
         // $pendaftaran = DB::table('pendaftarans')->get();
-        $pendaftarans = Pendaftaran::all();
+        $pendaftarans = Pendaftaran::where('event_id','=','2')->get();
         return view('admin.sub_event', compact('pendaftarans'));
     }
 }
