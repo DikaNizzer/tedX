@@ -145,7 +145,7 @@
 
             <!-- Cards -->
             <li class="menu-item">
-              <a href="/subevent" class="menu-link">
+              <a href="/subevents" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Sub Event</div>
               </a>

@@ -87,11 +87,45 @@
               $('#showModal').modal('show');
                 $('#peserta-nama').val(data.nama);
                 $('#peserta-angkatan').val(data.angkatan);
-                $('#peserta-fakultas').val(data.fakultas);
-                
-            });
+                $('#peserta-fakultas').val(data.fakultas);  
+            });          
           });
+        });
 
+      </script>
+
+      <script>
+
+        $('body').on('change', '.status', function () {
+          // console.log(this)
+          let statusVal = $(this).val();
+          let id = $(this).attr('data-id')
+          console.log(id)
+          console.log(statusVal)
+
+          // const data = {
+          //   status: statusVal
+          // }
+          // console.log(data.status)
+
+          $.ajax({
+            type: "PUT",
+            url: "/subevents/"+id,
+            async: false,
+            data: {status: statusVal, _token:'{{ csrf_token() }}'},
+            dataType: "json",
+            success: function (response) {
+              console.log("data berhasil dikirim")
+            }
+          })
+          .fail(function(error, textStatus, errorThrown) {
+            console.log(JSON.stringify(error));
+            alert(textStatus);
+            alert(errorThrown);
+          })
+          .always(function() {
+            console.log("selesai")
+          });
         });
 
       </script>

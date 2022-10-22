@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class DashboardSubeventController extends Controller
 {
@@ -70,9 +71,33 @@ class DashboardSubeventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pendaftaran $subevent)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'status'=>'required'
+        ]);
+        if($validator->fails()) {
+            return response()->json([
+                'status'=>400,
+                'errors'=>$validator->messages(),
+            ]);
+        } else {                
+            $status_update = Pendaftaran::find($subevent->id);
+            if ($status_update) {
+                $status_update->status = $request->input('status');
+                $status_update->update();
+                return response()->json([
+                    'data' => $status_update->status,
+                    'status'=>200,
+                    'message'=>'Status Edited!',
+                ]);
+            } else {
+                return response()->json([
+                    'status'=>404,
+                    'message'=>'Data Not Found',
+                ]);
+            }
+        }
     }
 
     /**
