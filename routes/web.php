@@ -8,6 +8,8 @@ use App\Http\Controllers\SubeventController;
 use App\Http\Controllers\UserHomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MaineventController;
+use App\Http\Controllers\PesertaLoginController;
+use App\Http\Controllers\PesertaRegisterController;
 use App\Http\Controllers\DashboardSubeventController;
 
 /*
@@ -49,6 +51,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
     // });
 Route::get('/regis', [RegisterController::class, 'index']);
 Route::post('/regis', [RegisterController::class, 'store']);
+
+Route::post('/peserta-login', [PesertaLoginController::class, 'authenticate']);
+Route::post('/peserta-regis', [PesertaRegisterController::class, 'store']);
 
 // ADMIN Dashboard
     // Route::get('/dashboard', function () {

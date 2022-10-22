@@ -52,22 +52,21 @@
                 <a href="index.html"><img src="admin/login/assets/img/logo/loder.png" alt=""></a>
             </div>
 
-            {{-- <div class="form-input">
-                <label for="name">Full name</label>
-                <input  type="text" name="name" placeholder="Full name" required>
-            </div> --}}
             <div class="form-input">
                 <label for="name">Email Address</label>
                 <input type="email" name="email" placeholder="Email Address" required>
             </div>
+
             <div class="form-input">
                 <label for="name">Password</label>
                 <input type="password" name="password" placeholder="Password" required>
             </div>
+
             <div class="form-input">
                 <label for="name">Confirm Password</label>
                 <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
             </div>
+            
             <div class="form-input pt-30">
                 <input type="submit" name="submit" value="Registration"required>
             </div>
@@ -123,19 +122,7 @@
     <script src="./admin/login/assets/js/plugins.js"></script>
     <script src="./admin/login/assets/js/main.js"></script>
 
-    <script>
-        let exist = '{{Session::has('errors')}}';
-        let msg = '{{Session::get('errors')}}';
-        msg = msg.replace(/&quot;/g, '\"');
-
-        if(exist){
-            let json = JSON.parse(msg);
-            let emailErr = ((typeof (json["email"]) !== 'undefined') ? json["email"] : '');
-            let passErr = ((typeof (json["password_confirmation"]) !== 'undefined') ? json["password_confirmation"] : '');
-            let alertText = emailErr + "\n" + passErr;
-            alert(alertText);
-        }
-    </script>
+    
     
     </body>
 </html>

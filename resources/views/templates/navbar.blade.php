@@ -57,18 +57,19 @@
 		</div>
 		<div class="modal-body" style="padding:40px">
 		  <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Register for an account</h5>
-		  <form action="">
+		  <form action="/peserta-regis" method="post">
+				@csrf
 			<div class="mb-4 mt-4">
-			  <label for="exampleFormControlInput1" class="form-label auth-label">Email </label>
-			  <input class="form-control auth-form" type="email" aria-label="default input example" required>
+			  <label for="email" class="form-label auth-label">Email </label>
+			  <input id="email" name="email" class="form-control auth-form" type="email" aria-label="default input example"  required>
 			</div>
 			<div class="mb-4 mt-2">
-			  <label for="exampleFormControlInput1" class="form-label auth-label">Password </label>
-			  <input class="form-control auth-form" type="password" aria-label="default input example" required>
+			  <label for="password" class="form-label auth-label">Password </label>
+			  <input id="password" name="password" class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
 			<div class="mb-4 mt-2">
-			  <label for="exampleFormControlInput1" class="form-label auth-label">Confirm Password </label>
-			  <input class="form-control auth-form" type="password" aria-label="default input example" required>
+			  <label for="password_confirmation" class="form-label auth-label">Confirm Password </label>
+			  <input id="password_confirmation" name="password_confirmation" class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
   
 			<center><button type="submit" class="register" style="margin:auto" > GET STARTED</button></center>
@@ -101,14 +102,15 @@
 		</div>
 		<div class="modal-body" style="padding:40px">
 		  <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Log into your account</h5>
-		  <form action="">
+		  <form action="/peserta-login" method="post">
+				@csrf
 			<div class="mb-4 mt-4">
-			  <label for="exampleFormControlInput1" class="form-label auth-label">Email </label>
-			  <input class="form-control auth-form" type="email" aria-label="default input example" required>
+			  <label for="email_login" class="form-label auth-label">Email </label>
+			  <input id="email_login" name="email" class="form-control auth-form" type="email" aria-label="default input example" required>
 			</div>
 			<div class="mb-4 mt-2">
-			  <label for="exampleFormControlInput1" class="form-label auth-label">Password </label>
-			  <input class="form-control auth-form" type="password" aria-label="default input example" required>
+			  <label for="password_login" class="form-label auth-label">Password </label>
+			  <input id="password_login" name="password" class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
   
 			<center><button type="submit" class="register" style="margin:auto" >LOGIN </button></center>

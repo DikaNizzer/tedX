@@ -12,3 +12,39 @@
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/home/index.js"></script>
 <script src="js/home/navbar.js"></script>
+
+<script>
+  let exist = '{{Session::has('errors')}}';
+  let msg = '{{Session::get('errors')}}';
+  msg = msg.replace(/&quot;/g, '\"');
+
+  if(exist){
+      let json = JSON.parse(msg);
+      let emailErr = ((typeof (json["email"]) !== 'undefined') ? json["email"] : '');
+      let passErr = ((typeof (json["password_confirmation"]) !== 'undefined') ? json["password_confirmation"] : '');
+      let alertText = emailErr + "\n" + passErr;
+      alert(alertText);
+  }
+</script>
+
+<script>
+  let msglog = '{{Session::get('alert')}}';
+  let loginErrMsg = '{{Session::get('loginErr')}}';
+  
+  if(msglog){
+    alert(msglog);
+    $(function() {
+      $('#loginModal').modal('show');
+    });
+  }
+
+  if(loginErrMsg){
+      alert(loginErrMsg);
+      $(function() {
+        $('#loginModal').modal('show');
+      });
+  }
+
+  
+
+</script>
