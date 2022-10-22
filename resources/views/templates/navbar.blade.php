@@ -30,7 +30,7 @@
 					</ul>
 				</div>
 			<?php else : ?>
-				<div class="d-grid gap-3 d-md-block">
+				<div class="d-md-flex d-grid gap-2 d-md-block">
 					<button class="btn-custom-daftar" style="margin:auto" data-bs-toggle="modal" data-bs-target="#registerModal"> REGISTER</button>
 					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> LOGIN</button>
 				</div>
