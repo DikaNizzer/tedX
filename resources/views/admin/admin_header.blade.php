@@ -18,6 +18,9 @@
     <title>ADMIN TedxUA 2022</title>
 
     <meta name="description" content="" />
+    
+    <!-- AJAX Setup CSRF -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="admin/dashboard/assets/img/favicon/favicon.ico" />
