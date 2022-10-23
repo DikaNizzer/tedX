@@ -32,6 +32,8 @@ Route::get('/', [HomeController::class, 'home']);
 // Peserta
 Route::get('/home', [UserHomeController::class, 'index']);
 
+Route::get('/regis-lfls', [UserHomeController::class, 'form']);
+
 
 
 // ADMIN

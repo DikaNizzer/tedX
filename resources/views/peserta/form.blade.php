@@ -42,7 +42,7 @@
   <div class="event my-4">
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col-lg-6">
+        {{-- <div class="col-lg-12">
           <div class="card h-100">
             <img src="images/main-event.png" class="card-img-top zoom" alt="header-main-event">
             <div class="card-body h-100">
@@ -59,8 +59,8 @@
               <small class="text-muted">Location: Universitas Airlangga Kampus B </small>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6">
+        </div> --}}
+        <div class="col-lg-12">
           <div class="card h-100">
             <img src="images/sub-event.png" class="card-img-top zoom" alt="header-sub-event">
             <div class="card-body h-100">
@@ -69,18 +69,60 @@
               <p class="card-text">A medium to display various works of experience that can be felt by humans with their five
                 senses
               </p>
+
+              {{-- Form --}}
+              <form>
+                <div class="form-group">
+                    <label for="example-text-input" class="form-control-label">Full Name</label>
+                    <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">Student ID</label>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">Faculty</label>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Batch</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">Address </label>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">Contact info (id line/no wa) </label>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">Instagram account </label>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">Instagram account </label>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                <div class="form-group">
+                  <label for="example-text-input" class="form-control-label">link folder gdrive</label>
+                  <p><i>link folder gdrive (Name_Faculty; e.g., Dira_FKM) which contains video (Video_Name; e.g., Video_Dira), 
+                    CV (CV_Name; e.g., CV_Dira), KTM (KTM_Name; e.g., KTM_Dira), Script talks (Script_Name; e.g., Script_Dira)</i></p>
+                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                </div>
+                
+            </form>
+            {{-- END FORM --}}
             </div>
             <div class="card-body button">
-              {{-- <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Registration</button> --}}
+              
                 <div class="dropdown">
-                  <button class="btn-custom-subev dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Registration
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/regis-lfls">Registration Form</a></li>
-                    <li><a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#aturanModal">See Requirements</a></li>
-                    
-                  </ul>
+                  <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Submit</button>
                 </div>
             </div>
             <div class="card-footer">
@@ -113,13 +155,13 @@
 		  </div>     
 		</div>
 		<div class="modal-body" style="padding:40px">
-
+      <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Make sure the data you enter is correct!</h5>
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col-lg-6">
-          <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#requirements"> Requirements </div>
+          <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#requirements"> Submit </div>
         </div>
         <div class="col-lg-6">
-          <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#video"> Video Requirements</div>
+          <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#video"> check my data once again</div>
         </div>
       </div>
 		</div>
@@ -128,71 +170,3 @@
 	</div>
   </div>
 
-
-  {{-- MODAL ATURAN --}}
-<!-- Modal -->
-<div class="modal fade" id="requirements" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-	  <div class="modal-content auth-modal">
-		<div class="modal-header auth-header">
-		  <div class="row" style="padding:5px">
-			<div class="col-10">
-			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
-			</div>
-			<div class="col-2 justify-content-end">
-			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
-			</div>
-		  </div>     
-		</div>
-		<div class="modal-body" style="padding:40px">
-      <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Requirements</h5>
-      1.Universitas Airlangga undergraduate active students (must submit KTM)
-      2.Have the ability and knowledge in the field of Epiphany on Ephemeral  such as education/work life.
-      3.Good public speaking skills. 
-      4.Detail oriented.
-      5.Active in social media. 
-      6.Domiciles in  Surabaya. 
-      7.Pasang twibbon 
-
-		</div>
-  
-	  </div>
-	</div>
-  </div>
-
-
-    {{-- MODAL ATURAN Video--}}
-<!-- Modal -->
-<div class="modal fade" id="video" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-	  <div class="modal-content auth-modal">
-		<div class="modal-header auth-header">
-		  <div class="row" style="padding:5px">
-			<div class="col-10">
-			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
-			</div>
-			<div class="col-2 justify-content-end">
-			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
-			</div>
-		  </div>     
-		</div>
-		<div class="modal-body" style="padding:40px">
-      <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Video Requirements</h5>
-      a.Include a self-introduction (Name, Faculty, Batch, and domicile) 
-      b.The grand theme of speech is about Epiphany on Ephemeral and applicants are obliged to choose one of the subthemes to be delivered, namely education or work life. 
-      c.The maximum duration is 5 minutes with the following terms:
-      -The first minute should contain the explanation of speaker identity and the outline of the chosen subtheme along with conclusion.
-      -The next 4 minutes is the further explanation regarding the sub theme that was delivered in the first minute.
-      -Video is recorded in portrait scaling 1:1
-      d.Have good lighting, displaying the full face and clear voice of the applicants.
-      e.Proper attire, avoid wearing tshirt. (but make sure you feel comfortable in whatever you wear!)
-      f.The video could be delivered in English or Bahasa Indonesia. Both have the same value and no suggestion of priority for the use of a certain language.
-      g.The video must not insult SARA (Ethnicities, Religions, Races, and Intergroups)
-      h.The video must not contain commercial use, religion, or political promotion.
-      i.Applicants should deliver speech based on factual condition and experiences of the speaker with no exaggeration. 
-
-		</div>
-  
-	  </div>
-	</div>
-  </div>

@@ -410,3 +410,29 @@ body {
     display:inline;
     line-height: 1em;
   }
+
+.register:hover,
+.register-option:hover{
+    /* background: #9C39FF; */
+    color:#ffffff;
+    border:none;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,0.6306897759103641) 73%, rgba(0,212,255,1) 100%);
+}
+
+.register-option{
+    width:100%;
+    height:50px;
+    border-radius: 10px;
+    color:#ffff;
+    /* background-color: #6D0CBA; */
+    text-align:center;
+    justify-content:center;
+    align-content:center;
+    font-weight:500;
+    margin:auto;
+    margin-bottom:20px;
+    padding:10px;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 50%, rgba(0,212,255,1) 100%);
+}
