@@ -115,7 +115,8 @@ body {
     margin:auto;
     width:100%;
     height:auto;
-    background-image: url('../../images/home-bg-01.png');
+    /* background-image: url('../../images/home-bg-01.png'); */
+    background-image: url('../../images/banner.png');
 	background-size:100%;
 	background-repeat: no-repeat;
 }
