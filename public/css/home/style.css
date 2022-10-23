@@ -76,11 +76,11 @@ body {
 
 
 .home{
-    background: linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);;
+    background: linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);
 }
 
 .homePeserta{
-    background-color: #fafafafa;
+    background-color: rgb(229, 229, 229);
 }
 
 
@@ -135,32 +135,6 @@ body {
 	color: #ffff;
 	border-radius: 30px 30px 30px 30px;
 }
-
-
-.header-background{
-    margin: auto;
-    min-height: 300px;
-    background-image:linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../../images/home-bg-01.png');
-    /* border-radius: 0 0 72px 72px; */
-}
-
-
-.card.card-profile-bottom{
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.075) ;
-    border: none;
-    border-radius: 10px;
-    z-index: 10;
-    margin-top: -4rem;
-}
-
-
-.breadcrumb.breadcrumb-pills {
-    width: fit-content;
-    background: #f8fbff;
-    border-radius: 0.75rem;
-    position: relative;
-}
-
 
 
 @media (max-width: 986px) {
@@ -263,8 +237,6 @@ body {
 }
 
 
-
-
 .home-bg{
     margin:0;
     object-fit:cover;
@@ -274,6 +246,75 @@ body {
     position:absolute
 }
 
+
+.header-background{
+    margin: auto;
+    min-height: 360px;
+    background-image:url('../../images/banner-panjang.png');
+    /* border-radius: 0 0 72px 72px; */
+}
+
+
+.card.card-profile-bottom{
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.075) ;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+    margin-top: -4rem;
+}
+
+
+.breadcrumb.breadcrumb-pills {
+    position: relative;
+    border: 1px dashed #c9c9c9;
+    width: fit-content;
+    border-radius: 0.75rem;
+}
+
+.event .card:hover{
+    z-index:10;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.151) ;
+    transform: scale(1.02);    
+}
+
+.event .card{
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.075) ;
+}
+
+.event .card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.event .card .card-title{
+    color: rgb(198, 47, 36);
+}
+
+.btn-custom-subev,
+.btn-custom-mainev {
+    background: #891718;
+	color: #ffff;
+	border-radius: 30px;
+    border: none;
+    /* border: 2px solid linear-gradient(180deg, #D90000 0%, #B606BA 100%); */
+	height:40px;
+	width: 150px;
+	font-weight:700;
+}
+
+.btn-custom-mainev.disabled{
+    background-color: rgb(204, 204, 204);
+    color: rgb(100, 100, 100);
+}
+
+
+.btn-custom-subev:hover{
+    background: #991b1d;
+    border: none;
+}
 
 .footer-top{
     min-height:50px;
