@@ -12,6 +12,9 @@
                     <thead>
                       <tr>
                         <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Fakultas</th>
+                        <th>Angkatan</th>
                         <th>Email</th>
                         <th>Tanggal Pendaftaran</th>
                         <th>Status</th>
@@ -22,8 +25,12 @@
                       @foreach ($pendaftarans as $pendaftaran)
                         <tr>
                           <td> <strong>{{$pendaftaran->peserta->nama}}</strong></td>
+                          <td>{{$pendaftaran->peserta->nim}}</td>
+                          <td>{{$pendaftaran->peserta->fakultas}}</td>
+                          <td>{{$pendaftaran->peserta->angkatan}}</td>
                           <td>{{$pendaftaran->peserta->user->email}}</td>
-                          <td>{{$pendaftaran->peserta->user->created_at->diffForHumans()}}</td>
+                          <td>{{ date('d F Y', strtotime($pendaftaran->peserta->pendaftaran->created_at)); }}</td>
+                          
                           <td>
                             <select class="form-select status" data-id="{{ $pendaftaran->peserta->user->id }}" aria-label="Default select example">
                               <option value="0" {{ ($pendaftaran->status == 0) ? 'selected' : '' }}>Unverified</option>
@@ -38,26 +45,7 @@
                         </tr>
                       @endforeach
 
-                      <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Nama</strong></td>
-                        <td>email</td>
-                        <td>
-                        email
-                        </td>
-                        <td>
-                          <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Unverified
-                          </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="javascript:void(0);">Unverified</a></li>
-                              <li><a class="dropdown-item" href="javascript:void(0);">Verified</a></li>
-                              <li><a class="dropdown-item" href="javascript:void(0);">Berkas Kurang / Salah</a></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                            data-bs-target="#modalCenter">Info</button>
-                        </td>
-                      </tr>
+                      
 
                     </tbody>
                   </table>
@@ -98,6 +86,30 @@
                   <input type="text" id="peserta-angkatan" value="" class="form-control" readonly/>
               </div>
           </div>
+          <div class="row">
+            <div class="col mb-3">
+                <label for="peserta-nama" class="form-label">Kontak</label>
+                <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col mb-3">
+                <label for="peserta-nama" class="form-label">Alamat</label>
+                <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+              <label for="peserta-nama" class="form-label">Instagrm</label>
+              <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+          </div>
+      </div>
+        <div class="row">
+          <div class="col mb-3">
+              <label for="peserta-nama" class="form-label">Drive</label>
+              <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+          </div>
+      </div>
       </div>
       <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">

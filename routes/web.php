@@ -29,38 +29,30 @@ Route::get('/', [HomeController::class, 'home']);
 
 
 // Peserta
-// Peserta
-Route::get('/home', [UserHomeController::class, 'index']);
 
-Route::get('/regis-lfls', [UserHomeController::class, 'form']);
-
-
-
-// ADMIN
-// ADMIN Login
-    // Route::get('/administrator', function () {
-    //     return view('admin/login');
-    // });
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/home', [UserHomeController::class, 'index']); //Hanya Boleh setelah Login
+Route::get('/regis-lfls', [UserHomeController::class, 'form']); //Hanya Boleh setelah Login
+Route::get('/status', [UserHomeController::class, 'status']); //Hanya Boleh setelah Login
 
 // LOGOUT
 Route::post('/logout', [LoginController::class, 'logout']);
 
-// ADMIN Registration
-    // Route::get('/regis', function () {
-    //     return view('admin/regis');
-    // });
-Route::get('/regis', [RegisterController::class, 'index']);
-Route::post('/regis', [RegisterController::class, 'store']);
-
+// PESERTA
 Route::post('/peserta-login', [PesertaLoginController::class, 'authenticate']);
 Route::post('/peserta-regis', [PesertaRegisterController::class, 'store']);
 
+
+
+
+// ADMIN
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+// ADMIN Registration
+Route::get('/regis', [RegisterController::class, 'index']);
+Route::post('/regis', [RegisterController::class, 'store']);
+
 // ADMIN Dashboard
-    // Route::get('/dashboard', function () {
-    //     return view('admin/dashboard');
-    // });
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 // Route::get('/subevent', function () {

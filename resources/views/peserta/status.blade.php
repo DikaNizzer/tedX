@@ -70,57 +70,39 @@
                 senses
               </p>
 
-              {{-- Form --}}
-              <form>
-                <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Full Name</label>
-                    <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Student ID</label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Faculty</label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlSelect1">Batch</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>2018</option>
-                    <option>2019</option>
-                    <option>2020</option>
-                    <option>2021</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Address </label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Contact info (id line/no wa) </label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Instagram account </label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">link folder gdrive</label>
-                  <p><i>link folder gdrive (Name_Faculty; e.g., Dira_FKM) which contains video (Video_Name; e.g., Video_Dira), 
-                    CV (CV_Name; e.g., CV_Dira), KTM (KTM_Name; e.g., KTM_Dira), Script talks (Script_Name; e.g., Script_Dira)</i></p>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
-                </div>
-                
-            </form>
-            {{-- END FORM --}}
+                {{-- Body --}}
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Nama</th>
+                      <th scope="col">Jenis Pendaftaran</th>
+                      <th scope="col">Contact info</th>
+                      <th scope="col">link folder gdrive</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Dika</td>
+                      <td>Subevent</td>
+                      <td>CP</td>
+                      <td>Status Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum quos itaque laboriosam libero quibusdam earum accusantium et tempore pariatur nemo, aliquam obcaecati ex praesentium nesciunt, eum voluptatibus architecto quis neque impedit adipisci. Recusandae labore assumenda fugiat tenetur provident nam nesciunt illum porro adipisci eius, unde velit voluptate, possimus, ipsam temporibus non neque. Dignissimos, nisi optio, reprehenderit vitae error fugiat praesentium doloremque accusantium voluptatem ipsum assumenda autem iusto voluptatibus quisquam totam reiciendis ullam blanditiis animi omnis consequatur? Eos placeat expedita dolorum porro dignissimos eaque officiis sapiente obcaecati perspiciatis quo cupiditate quibusdam, magni itaque facilis. Necessitatibus nobis laborum voluptatum id sint.</td>                      
+                      <td>Dalam Seleksi</td>
+                    </tr>
+                    <tr>
+
+                  </tbody>
+                </table>
+                {{-- End Body --}}
             </div>
-            <div class="card-body button">
+            {{-- <div class="card-body button">
               
                 <div class="dropdown">
                   <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Submit</button>
                 </div>
-            </div>
+            </div> --}}
             <div class="card-footer">
               <small class="text-muted">Registration: DD-MM-YYYY</small>
               <br>

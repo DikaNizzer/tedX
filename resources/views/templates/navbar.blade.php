@@ -10,32 +10,24 @@
 		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
 			<ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">
 				<li class="nav-item">
-					<a class="nav-link active link-danger text-center" href="" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
+					<a class="nav-link active link-danger text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link text-light link-danger text-center" href="/home"><b>Dashboard</b></a>
+				</li>
+				{{-- <li class="nav-item">
 					<a class="nav-link text-light link-danger text-center" href=""><b>About</b></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link text-light link-danger text-center" href=""><b>Event</b></a>
-				</li>
+				</li> --}}
 			</ul>
-			<?php if (isset($_SESSION['user_data'])) : ?>
-				<div class="dropdown d-none d-md-block">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<iconify-icon inline icon="bi:person" width="20" height="20"></iconify-icon>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end my-2">
-						<li><a class="dropdown-item" href="#">Profile</a></li>
-						<li><a class="dropdown-item" href="">Logout</a></li>
-					</ul>
-				</div>
-			<?php else : ?>
 				<div class="d-md-flex d-grid gap-2 d-md-block">
 					<button class="btn-custom-daftar" style="margin:auto" data-bs-toggle="modal" data-bs-target="#registerModal"> REGISTER</button>
 					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> LOGIN</button>
 					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> LOGOUT</button>
 				</div>
-			<?php endif; ?>
+			
 		</div>
 	</div>
 </nav>

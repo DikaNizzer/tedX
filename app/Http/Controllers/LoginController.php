@@ -20,6 +20,9 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
 
+        // Select * where emailnya sama inputan
+        // IF (Cek dulu kalo rolenya admin, Kalai bener masuk kondisi di bawah)
+        
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('dashboard');

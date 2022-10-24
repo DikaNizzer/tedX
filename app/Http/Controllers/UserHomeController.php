@@ -26,4 +26,11 @@ class UserHomeController extends Controller
         ]);
     }
 
+    public function status()
+    {
+        return view('peserta.status',[
+            "title" => "TEDx Universitas Airlangga"
+        ]);
+    }
+
 }

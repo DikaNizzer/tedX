@@ -16,11 +16,11 @@
             <div class="col-auto my-auto">
               <div class="h-100">
                 <h5 class="mb-1 fw-bold">
-                  Halo, Sayo Kravits
+                  Halo, emailpeserta@gmail.com
                 </h5>
-                <p class="mb-0 text-sm">
+                {{-- <p class="mb-0 text-sm">
                   emailpeserta@gmail.com
-                </p>
+                </p> --}}
                 
               </div>
             </div>
@@ -28,8 +28,8 @@
               <div class="nav-wrapper position-relative end-0" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ul class="breadcrumb breadcrumb-pills ms-lg-auto ms-md-auto ms-sm-0 my-auto py-2 px-3" >
                   <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Dashboard</a></li> 
-                  <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Profile</a></li>
-                  <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Status Pendaftaran</a></li>
+                  {{-- <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Profile</a></li> --}}
+                  <li class="breadcrumb-item-active"><a href="/status" class="text-dark">Status Pendaftaran</a></li>
                 </ul>
               </div>
             </div>

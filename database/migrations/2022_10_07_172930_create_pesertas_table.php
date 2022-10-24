@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('pesertas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 45)->nullable();
-            $table->string('fakultas', 45);
-            $table->string('angkatan', 45);
+            $table->string('nama', 255)->nullable();
+            $table->string('nim', 255)->nullable();
+            $table->string('fakultas', 100)->nullable();
+            $table->string('angkatan', 45)->nullable();
+            $table->string('alamat', 255)->nullable();
             $table->foreignId('user_id');
             $table->timestamps();
         });

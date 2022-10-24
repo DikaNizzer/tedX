@@ -20,8 +20,8 @@ INSERT INTO `tedx`.`pendaftarans` (`status`, `event_id`, `peserta_id`)
 VALUES ('0', '2', '2');
 
 STatus Pendaftaran : 
-0 : Baru masuk (default)
-1 : Berkas Lengkap (verified)
+0 : Unverified (default)
+1 : Verified (verified)
 2. Berkas Tidak Lengkap
 
 Tugas Baru
@@ -33,5 +33,82 @@ c. Select detail dari pendaftarans
 ILHAM
 a. Select data pendaftaran where idvent = 2 atau yg subevents 
 d. Hitung jumlah pendaftaran dengan count di dashboard
+
+
+//Briefing BE 24/10
+Ilham
+1. Perbaiki Menu Navbar
+Sebelum Login :
+a. Home /
+b. Login
+c. Register
+
+Sesudah Login :
+a. Home (/)
+b. dashboard (/home)
+c. Logout
+
+2. Pembatasan Session
+A. Peserta/user yang belum login gapunya akses ke 
+http://127.0.0.1:8000/home
+http://127.0.0.1:8000/regis-lfls (form Daftar)
+dan sebagainya
+
+B. Admin yang belum login juga tidak bisa akses dashboard
+http://127.0.0.1:8000/dashboard
+http://127.0.0.1:8000/subevents
+
+5. Select Data Pendaftaran di halaman user sesuai usernya  -> Nama, Jenis Pendaftaran, cp, drive Status
+(/status)
+
+6. Select Email Peserta di header setiap halaman sesuai usernya
+
+
+
+Gamas
+3. Perbaiki Login Admin jadi hanya yang rolenya admin yang bisa login di admin
+atau di http://127.0.0.1:8000/login
+
+
+4. Input Data Peserta dan Pendaftaran dari halaman http://127.0.0.1:8000/regis-lfls
+@if(pertama daftar)
+    nama
+    Nim
+    fakultas
+    angkatan 
+    alamat
+    CP
+    IG
+    link gdrive
+@elseif(Kalo daftar kedua) -->Jadi misal dia nih salah daftar/berkas bisa daftar lagi (tapi ga nginputin 
+nama/nim dll soalnya namanya ditable peserta)
+    CP
+    IG
+    link gdrive
+
+7. Karena Datanya berubah maka data di admin dashboard juga berubah 
+
+
+
+
+INSERT INTO `tedx`.`pesertas` (`nama`, `nim`, `fakultas`, `angkatan`, `alamat`) 
+VALUES ('andika', '1520', 'vokasi', '20', 'surabaya');
+
+
+Conton inject event
+INSERT INTO `tedx`.`events` (`nama_event`) VALUES ('Mainevent');
+INSERT INTO `tedx`.`events` (`nama_event`) VALUES ('Subevent');
+
+Contoh Inject Pendaftaran
+INSERT INTO `tedx`.`pendaftarans` (`kontak`, `drive`, `status`, `event_id`, `peserta_id`) 
+VALUES ('data kontak', 'Data drive', '0', '2', '1');
+
+
+
+
+
+
+
+
 
 
