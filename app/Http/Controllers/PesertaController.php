@@ -30,10 +30,14 @@ class PesertaController extends Controller
             'event_id' => ['required'],
         ]);
         // dd($validated_pend);
-        $peserta = Peserta::create($validated);
-        $validated_pend['peserta_id'] = $peserta->id;
+        if ($validated_pend && $validated) {
+            $peserta = Peserta::create($validated);
+            $validated_pend['peserta_id'] = $peserta->id;
 
-        Pendaftaran::create($validated_pend);
-        return redirect('/home')->with('pesan', 'registrasi berhasil!');
+            Pendaftaran::create($validated_pend);
+            return redirect('/home')->with('pesan', 'registrasi berhasil!');
+        } else {
+            return redirect('/regis-lfls')->with('daftar_gagal', 'Registrasi gagal! Cek kembali form anda');
+        }
     }
 }

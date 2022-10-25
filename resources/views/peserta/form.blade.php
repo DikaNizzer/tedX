@@ -69,11 +69,11 @@
               <p class="card-text">A medium to display various works of experience that can be felt by humans with their five
                 senses
               </p>
-
+              {{-- @dd($peserta->first()) --}}
               {{-- Form --}}
               <form action="/regis-lfls" method="POST">
                 @csrf
-                @if ($peserta)
+                @if ($peserta->first() !== null)
                 <input class="form-control" type="hidden" name="nama" value="{{ $peserta->first()->nama }}" id="nama">
                 <input class="form-control" type="hidden" name="nim" value="{{ $peserta->first()->nim }}" id="nim">
                 <input class="form-control" type="hidden" name="fakultas" value="{{ $peserta->first()->fakultas }}" id="fakultas">
@@ -99,45 +99,45 @@
                 @else
                 <div class="form-group">
                   <label for="nama" class="form-control-label">Full Name</label>
-                  <input class="form-control" type="text" name="nama" value="Nama" id="nama">
+                  <input class="form-control" type="text" name="nama" value="{{ old('nama') }}" id="nama">
                 </div>
                 <div class="form-group">
                   <label for="nim" class="form-control-label">Student ID</label>
-                  <input class="form-control" type="text" name="nim" value="Nomor Induk Mahasiswa" id="nim">
+                  <input class="form-control" type="text" name="nim" value="{{ old('nim') }}" id="nim">
                 </div>
                 <div class="form-group">
                   <label for="fakultas" class="form-control-label">Faculty</label>
-                  <input class="form-control" type="text" name="fakultas" value="Fakultas" id="fakultas">
+                  <input class="form-control" type="text" name="fakultas" value="{{ old('fakultas') }}" id="fakultas">
                 </div>
                 <div class="form-group">
                   <label for="angkatan">Batch</label>
                   <select class="form-control" name="angkatan" id="angkatan">
-                    <option value="18">2018</option>
-                    <option value="19">2019</option>
-                    <option value="20">2020</option>
-                    <option value="21">2021</option>
+                    <option value="18" {{ (old('angkatan') == "18") ? 'selected' : '' }}>2018</option>
+                    <option value="19" {{ (old('angkatan') == "19") ? 'selected' : '' }}>2019</option>
+                    <option value="20" {{ (old('angkatan') == "20") ? 'selected' : '' }}>2020</option>
+                    <option value="21" {{ (old('angkatan') == "21") ? 'selected' : '' }}>2021</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="alamat" class="form-control-label">Address </label>
-                  <input class="form-control" type="text" name="alamat" value="Alamat" id="alamat">
+                  <input class="form-control" type="text" name="alamat" value="{{ old('alamat') }}" id="alamat">
                 </div>
                 <div class="form-group">
                   <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
-                  <input class="form-control" type="text" name="kontak" value="Kontak" id="kontak">
+                  <input class="form-control" type="text" name="kontak" value="{{ old('kontak') }}" id="kontak">
                 </div>
                 <div class="form-group">
                   <label for="akun_ig" class="form-control-label">Instagram account </label>
-                  <input class="form-control" type="text" name="akun_ig" value="Instagram" id="akun_ig">
+                  <input class="form-control" type="text" name="akun_ig" value="{{ old('akun_ig') }}" id="akun_ig">
                 </div>
-                <input type="hidden" value="{{ $peserta->first()->user_id }}" name="user_id">
+                <input type="hidden" value="{{ Auth::user()->id }}" name="user_id">
                 <input type="hidden" value="2" name="event_id">
               
                 <div class="form-group">
                   <label for="link_gdrive" class="form-control-label">link folder gdrive</label>
                   <p><i>link folder gdrive (Name_Faculty; e.g., Dira_FKM) which contains video (Video_Name; e.g., Video_Dira), 
                     CV (CV_Name; e.g., CV_Dira), KTM (KTM_Name; e.g., KTM_Dira), Script talks (Script_Name; e.g., Script_Dira)</i></p>
-                  <input class="form-control" type="text" name="link_gdrive" value="Link Google Drive" id="link_gdrive">
+                  <input class="form-control" type="text" name="link_gdrive" value="{{ old('link_gdrive') }}" id="link_gdrive">
                 </div>
                 @endif
                 

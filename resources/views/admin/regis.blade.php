@@ -122,7 +122,19 @@
     <script src="./admin/login/assets/js/plugins.js"></script>
     <script src="./admin/login/assets/js/main.js"></script>
 
-    
+    <script>
+        let exist = '{{Session::has('errors')}}';
+        let msg = '{{Session::get('errors')}}';
+        msg = msg.replace(/&quot;/g, '\"');
+      
+        if(exist){
+            let json = JSON.parse(msg);
+            let emailErr = ((typeof (json["email"]) !== 'undefined') ? json["email"] : '');
+            let passErr = ((typeof (json["password_confirmation"]) !== 'undefined') ? json["password_confirmation"] : '');
+            let alertText = emailErr + "\n" + passErr;
+            alert(alertText);
+        }
+      </script>
     
     </body>
 </html>
