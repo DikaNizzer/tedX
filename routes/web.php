@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SubeventController;
 use App\Http\Controllers\UserHomeController;
@@ -31,7 +32,10 @@ Route::get('/', [HomeController::class, 'home']);
 // Peserta
 
 Route::get('/home', [UserHomeController::class, 'index']); //Hanya Boleh setelah Login
+
 Route::get('/regis-lfls', [UserHomeController::class, 'form']); //Hanya Boleh setelah Login
+Route::post('/regis-lfls', [PesertaController::class, 'form']); //Hanya Boleh setelah Login
+
 Route::get('/status', [UserHomeController::class, 'status']); //Hanya Boleh setelah Login
 
 // LOGOUT
@@ -52,15 +56,22 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/regis', [RegisterController::class, 'index']);
 Route::post('/regis', [RegisterController::class, 'store']);
 
-// ADMIN Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index']);
+// Authenticated user only
+Route::group(['middleware' => 'auth'], function() {   
+    
+    //User with admin type
+    Route::group(['middleware' => 'cektipe:admin'], function() {    
+        Route::get('/dashboard', [DashboardController::class, 'index']);
+        Route::resource('/subevents', DashboardSubeventController::class);
+    });
+    
+});
 
 // Route::get('/subevent', function () {
 //     return view('admin/sub_event');
 // });
 
 // Subevent
-Route::resource('/subevents', DashboardSubeventController::class);
 
 // Mainevent
 Route::get('/mainevent', [MaineventController::class, 'index']);

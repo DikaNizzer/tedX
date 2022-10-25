@@ -71,56 +71,87 @@
               </p>
 
               {{-- Form --}}
-              <form>
+              <form action="/regis-lfls" method="POST">
+                @csrf
+                @if ($user->peserta)
+                <input class="form-control" type="hidden" name="nama" value="{{ $user->peserta->nama }}" id="nama">
+                <input class="form-control" type="hidden" name="nim" value="{{ $user->peserta->nim }}" id="nim">
+                <input class="form-control" type="hidden" name="fakultas" value="{{ $user->peserta->fakultas }}" id="fakultas">
+                <input class="form-control" type="hidden" name="angkatan" value="{{ $user->peserta->angkatan }}" id="fakultas">
+                <input class="form-control" type="hidden" name="alamat" value="{{ $user->peserta->alamat }}" id="alamat">
+
                 <div class="form-group">
-                    <label for="example-text-input" class="form-control-label">Full Name</label>
-                    <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
+                  <input class="form-control" type="text" name="kontak" value="Kontak" id="kontak">
                 </div>
                 <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Student ID</label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <label for="akun_ig" class="form-control-label">Instagram account </label>
+                  <input class="form-control" type="text" name="akun_ig" value="Instagram" id="akun_ig">
+                </div>
+                <input type="hidden" value="{{ $user->id }}" name="user_id">
+                <input type="hidden" value="2" name="event_id">
+                <div class="form-group">
+                  <label for="link_gdrive" class="form-control-label">link folder gdrive</label>
+                  <p><i>link folder gdrive (Name_Faculty; e.g., Dira_FKM) which contains video (Video_Name; e.g., Video_Dira), 
+                    CV (CV_Name; e.g., CV_Dira), KTM (KTM_Name; e.g., KTM_Dira), Script talks (Script_Name; e.g., Script_Dira)</i></p>
+                  <input class="form-control" type="text" name="link_gdrive" value="Link Google Drive" id="link_gdrive">
+                </div>
+                @else
+                <div class="form-group">
+                  <label for="nama" class="form-control-label">Full Name</label>
+                  <input class="form-control" type="text" name="nama" value="Nama" id="nama">
                 </div>
                 <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Faculty</label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <label for="nim" class="form-control-label">Student ID</label>
+                  <input class="form-control" type="text" name="nim" value="Nomor Induk Mahasiswa" id="nim">
                 </div>
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Batch</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>2018</option>
-                    <option>2019</option>
-                    <option>2020</option>
-                    <option>2021</option>
+                  <label for="fakultas" class="form-control-label">Faculty</label>
+                  <input class="form-control" type="text" name="fakultas" value="Fakultas" id="fakultas">
+                </div>
+                <div class="form-group">
+                  <label for="angkatan">Batch</label>
+                  <select class="form-control" name="angkatan" id="angkatan">
+                    <option value="18">2018</option>
+                    <option value="19">2019</option>
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Address </label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <label for="alamat" class="form-control-label">Address </label>
+                  <input class="form-control" type="text" name="alamat" value="Alamat" id="alamat">
                 </div>
                 <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Contact info (id line/no wa) </label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
+                  <input class="form-control" type="text" name="kontak" value="Kontak" id="kontak">
                 </div>
                 <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">Instagram account </label>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <label for="akun_ig" class="form-control-label">Instagram account </label>
+                  <input class="form-control" type="text" name="akun_ig" value="Instagram" id="akun_ig">
                 </div>
+                <input type="hidden" value="{{ $user->id }}" name="user_id">
+                <input type="hidden" value="2" name="event_id">
+              
                 <div class="form-group">
-                  <label for="example-text-input" class="form-control-label">link folder gdrive</label>
+                  <label for="link_gdrive" class="form-control-label">link folder gdrive</label>
                   <p><i>link folder gdrive (Name_Faculty; e.g., Dira_FKM) which contains video (Video_Name; e.g., Video_Dira), 
                     CV (CV_Name; e.g., CV_Dira), KTM (KTM_Name; e.g., KTM_Dira), Script talks (Script_Name; e.g., Script_Dira)</i></p>
-                  <input class="form-control" type="text" value="Nama" id="example-text-input">
+                  <input class="form-control" type="text" name="link_gdrive" value="Link Google Drive" id="link_gdrive">
                 </div>
+                @endif
                 
+                <div class="card-body button">
+                  <div class="dropdown">
+                    {{-- <button type="submit" class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Submit</button> --}}
+                    <button type="submit" class="btn-custom-subev">Submit</button>
+                  </div>
+                </div>
+
             </form>
             {{-- END FORM --}}
             </div>
-            <div class="card-body button">
-              
-                <div class="dropdown">
-                  <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Submit</button>
-                </div>
-            </div>
+            
             <div class="card-footer">
               <small class="text-muted">Registration: DD-MM-YYYY</small>
               <br>

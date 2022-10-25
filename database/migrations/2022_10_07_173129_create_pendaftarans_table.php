@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('pendaftarans', function (Blueprint $table) {
             $table->id();
-            $table->string('instagram', 255)->nullable();
+            $table->string('akun_ig', 255)->nullable();
             $table->string('kontak', 255)->nullable();
-            $table->string('drive', 255)->nullable();
+            $table->string('link_gdrive', 255)->nullable();
             $table->string('metode_bayar', 45)->nullable();
             $table->integer('status');
             $table->timestamps();

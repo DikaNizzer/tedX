@@ -66,11 +66,11 @@ http://127.0.0.1:8000/subevents
 
 
 Gamas
-3. Perbaiki Login Admin jadi hanya yang rolenya admin yang bisa login di admin
+3. (DONE) Perbaiki Login Admin jadi hanya yang rolenya admin yang bisa login di admin
 atau di http://127.0.0.1:8000/login
 
 
-4. Input Data Peserta dan Pendaftaran dari halaman http://127.0.0.1:8000/regis-lfls
+4. (DONE) Input Data Peserta dan Pendaftaran dari halaman http://127.0.0.1:8000/regis-lfls
 @if(pertama daftar)
     nama
     Nim

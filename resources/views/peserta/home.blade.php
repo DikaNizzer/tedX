@@ -196,3 +196,11 @@
 	  </div>
 	</div>
   </div>
+
+  <script>
+    let pesan = '{{ Session::get('pesan') }}'
+
+    if (pesan) {
+      alert(pesan)
+    }
+  </script>
