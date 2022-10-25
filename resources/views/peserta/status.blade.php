@@ -82,16 +82,30 @@
                       <th scope="col">Status</th>
                     </tr>
                   </thead>
+                  @php
+                      $no = 1;
+                  @endphp
                   <tbody>
+                    {{-- @dd($user->peserta[0]->pendaftaran) --}}
+                    @foreach ($peserta as $data)
+                      @php
+                        if($data->pendaftaran->status == 0) {
+                          $status = 'Unverified';
+                        } elseif($data->pendaftaran->status == 1) {
+                          $status = 'Verified';
+                        } else {
+                          $status = 'Berkas Kurang / Salah';
+                        }
+                    @endphp
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Dika</td>
-                      <td>Subevent</td>
-                      <td>CP</td>
-                      <td>Status Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum quos itaque laboriosam libero quibusdam earum accusantium et tempore pariatur nemo, aliquam obcaecati ex praesentium nesciunt, eum voluptatibus architecto quis neque impedit adipisci. Recusandae labore assumenda fugiat tenetur provident nam nesciunt illum porro adipisci eius, unde velit voluptate, possimus, ipsam temporibus non neque. Dignissimos, nisi optio, reprehenderit vitae error fugiat praesentium doloremque accusantium voluptatem ipsum assumenda autem iusto voluptatibus quisquam totam reiciendis ullam blanditiis animi omnis consequatur? Eos placeat expedita dolorum porro dignissimos eaque officiis sapiente obcaecati perspiciatis quo cupiditate quibusdam, magni itaque facilis. Necessitatibus nobis laborum voluptatum id sint.</td>                      
-                      <td>Dalam Seleksi</td>
+                      <th scope="row">{{ $no++ }}</th>
+                      <td>{{ $data->nama }}</td>
+                      <td>{{ ($data->pendaftaran->event_id == 1) ? 'Mainevent' : 'Subevent' }}</td>
+                      <td>{{ $data->pendaftaran->kontak }}</td>
+                      <td>{{ $data->pendaftaran->link_gdrive}}</td>                      
+                      <td>{{ $status }}</td>
                     </tr>
-                    <tr>
+                    @endforeach
 
                   </tbody>
                 </table>

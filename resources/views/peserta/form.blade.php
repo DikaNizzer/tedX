@@ -73,12 +73,12 @@
               {{-- Form --}}
               <form action="/regis-lfls" method="POST">
                 @csrf
-                @if ($user->peserta)
-                <input class="form-control" type="hidden" name="nama" value="{{ $user->peserta->nama }}" id="nama">
-                <input class="form-control" type="hidden" name="nim" value="{{ $user->peserta->nim }}" id="nim">
-                <input class="form-control" type="hidden" name="fakultas" value="{{ $user->peserta->fakultas }}" id="fakultas">
-                <input class="form-control" type="hidden" name="angkatan" value="{{ $user->peserta->angkatan }}" id="fakultas">
-                <input class="form-control" type="hidden" name="alamat" value="{{ $user->peserta->alamat }}" id="alamat">
+                @if ($peserta)
+                <input class="form-control" type="hidden" name="nama" value="{{ $peserta->first()->nama }}" id="nama">
+                <input class="form-control" type="hidden" name="nim" value="{{ $peserta->first()->nim }}" id="nim">
+                <input class="form-control" type="hidden" name="fakultas" value="{{ $peserta->first()->fakultas }}" id="fakultas">
+                <input class="form-control" type="hidden" name="angkatan" value="{{ $peserta->first()->angkatan }}" id="fakultas">
+                <input class="form-control" type="hidden" name="alamat" value="{{ $peserta->first()->alamat }}" id="alamat">
 
                 <div class="form-group">
                   <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
@@ -88,7 +88,7 @@
                   <label for="akun_ig" class="form-control-label">Instagram account </label>
                   <input class="form-control" type="text" name="akun_ig" value="Instagram" id="akun_ig">
                 </div>
-                <input type="hidden" value="{{ $user->id }}" name="user_id">
+                <input type="hidden" value="{{ $peserta->first()->user_id }}" name="user_id">
                 <input type="hidden" value="2" name="event_id">
                 <div class="form-group">
                   <label for="link_gdrive" class="form-control-label">link folder gdrive</label>
@@ -130,7 +130,7 @@
                   <label for="akun_ig" class="form-control-label">Instagram account </label>
                   <input class="form-control" type="text" name="akun_ig" value="Instagram" id="akun_ig">
                 </div>
-                <input type="hidden" value="{{ $user->id }}" name="user_id">
+                <input type="hidden" value="{{ $peserta->first()->user_id }}" name="user_id">
                 <input type="hidden" value="2" name="event_id">
               
                 <div class="form-group">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Peserta;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -23,18 +24,21 @@ class UserHomeController extends Controller
 
     public function form()
     {
-        $user = User::find(Auth::user()->id);
+        $peserta = Peserta::where('user_id', Auth::user()->id)->get();
 
         return view('peserta.form',[
             'title' => 'TEDx Universitas Airlangga',
-            'user' => $user
+            'peserta' => $peserta
         ]);
     }
 
     public function status()
     {
+        $peserta = Peserta::with('pendaftaran')->where('user_id', Auth::user()->id)->get();
+
         return view('peserta.status',[
-            "title" => "TEDx Universitas Airlangga"
+            'title' => 'TEDx Universitas Airlangga',
+            'peserta' => $peserta
         ]);
     }
 
