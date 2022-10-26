@@ -8,26 +8,41 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
-			<ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">
-				<li class="nav-item">
-					<a class="nav-link active link-danger text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-light link-danger text-center" href="/home"><b>Dashboard</b></a>
-				</li>
-				{{-- <li class="nav-item">
-					<a class="nav-link text-light link-danger text-center" href=""><b>About</b></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-light link-danger text-center" href=""><b>Event</b></a>
-				</li> --}}
-			</ul>
+            @if (Auth::user())
+                <ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active link-danger text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href="/home"><b>Dashboard</b></a>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>About</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>Event</b></a>
+                    </li> --}}
+                </ul>
+                <div class="d-md-flex d-grid gap-2 d-md-block">
+					<button class="btn-custom-login" style="margin:auto"> LOGOUT</button>
+				</div>
+            @else
+                <ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active link-danger text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>About</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>Event</b></a>
+                    </li> --}}
+                </ul>
 				<div class="d-md-flex d-grid gap-2 d-md-block">
 					<button class="btn-custom-daftar" style="margin:auto" data-bs-toggle="modal" data-bs-target="#registerModal"> REGISTER</button>
 					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> LOGIN</button>
-					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> LOGOUT</button>
 				</div>
-			
+            @endif
 		</div>
 	</div>
 </nav>
@@ -46,7 +61,7 @@
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
 			</div>
-		  </div>     
+		  </div>
 		</div>
 		<div class="modal-body" style="padding:40px">
 		  <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Register for an account</h5>
@@ -64,15 +79,15 @@
 			  <label for="password_confirmation" class="form-label auth-label">Confirm Password </label>
 			  <input id="password_confirmation" name="password_confirmation" class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
-  
+
 			<center><button type="submit" class="register" style="margin:auto" > GET STARTED</button></center>
 		  </form>
-  
+
 			  <h5 style="font-size:12px; text-align:center; margin-top:10px;">Already have an account? <span class="modal-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</span></h5>
 
-	
+
 		</div>
-  
+
 	  </div>
 	</div>
   </div>
@@ -91,7 +106,7 @@
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
 			</div>
-		  </div>     
+		  </div>
 		</div>
 		<div class="modal-body" style="padding:40px">
 		  <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Log into your account</h5>
@@ -105,13 +120,13 @@
 			  <label for="password_login" class="form-label auth-label">Password </label>
 			  <input id="password_login" name="password" class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
-  
+
 			<center><button type="submit" class="register" style="margin:auto" >LOGIN </button></center>
 		  </form>
-  
+
 			  <h5 style="font-size:12px; text-align:center; margin-top:10px;">Don't have an account? <span class="modal-login" data-bs-toggle="modal" data-bs-target="#registerModal">Register</span></h5>
 		</div>
-  
+
 	  </div>
 	</div>
   </div>

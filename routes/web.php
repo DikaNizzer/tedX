@@ -31,7 +31,7 @@ Route::get('/', [HomeController::class, 'home']);
 
 // Peserta
 
-// Route::get('/home', [UserHomeController::class, 'index'])->middleware('cektipe:peserta'); //Hanya Boleh setelah Login
+// Route::get('/home', [UserHomeController::class, 'index']); //Hanya Boleh setelah Login
 
 Route::get('/regis-lfls', [UserHomeController::class, 'form']); //Hanya Boleh setelah Login
 Route::post('/regis-lfls', [PesertaController::class, 'form']); //Hanya Boleh setelah Login
@@ -49,7 +49,7 @@ Route::post('/peserta-regis', [PesertaRegisterController::class, 'store']);
 
 
 // ADMIN
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 // ADMIN Registration
@@ -57,16 +57,12 @@ Route::get('/regis', [RegisterController::class, 'index']);
 Route::post('/regis', [RegisterController::class, 'store']);
 
 // Authenticated user only
-Route::group(['middleware' => 'auth'], function() {   
-    
+Route::group(['middleware' => 'auth'], function() {
+
     //User with admin type
-    Route::group(['middleware' => 'cektipe:admin'], function() {    
+    Route::group(['middleware' => 'cektipe:admin'], function() {
         Route::get('/dashboard', [DashboardController::class, 'index']);
         Route::resource('/subevents', DashboardSubeventController::class);
-    });
-
-    Route::group(['middleware' => 'cektipe:peserta'], function() {    
-        Route::get('/home', [UserHomeController::class, 'index']);
     });
     
 });
