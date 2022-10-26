@@ -1,5 +1,4 @@
 $(document).ready(function () {
-          
   $('body').on('click', '#show-subevent', function () {
     let pendaftaran_subevent_url = $(this).data('url');
     console.log(pendaftaran_subevent_url)
@@ -7,8 +6,8 @@ $(document).ready(function () {
       $('#showModal').modal('show');
         $('#peserta-nama').val(data.nama);
         $('#peserta-angkatan').val(data.angkatan);
-        $('#peserta-fakultas').val(data.fakultas);  
-    });          
+        $('#peserta-fakultas').val(data.fakultas);
+    });
   });
 });
 
@@ -29,7 +28,7 @@ $('body').on('change', '.status', function () {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
-  
+
   $.ajax({
     type: "PUT",
     url: "/subevents/"+id,

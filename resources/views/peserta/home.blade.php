@@ -16,18 +16,18 @@
             <div class="col-auto my-auto">
               <div class="h-100">
                 <h5 class="mb-1 fw-bold">
-                  Halo, emailpeserta@gmail.com
+                  Halo, {{ Auth::user()->email }}
                 </h5>
                 {{-- <p class="mb-0 text-sm">
                   emailpeserta@gmail.com
                 </p> --}}
-                
+
               </div>
             </div>
             <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-4">
               <div class="nav-wrapper position-relative end-0" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ul class="breadcrumb breadcrumb-pills ms-lg-auto ms-md-auto ms-sm-0 my-auto py-2 px-3" >
-                  <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Dashboard</a></li>
+                  <li class="breadcrumb-item-active me-3"><a href="/home" class="text-dark">Dashboard</a></li>
                   {{-- <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Profile</a></li> --}}
                   <li class="breadcrumb-item-active"><a href="/status" class="text-dark">Status Pendaftaran</a></li>
                 </ul>
@@ -79,7 +79,7 @@
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/regis-lfls">Registration Form</a></li>
                     <li><a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#aturanModal">See Requirements</a></li>
-                    
+
                   </ul>
                 </div>
             </div>
@@ -110,7 +110,7 @@
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
 			</div>
-		  </div>     
+		  </div>
 		</div>
 		<div class="modal-body" style="padding:40px">
 
@@ -123,7 +123,7 @@
         </div>
       </div>
 		</div>
-  
+
 	  </div>
 	</div>
   </div>
@@ -142,20 +142,20 @@
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
 			</div>
-		  </div>     
+		  </div>
 		</div>
 		<div class="modal-body" style="padding:40px">
       <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Requirements</h5>
       1.Universitas Airlangga undergraduate active students (must submit KTM)
       2.Have the ability and knowledge in the field of Epiphany on Ephemeral  such as education/work life.
-      3.Good public speaking skills. 
+      3.Good public speaking skills.
       4.Detail oriented.
-      5.Active in social media. 
-      6.Domiciles in  Surabaya. 
-      7.Pasang twibbon 
+      5.Active in social media.
+      6.Domiciles in  Surabaya.
+      7.Pasang twibbon
 
 		</div>
-  
+
 	  </div>
 	</div>
   </div>
@@ -174,12 +174,12 @@
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
 			</div>
-		  </div>     
+		  </div>
 		</div>
 		<div class="modal-body" style="padding:40px">
       <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Video Requirements</h5>
-      a.Include a self-introduction (Name, Faculty, Batch, and domicile) 
-      b.The grand theme of speech is about Epiphany on Ephemeral and applicants are obliged to choose one of the subthemes to be delivered, namely education or work life. 
+      a.Include a self-introduction (Name, Faculty, Batch, and domicile)
+      b.The grand theme of speech is about Epiphany on Ephemeral and applicants are obliged to choose one of the subthemes to be delivered, namely education or work life.
       c.The maximum duration is 5 minutes with the following terms:
       -The first minute should contain the explanation of speaker identity and the outline of the chosen subtheme along with conclusion.
       -The next 4 minutes is the further explanation regarding the sub theme that was delivered in the first minute.
@@ -189,10 +189,10 @@
       f.The video could be delivered in English or Bahasa Indonesia. Both have the same value and no suggestion of priority for the use of a certain language.
       g.The video must not insult SARA (Ethnicities, Religions, Races, and Intergroups)
       h.The video must not contain commercial use, religion, or political promotion.
-      i.Applicants should deliver speech based on factual condition and experiences of the speaker with no exaggeration. 
+      i.Applicants should deliver speech based on factual condition and experiences of the speaker with no exaggeration.
 
 		</div>
-  
+
 	  </div>
 	</div>
   </div>
