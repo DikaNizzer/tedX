@@ -89,19 +89,19 @@
           <div class="row">
             <div class="col mb-3">
                 <label for="peserta-nama" class="form-label">Kontak</label>
-                <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+                <input type="text" id="peserta-kontak" class="form-control" value="" readonly/>
             </div>
         </div>
           <div class="row">
             <div class="col mb-3">
                 <label for="peserta-nama" class="form-label">Alamat</label>
-                <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+                <input type="text" id="peserta-alamat" class="form-control" value="" readonly/>
             </div>
         </div>
         <div class="row">
           <div class="col mb-3">
               <label for="peserta-nama" class="form-label">Instagrm</label>
-              <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+              <input type="text" id="peserta-instagram" class="form-control" value="" readonly/>
           </div>
       </div>
         <div class="row">

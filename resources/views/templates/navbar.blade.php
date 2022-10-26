@@ -24,7 +24,10 @@
                     </li> --}}
                 </ul>
                 <div class="d-md-flex d-grid gap-2 d-md-block">
-					<button class="btn-custom-login" style="margin:auto"> LOGOUT</button>
+					<form action="/peserta-logout" method="POST">
+						@csrf
+						<button class="btn-custom-login" style="margin:auto"> LOGOUT</button>
+					</form>
 				</div>
             @else
                 <ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">

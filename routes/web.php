@@ -25,13 +25,13 @@ use App\Http\Controllers\DashboardSubeventController;
 */
 
 
-Route::get('/', [HomeController::class, 'home']);
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
 
 
 // Peserta
 
-// Route::get('/home', [UserHomeController::class, 'index']); //Hanya Boleh setelah Login
+Route::get('/home', [UserHomeController::class, 'index']); //Hanya Boleh setelah Login
 
 Route::get('/regis-lfls', [UserHomeController::class, 'form']); //Hanya Boleh setelah Login
 Route::post('/regis-lfls', [PesertaController::class, 'form']); //Hanya Boleh setelah Login
@@ -40,6 +40,7 @@ Route::get('/status', [UserHomeController::class, 'status']); //Hanya Boleh sete
 
 // LOGOUT
 Route::post('/logout', [LoginController::class, 'logout']);
+Route::post('/peserta-logout', [PesertaLoginController::class, 'logout']);
 
 // PESERTA
 Route::post('/peserta-login', [PesertaLoginController::class, 'authenticate']);
@@ -63,6 +64,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'cektipe:admin'], function() {
         Route::get('/dashboard', [DashboardController::class, 'index']);
         Route::resource('/subevents', DashboardSubeventController::class);
+    });
+
+    Route::group(['middleware' => 'cektipe:peserta'], function() {
+        Route::get('/home', [UserHomeController::class, 'index']);
     });
     
 });

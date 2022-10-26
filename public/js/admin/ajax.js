@@ -3,10 +3,12 @@ $(document).ready(function () {
     let pendaftaran_subevent_url = $(this).data('url');
     console.log(pendaftaran_subevent_url)
     $.get(pendaftaran_subevent_url, function (data) {
+      // console.log(data.peserta)
       $('#showModal').modal('show');
         $('#peserta-nama').val(data.nama);
         $('#peserta-angkatan').val(data.angkatan);
         $('#peserta-fakultas').val(data.fakultas);
+        // $('#peserta-alamat').val(data.alamat);
     });
   });
 });
