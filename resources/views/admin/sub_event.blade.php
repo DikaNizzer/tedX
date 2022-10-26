@@ -107,7 +107,7 @@
         <div class="row">
           <div class="col mb-3">
               <label for="peserta-nama" class="form-label">Drive</label>
-              <input type="text" id="peserta-nama" class="form-control" value="" readonly/>
+              <input type="text" id="peserta-drive" class="form-control" value="" readonly/>
           </div>
       </div>
       </div>

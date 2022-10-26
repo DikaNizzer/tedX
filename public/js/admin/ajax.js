@@ -3,12 +3,15 @@ $(document).ready(function () {
     let pendaftaran_subevent_url = $(this).data('url');
     console.log(pendaftaran_subevent_url)
     $.get(pendaftaran_subevent_url, function (data) {
-      // console.log(data.peserta)
+      console.log(data.subevent)
       $('#showModal').modal('show');
-        $('#peserta-nama').val(data.nama);
-        $('#peserta-angkatan').val(data.angkatan);
-        $('#peserta-fakultas').val(data.fakultas);
-        // $('#peserta-alamat').val(data.alamat);
+        $('#peserta-nama').val(data.peserta.nama);
+        $('#peserta-angkatan').val(data.peserta.angkatan);
+        $('#peserta-fakultas').val(data.peserta.fakultas);
+        $('#peserta-alamat').val(data.peserta.alamat);
+        $('#peserta-kontak').val(data.subevent.kontak);
+        $('#peserta-instagram').val(data.subevent.akun_ig);
+        $('#peserta-drive').val(data.subevent.link_gdrive);
     });
   });
 });

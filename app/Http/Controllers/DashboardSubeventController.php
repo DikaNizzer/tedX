@@ -50,7 +50,10 @@ class DashboardSubeventController extends Controller
     public function show(Pendaftaran $subevent)
     {
         $peserta = $subevent->peserta;
-        return response()->json($peserta);
+        return response()->json(array(
+            'peserta' => $peserta,
+            'subevent' => $subevent
+        ));
     }
 
     /**
