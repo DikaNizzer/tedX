@@ -109,14 +109,9 @@
 			</div>
 		  </div>
 		</div>
-		<div class="modal-body" style="padding:40px">
-
-
-   
+		<div class="modal-body" style="padding:5%"> 
           <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#requirements"> Requirements </div>
-          <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#video"> Video Requirements</div>
-       
-     
+          <div class="register-option mt-2 mb-4" style="margin:auto" data-bs-toggle="modal" data-bs-target="#video"> Video Requirements</div>   
 		</div>
 
 	  </div>
@@ -145,7 +140,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           Universitas Airlangga undergraduate active students (must submit KTM)
         </div>
       </div>
@@ -153,7 +148,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11"  style="text-align:justify; font-size:12px">
+        <div class="col-11"  style="text-align:justify; font-size:12px; padding-left:5%">
           Have the ability and knowledge in the field of Epiphany on Ephemeral  such as education/work life.
         </div>
       </div>
@@ -161,7 +156,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="font-size:12px">
+        <div class="col-11" style="font-size:12px; padding-left:5%">
           Good public speaking skills.
         </div>
       </div>
@@ -169,7 +164,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="font-size:12px">
+        <div class="col-11" style="font-size:12px; padding-left:5%">
           Detail oriented.
         </div>
       </div>
@@ -177,7 +172,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="font-size:12px">
+        <div class="col-11" style="font-size:12px; padding-left:5%">
           Active in social media.
         </div>
       </div>
@@ -185,7 +180,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="font-size:12px">
+        <div class="col-11" style="font-size:12px; padding-left:5%">
           Domiciles in  Surabaya.
         </div>
       </div>
@@ -193,7 +188,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="font-size:12px">
+        <div class="col-11" style="font-size:12px; padding-left:5%">
           Posting our twibbon
         </div>
       </div>
@@ -227,7 +222,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           Include a self-introduction (Name, Faculty, Batch, and domicile)
         </div>
       </div>
@@ -235,7 +230,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           The grand theme of speech is about Epiphany on Ephemeral and applicants are obliged to choose one of the subthemes to be delivered, namely education or work life.
         </div>
       </div>
@@ -243,7 +238,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           The maximum duration is 5 minutes with the following terms:
           <ol>
             <li>The first minute should contain the explanation of speaker identity and the outline of the chosen subtheme along with conclusion.</li>
@@ -256,7 +251,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           Have good lighting, displaying the full face and clear voice of the applicants.
         </div>
       </div>
@@ -264,7 +259,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           Proper attire, avoid wearing tshirt. (but make sure you feel comfortable in whatever you wear!)
         </div>
       </div>
@@ -272,7 +267,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           The video could be delivered in English or Bahasa Indonesia. Both have the same value and no suggestion of priority for the use of a certain language.
         </div>
       </div>
@@ -280,7 +275,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           The video must not insult SARA (Ethnicities, Religions, Races, and Intergroups)
         </div>
       </div>
@@ -288,7 +283,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           The video must not contain commercial use, religion, or political promotion.
         </div>
       </div>
@@ -296,7 +291,7 @@
         <div class="col-1">
           <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
         </div>
-        <div class="col-11" style="text-align:justify; font-size:12px">
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
           Applicants should deliver speech based on factual condition and experiences of the speaker with no exaggeration.
 
         </div>
