@@ -32,7 +32,7 @@
                           <td>{{ date('d F Y', strtotime($pendaftaran->peserta->pendaftaran->created_at)); }}</td>
                           
                           <td>
-                            <select class="form-select status" data-id="{{ $pendaftaran->peserta->user->id }}" aria-label="Default select example">
+                            <select class="form-select status" data-id="{{ $pendaftaran->peserta->id }}" aria-label="Default select example">
                               <option value="0" {{ ($pendaftaran->status == 0) ? 'selected' : '' }}>Unverified</option>
                               <option value="1" {{ ($pendaftaran->status == 1) ? 'selected' : '' }}>Verified</option>
                               <option value="2" {{ ($pendaftaran->status == 2) ? 'selected' : '' }}>Berkas Kurang / Salah</option>
