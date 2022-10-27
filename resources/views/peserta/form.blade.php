@@ -61,11 +61,11 @@
 
                 <div class="form-group mt-3">
                   <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
-                  <input class="form-control peserta-form" type="text" name="kontak" value="Kontak" id="kontak">
+                  <input class="form-control peserta-form" type="text" name="kontak"  id="kontak">
                 </div>
                 <div class="form-group mt-3">
                   <label for="akun_ig" class="form-control-label">Instagram account </label>
-                  <input class="form-control peserta-form" type="text" name="akun_ig" value="Instagram" id="akun_ig">
+                  <input class="form-control peserta-form" type="text" name="akun_ig"  id="akun_ig">
                 </div>
                 <input type="hidden" value="{{ $peserta->first()->user_id }}" name="user_id">
                 <input type="hidden" value="2" name="event_id">
@@ -73,7 +73,7 @@
                   <label for="link_gdrive" class="form-control-label">link folder gdrive</label>
                   <p style="font-size:12px"><i>link folder gdrive (Name_Faculty; e.g., Dira_FKM) which contains video (Video_Name; e.g., Video_Dira), 
                     CV (CV_Name; e.g., CV_Dira), KTM (KTM_Name; e.g., KTM_Dira), Script talks (Script_Name; e.g., Script_Dira)</i></p>
-                  <input class="form-control peserta-form" type="text" name="link_gdrive" value="Link Google Drive" id="link_gdrive">
+                  <input class="form-control peserta-form" type="text" name="link_gdrive"  id="link_gdrive">
                 </div>
                 @else
 

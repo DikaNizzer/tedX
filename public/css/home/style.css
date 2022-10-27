@@ -18,11 +18,12 @@ body {
 
 .home{
     width:100%;
-    height:auto;
+    height:100%;
     background: linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);
     background-image: url('../../images/banner.png');
-	background-size:100%;
+	/* background-size:100%; */
 	background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .homePeserta{
