@@ -18,7 +18,7 @@ class UserHomeController extends Controller
     public function index()
     {
         return view('peserta.home',[
-            "title" => "TEDx Universitas Airlangga"
+            "title" => "TEDxUniversitasAirlangga"
         ]);
     }
 
@@ -27,7 +27,7 @@ class UserHomeController extends Controller
         $peserta = Peserta::where('user_id', Auth::user()->id)->get();
 
         return view('peserta.form',[
-            'title' => 'TEDx Universitas Airlangga',
+            'title' => 'TEDxUniversitasAirlangga',
             'peserta' => $peserta
         ]);
     }

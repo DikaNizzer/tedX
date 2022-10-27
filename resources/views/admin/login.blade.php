@@ -63,9 +63,9 @@
             </div>
             <a href="#" class="form-input pt-30">Login</a>
             <!-- Forget Password -->
-            <a href="#" class="forget">Forget Password</a>
+            {{-- <a href="#" class="forget">Forget Password</a> --}}
             <!-- Forget Password -->
-            <a href="/regis" class="registration">Registration</a>
+            {{-- <a href="/regis" class="registration">Registration</a> --}}
         </div>
     </form>
     <!-- /end login form -->

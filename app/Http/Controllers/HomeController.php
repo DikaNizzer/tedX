@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function home(){
         $data = [
-			'title' => 'TEDx Universitas Airlangga',
+			'title' => 'TEDxUniversitasAirlangga',
 		];
 
         

@@ -44,9 +44,10 @@
             <img src="images/sub-event.png" class="card-img-top zoom" alt="header-sub-event">
             <div class="card-body h-100"  style="padding:7%; padding-top:10px">
               <h3 class="card-title fw-bold mb-4">SUB EVENT</h3>
-              <h5 class="card-subtitle mb-2" style="font-weight: 600">WANDERLUST</h5>
-              <p class="card-text">A medium to display various works of experience that can be felt by humans with their five
-                senses
+              <h5 class="card-subtitle mb-2" style="font-weight: 600">LOOKING FOR LOCAL SPEAKERS</h5>
+              <p class="card-text">
+                The searching for potential student speakers who are able and want to spread their
+ideas about TEDxUniversitasAirlangga’s theme in 2022
               </p>
               {{-- @dd($peserta->first()) --}}
               {{-- Form --}}
@@ -147,7 +148,7 @@
             <div class="card-footer">
               <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
               <br>
-              <small class="text-muted">Location: Universitas Airlangga Kampus B </small>
+              <small class="text-muted">Location: Universitas Airlangga</small>
             </div>
           </div>
         </div>

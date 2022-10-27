@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md fixed-top transition-color pt-4 pb-4" >
 	<div class="container">
 		<a class="navbar-brand" href="">
-			<img src="images/navbar-logo.png" alt="tender+logo" width="auto" height="45">
+			<img src="images/logo-baru.png" alt="tender+logo" width="auto" height="45">
 		</a>
 		<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
