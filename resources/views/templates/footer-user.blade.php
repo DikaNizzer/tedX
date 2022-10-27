@@ -1,5 +1,5 @@
 <footer>
-  <div class="footer-top mt-4" style="color: #1c1c1c">
+  <div class="footer-top mt-4" style="color: #ffffff">
 	<h5>This independent TEDx event is operated under incense from TED</h5>
   </div>
 </footer>

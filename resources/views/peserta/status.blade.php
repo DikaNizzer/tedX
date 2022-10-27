@@ -5,32 +5,29 @@
   <div class="header">
     <div class="header-background"></div>
     <div class="container">
-      <div class="card card-profile-bottom">
+      <div class="card-profile-bottom">
         <div class="card-body p-3">
           <div class="row gx-4">
             <div class="col-auto">
-              <div class="avatar avatar-xl position-relative">
+              {{-- <div class="avatar avatar-xl position-relative">
                 <img src="/images/team-1.jpg" alt="profile_image" width="80" class="rounded-circle">
-              </div>
+              </div> --}}
             </div>
             <div class="col-auto my-auto">
               <div class="h-100">
                 <h5 class="mb-1 fw-bold">
-                  Halo, {{ Auth::user()->email }}
+                  Welcome, {{ Auth::user()->email }}
                 </h5>
-                {{-- <p class="mb-0 text-sm">
-                  emailpeserta@gmail.com
-                </p> --}}
-
               </div>
             </div>
             <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-4">
-              <div class="nav-wrapper position-relative end-0" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                <ul class="breadcrumb breadcrumb-pills ms-lg-auto ms-md-auto ms-sm-0 my-auto py-2 px-3" >
-                  <li class="breadcrumb-item-active me-3"><a href="/home" class="text-dark">Dashboard</a></li>
-                  {{-- <li class="breadcrumb-item-active"><a href="/home" class="text-dark">Profile</a></li> --}}
-                  <li class="breadcrumb-item-active"><a href="/status" class="text-dark">Status Pendaftaran</a></li>
-                </ul>
+              <div class="row d-flex justify-content-center">
+                <div class="col-auto d-flex justify-content-end">
+                  <a href="/home" class="profile-menu-1">Dashboard</a>
+                </div>
+                <div class="col-auto  d-flex justify-content-start">
+                  <a href="/status" class="profile-menu-2">Registration Status</a>
+                </div>
               </div>
             </div>
           </div>
@@ -42,28 +39,11 @@
   <div class="event my-4">
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        {{-- <div class="col-lg-12">
-          <div class="card h-100">
-            <img src="images/main-event.png" class="card-img-top zoom" alt="header-main-event">
-            <div class="card-body h-100">
-              <h3 class="card-title fw-bold mb-4">MAIN EVENT</h3>
-              <h5 class="card-subtitle mb-2" style="font-weight: 600">SESSION OF TALKS BASED ON TEDxUniversitasAirlangga Talks</h5>
-              <p class="card-text">TEDx events include live speakers, live experiences, recorded TED Talks, etc</p>
-            </div>
-            <div class="card-body button">
-              <button class="btn-custom-mainev disabled">Coming soon</button>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Registration: DD-MM-YYYY</small>
-              <br>
-              <small class="text-muted">Location: Universitas Airlangga Kampus B </small>
-            </div>
-          </div>
-        </div> --}}
+
         <div class="col-lg-12">
           <div class="card h-100">
             <img src="images/sub-event.png" class="card-img-top zoom" alt="header-sub-event">
-            <div class="card-body h-100">
+            <div class="card-body h-100" style="padding:7%; padding-top:10px">
               <h3 class="card-title fw-bold mb-4">SUB EVENT</h3>
               <h5 class="card-subtitle mb-2" style="font-weight: 600">WANDERLUST</h5>
               <p class="card-text">A medium to display various works of experience that can be felt by humans with their five
@@ -71,44 +51,46 @@
               </p>
 
                 {{-- Body --}}
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">No</th>
-                      <th scope="col">Nama</th>
-                      <th scope="col">Jenis Pendaftaran</th>
-                      <th scope="col">Contact info</th>
-                      <th scope="col">link folder gdrive</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @if ($peserta->first())
+           <div class="overflow-auto">
+            <table class="table status-table">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Jenis Pendaftaran</th>
+                  <th scope="col">Contact info</th>
+                  <th scope="col">link folder gdrive</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                @if ($peserta->first())
+                    @php
+                        $no = 1;
+                    @endphp
+                    @foreach ($peserta as $data)
                         @php
-                            $no = 1;
+                            if($data->pendaftaran->status == 0) {
+                            $status = 'Unverified';
+                            } elseif($data->pendaftaran->status == 1) {
+                            $status = 'Verified';
+                            } else {
+                            $status = 'Berkas Kurang / Salah';
+                            }
                         @endphp
-                        @foreach ($peserta as $data)
-                            @php
-                                if($data->pendaftaran->status == 0) {
-                                $status = 'Unverified';
-                                } elseif($data->pendaftaran->status == 1) {
-                                $status = 'Verified';
-                                } else {
-                                $status = 'Berkas Kurang / Salah';
-                                }
-                            @endphp
-                            <tr>
-                            <th scope="row">{{ $no++ }}</th>
-                            <td>{{ $data->nama }}</td>
-                            <td>{{ ($data->pendaftaran->event_id == 1) ? 'Mainevent' : 'Subevent' }}</td>
-                            <td>{{ $data->pendaftaran->kontak }}</td>
-                            <td>{{ $data->pendaftaran->link_gdrive}}</td>
-                            <td>{{ $status }}</td>
-                            </tr>
-                        @endforeach
-                    @endif
-                  </tbody>
-                </table>
+                        <tr>
+                        <td scope="row">{{ $no++ }}</td>
+                        <td>{{ $data->nama }}</td>
+                        <td>{{ ($data->pendaftaran->event_id == 1) ? 'Mainevent' : 'Subevent' }}</td>
+                        <td>{{ $data->pendaftaran->kontak }}</td>
+                        <td>{{ $data->pendaftaran->link_gdrive}}</td>
+                        <td>{{ $status }}</td>
+                        </tr>
+                    @endforeach
+                @endif
+              </tbody>
+            </table>
+           </div>
                 @if ($peserta->first() == null)
                     <p class="text-center">Anda belum melakukan registrasi Sub Event</p>
                 @endif
