@@ -23,16 +23,17 @@
               and readiness as humans to face this. Starting with ourselves first, we hope this value will be
               spread then as wide as possible like the tagline of TEDx itself. How society will respond is up
               to them to see this phenomenon from their views, every way is unique.</h5>
-              @if (Auth::user())
+              
+        </div>
+        <div class="col-auto"></div>
+        <div class="col-lg-6 " style="margin-left:3%">
+          <img src="images/sub.png"class="img-fluid home-img" style="margin:auto; border-radius:20px; margin-top: 100px; ">
+        </div>
+        @if (Auth::user())
                   
               @else
                 <button class=" get-started mb-4 mt-4" data-bs-toggle="modal" data-bs-target="#registerModal"> GET STARTED</button>
               @endif
-        </div>
-        <div class="col-auto"></div>
-        <div class="col-lg-6 " style="margin-left:3%">
-          <img src="images/home-img.png"class="img-fluid home-img" style="margin:auto">
-        </div>
       </div>
     </div>
     @include('templates.footer')
