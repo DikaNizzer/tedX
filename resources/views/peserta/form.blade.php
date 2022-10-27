@@ -145,7 +145,7 @@
             </div>
             
             <div class="card-footer">
-              <small class="text-muted">Registration: DD-MM-YYYY</small>
+              <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
               <br>
               <small class="text-muted">Location: Universitas Airlangga Kampus B </small>
             </div>
