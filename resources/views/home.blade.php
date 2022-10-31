@@ -27,7 +27,7 @@
         </div>
         <div class="col-auto"></div>
         <div class="col-lg-6 " style="margin-left:3%">
-          <img src="images/sub.png"class="img-fluid home-img" style="margin:auto; border-radius:20px; margin-top: 100px; ">
+          <img src="images/carauselsub-new.png"class="img-fluid home-img" style="margin:auto; border-radius:20px; margin-top: 100px; ">
         </div>
         @if (Auth::user())
                   

@@ -41,7 +41,7 @@
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col-lg-12">
           <div class="card h-100" >
-            <img src="images/sub-event.png" class="card-img-top zoom" alt="header-sub-event">
+            <img src="images/carauselsub-new.png" style="height:400px"  class="card-img-top zoom" alt="header-sub-event">
             <div class="card-body h-100"  style="padding:7%; padding-top:10px">
               <h3 class="card-title fw-bold mb-4">SUB EVENT</h3>
               <h5 class="card-subtitle mb-2" style="font-weight: 600">LOOKING FOR LOCAL SPEAKERS</h5>
