@@ -106,6 +106,9 @@ VALUES ('data kontak', 'Data drive', '0', '2', '1');
 
 
 BRIEFING TGL 5 - 11
+Migrate ulang karena aku naruh atribute baru di pembayaran.
+Input data pendaftaran main event Sudah tak buat.
+jadi coba input dulu yang di card mainEvent yang cooming soon.
 
 ILHAM
 1. route /status atau halaman resources\views\peserta\status.blade.php
