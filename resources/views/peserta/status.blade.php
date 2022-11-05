@@ -48,7 +48,7 @@
               <h5 class="card-subtitle mb-2" style="font-weight: 600">LOOKING FOR LOCAL SPEAKERS</h5>
               <p class="card-text">
                 The searching for potential student speakers who are able and want to spread their
-ideas about TEDxUniversitasAirlangga’s theme in 2022
+                  ideas about TEDxUniversitasAirlangga’s theme in 2022
               </p>
 
                 {{-- Body --}}
@@ -65,11 +65,12 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
                 </tr>
               </thead>
               <tbody>
-                @if ($peserta->first())
+                @if ($subevent->first())
                     @php
                         $no = 1;
                     @endphp
-                    @foreach ($peserta as $data)
+                    @foreach ($subevent as $data)
+
                         @php
                             if($data->pendaftaran->status == 0) {
                             $status = 'Unverified';
@@ -82,7 +83,7 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
                         <tr>
                         <td scope="row">{{ $no++ }}</td>
                         <td>{{ $data->nama }}</td>
-                        <td>{{ ($data->pendaftaran->event_id == 1) ? 'Mainevent' : 'Subevent' }}</td>
+                        <td>{{ ($data->pendaftaran->event_id == 1) ? 'subevent' : 'Subevent' }}</td>
                         <td>{{ $data->pendaftaran->kontak }}</td>
                         <td>{{ $data->pendaftaran->link_gdrive}}</td>
                         <td>{{ $status }}</td>
@@ -92,17 +93,85 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
               </tbody>
             </table>
            </div>
-                @if ($peserta->first() == null)
+                @if ($subevent->first() == null)
                     <p class="text-center">Anda belum melakukan registrasi Sub Event</p>
                 @endif
                 {{-- End Body --}}
             </div>
-            {{-- <div class="card-body button">
 
-                <div class="dropdown">
-                  <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Submit</button>
-                </div>
-            </div> --}}
+            {{-- MAIN EVENT --}}
+            <div class="card-body h-100" style="padding:7%; padding-top:10px">
+              <h3 class="card-title fw-bold mb-4">MAIN EVENT</h3>
+              <h5 class="card-subtitle mb-2" style="font-weight: 600">SESSION OF TALKS </h5>
+              <p class="card-text">
+                TEDx events include live speakers, live experiences, recorded TED Talks, etc
+              </p>
+
+                {{-- Body --}}
+           <div class="overflow-auto">
+            <table class="table status-table">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Jenis Pendaftaran</th>
+                  <th scope="col">Contact info</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Ticket</th>
+                </tr>
+              </thead>
+              <tbody>
+                @if ($mainevent)
+                    @php
+                        $no = 1;
+                    @endphp
+                    @foreach ($mainevent as $main)
+
+                        @php
+                            if($main->status == 0) {
+                              $status = 'Unverified';
+                              $button = '<td><a href="#" class="profile-menu-1">Waiting</a></td>';
+                            } elseif($main->status == 1) {
+                              $status = 'Verified';
+                              $button = "<td><a href='/home' class='profile-menu-1'>Download</a></td>";
+                            } else {
+                              $status = 'pembayaran Kurang / Salah';
+                              $button = "<td><a href='#' class='profile-menu-1'>Unverified</a></td>";
+                            }
+                        @endphp
+                        <tr>
+                        <td scope="row">{{ $no++ }}</td>
+                        <td>{{ $main->nama }}</td>
+                        <td>{{ ($main->penstatus == 1) ? 'subevent' : 'Subevent' }}</td>
+                        <td>{{ $main->kontak }}</td>
+                        <td>{{ $status }}</td>
+                        @php
+                            if($main->status == 0) {
+                              @endphp
+                                <td><a href="" class="profile-menu-1">Waiting</a></td>
+                              @php
+                            } elseif($main->status == 1) {
+                                @endphp
+                                  <td><a href="/home" class="profile-menu-1">Download</a></td>
+                                @php
+                            } else {
+                                @endphp
+                                  <td><a href="" class="profile-menu-1">Unverified</a></td>
+                                @php
+                            }
+                        @endphp
+                        {{-- {{$button}} --}}
+                        </tr>
+                    @endforeach
+                @endif
+              </tbody>
+            </table>
+           </div>
+                @if ($mainevent == null)
+                    <p class="text-center">Anda belum melakukan registrasi Sub Event</p>
+                @endif
+                {{-- End Body --}}
+            </div>
             <div class="card-footer">
               <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
               <br>
@@ -110,6 +179,8 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
             </div>
           </div>
         </div>
+
+        
       </div>
     </div>
   </div>

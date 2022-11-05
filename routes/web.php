@@ -38,6 +38,10 @@ Route::post('/regis-lfls', [PesertaController::class, 'form']); //Hanya Boleh se
 
 Route::get('/status', [UserHomeController::class, 'status']); //Hanya Boleh setelah Login
 
+// REGISTRASI MAIN EVENT
+Route::get('/regis-main', [UserHomeController::class, 'formMain']); //Hanya Boleh setelah Login
+Route::post('/regis-main', [PesertaController::class, 'formMain']); //Hanya Boleh setelah Login
+
 // LOGOUT
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::post('/peserta-logout', [PesertaLoginController::class, 'logout']);
@@ -80,10 +84,6 @@ Route::group(['middleware' => 'auth'], function() {
 
 // Mainevent
 Route::get('/mainevent', [MaineventController::class, 'index']);
-
-// Route::get('/mainevent', function () {
-//     return view('admin/main_event');
-// });
 
 Route::get('/mainevent_bayar', function () {
     return view('admin/pembayaran');

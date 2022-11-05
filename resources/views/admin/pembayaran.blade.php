@@ -13,9 +13,10 @@
                       <tr>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>Tanggal Pendaftaran</th>
-                        <th>Status</th>
-                        <th>Detal</th>
+                        <th>Tanggal Pembayaran</th>
+                        <th>Status Pembayaran</th>
+                        <th>Bukti Bayar</th>
+                        <th>Detail</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -28,24 +29,15 @@
                         <td><span class="badge bg-label-primary me-1">Verified</span></td>
                         <td>
                             <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                            data-bs-target="#modalCenter" >Info</button>
+                            data-bs-target="#modalCenter" >Bukti</button>
                         </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
-                        </td>
-                        <td>Jerry Milton</td>
-                        <td>
-                         email
-                        </td>
-                        <td><span class="badge bg-label-warning me-1">Unverified</span></td>
                         <td>
                           <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
                           data-bs-target="#modalCenter" >Info</button>
-                       </td>
+                      </td>
                       </tr>
+
+
                     </tbody>
                   </table>
                 </div>
@@ -60,7 +52,7 @@
                           <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title" id="modalCenterTitle">Pendaftaran Sub Event</h5>
+                                <h5 class="modal-title" id="modalCenterTitle">Detail</h5>
                                 <button
                                   type="button"
                                   class="btn-close"
@@ -71,7 +63,7 @@
                               <div class="modal-body">
                                 <div class="row">
                                   <div class="col mb-3">
-                                    <label for="nameWithTitle" class="form-label">Nama</label>
+                                    <label for="nameWithTitle" class="form-label">Insititute</label>
                                     <input
                                       type="text"
                                       id="nameWithTitle"
@@ -85,7 +77,7 @@
                                 </div>
                                 <div class="row g-2">
                                   <div class="col mb-0">
-                                    <label for="emailWithTitle" class="form-label">Email</label>
+                                    <label for="emailWithTitle" class="form-label">Umur</label>
                                     <input
                                       type="text"
                                       id="emailWithTitle"
@@ -96,7 +88,7 @@
                                     />
                                   </div>
                                   <div class="col mb-0">
-                                    <label for="dobWithTitle" class="form-label">DOB</label>
+                                    <label for="dobWithTitle" class="form-label">Kontak</label>
                                     <input
                                       type="text"
                                       id="dobWithTitle"

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('pembayarans', function (Blueprint $table) {
             $table->id();
             $table->string('bukti_bayar')->nullable();
+            $table->string('institute')->nullable();
+            $table->integer('age')->nullable();
             $table->timestamps();
             $table->integer('status');
             $table->foreignId('pendaftaran_id');

@@ -105,10 +105,29 @@ VALUES ('data kontak', 'Data drive', '0', '2', '1');
 
 
 
+BRIEFING TGL 5 - 11
+
+ILHAM
+1. route /status atau halaman resources\views\peserta\status.blade.php
+Memperbaiki select untuk subevent supaya hanya pendaftaran yg id_event nya 2 yg tampin di subevent
+NOTE : Yang maint event udah bener udah tak buat
+
+2. Untuk Admin menu pendaftaran maint event 
+a. Select sesuai kolom yang udah ku tulis (User join peserta join pendaftaran)
+[ID_PENDAFTARAN, NAMA, NIM, FAKULTAS, ANGKATAN EMAIL, STATUS, KONTAK]
+b. Buat fitur ubah status_pendaftaran kayak sub event
+0 = (baru masuk), belum datang
+1 = sudah datang
 
 
+GAMAS
+3. untuk admin menu pembayaran maint event (User join peserta join pendaftaran join pembayaran)
+a. Select sesuai kolom yang udah ku tulis
+[ NAMA, EMAIL,TANGGAL PEMBAYARAN, STATUS_PEMBAYARAN, BUKTI BAYAR KONTAK]
+b. Buat fitur ubah status_pendaftaran kayak sub event
+0 = Unverified
+1 = Verified
+2 = Pembayaran Salah
 
-
-
-
+4. Menu print excel untuk pendaftaran main event bisa select semua kolom terkait
 

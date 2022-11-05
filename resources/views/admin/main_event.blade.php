@@ -11,28 +11,32 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th>ID Pendaftaran</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Kontak</th>
                         <th>Tanggal Pendaftaran</th>
-                        <th>Status Pembayaran</th>
-                        <th>Detail</th>
+                        <th>Status Pendaftaran</th>
+                        {{-- <th>Detail</th> --}}
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
                         @foreach ($pendaftarans as $pendaftaran)
                             <tr>
+                              <td>IDPENDAFTARAN</td>
                             <td> <strong>{{$pendaftaran->peserta->nama}}</strong></td>
                             <td>{{$pendaftaran->peserta->user->email}}</td>
+                            <td>Kontak</td>
                             <td>{{$pendaftaran->peserta->user->created_at->diffForHumans()}}</td>
                             <td><span class="badge bg-label-primary me-1"><?= $pendaftaran->status ?></span></td>
-                            <td>
+                            {{-- <td>
                                 <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
                                 data-bs-target="#modalCenter-{{ $pendaftaran->peserta->id }}">Info</button>
-                            </td>
+                            </td> --}}
                             </tr>
                         @endforeach
 
-                      <tr>
+                      {{-- <tr>
                         <td>
                           <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
                         </td>
@@ -51,7 +55,7 @@
                         <td>
                             <button type="button" class="btn rounded-pill btn-outline-info">Info</button>
                         </td>
-                      </tr>
+                      </tr> --}}
                     </tbody>
                   </table>
                 </div>
@@ -66,7 +70,7 @@
 <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
     <div class="modal-header">
-        <h5 class="modal-title" id="modalCenterTitle">Pendaftaran Sub Event</h5>
+        <h5 class="modal-title" id="modalCenterTitle">Detail</h5>
         <button
         type="button"
         class="btn-close"
@@ -77,7 +81,7 @@
     <div class="modal-body">
         <div class="row">
             <div class="col mb-3">
-                <label for="nameWithTitle" class="form-label">Nama</label>
+                <label for="nameWithTitle" class="form-label">Kontak</label>
                 <input type="text" id="nameWithTitle" class="form-control" value={{$pendaftaran->peserta->nama}} readonly/>
             </div>
         </div>

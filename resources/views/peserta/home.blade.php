@@ -48,7 +48,7 @@
               <p class="card-text">TEDx events include live speakers, live experiences, recorded TED Talks, etc</p>
             </div>
             <div class="card-body button">
-              <button class="btn-custom-mainev disabled">Coming soon</button>
+              <a href="/regis-main"><button class="btn-custom-mainev">Coming soon</button></a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
