@@ -71,12 +71,12 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
             <div class="card-body button">
               {{-- <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Registration</button> --}}
                 <div class="dropdown">
-                  {{-- <button class="btn-custom-subev  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn-custom-subev  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Registration
-                  </button> --}}
-                  <button class="btn-custom-subev disabled dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Closed
                   </button>
+                  {{-- <button class="btn-custom-subev disabled dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Closed
+                  </button> --}}
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/regis-lfls">Registration Form</a></li>
                     <li><a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#aturanModal">See Requirements</a></li>

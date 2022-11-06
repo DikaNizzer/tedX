@@ -121,6 +121,8 @@ a. Select sesuai kolom yang udah ku tulis (User join peserta join pendaftaran)
 b. Buat fitur ubah status_pendaftaran kayak sub event
 0 = (baru masuk), belum datang
 1 = sudah datang
+Khusus ini Updatenya pake php yaa, Jangan pake js/json soalnya nanti di hari H proses rendernya penting
+https://www.fundaofwebit.com/index.php/laravel-8/how-to-edit-update-data-in-laravel
 
 
 GAMAS
@@ -132,4 +134,5 @@ b. Buat fitur ubah status_pendaftaran kayak sub event
 2 = Pembayaran Salah
 
 4. Menu print excel untuk pendaftaran main event bisa select semua kolom terkait
+id Pembayaran, email, nama, kontak, umur, instittue, fakultas, nim, angkatan, metode pembayaran, tgl_pembayaran
 

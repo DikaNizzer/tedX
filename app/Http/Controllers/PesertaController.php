@@ -17,6 +17,7 @@ class PesertaController extends Controller
 {
     public function form(Request $request)
     {
+        // dd($request);
         $validated = $request->validate([
             'nama' => ['required', 'max:255'],
             'nim' => ['required', 'max:255'],
