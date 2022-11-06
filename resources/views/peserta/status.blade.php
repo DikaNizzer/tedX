@@ -133,7 +133,7 @@
                               $button = '<td><a href="#" class="profile-menu-1">Waiting</a></td>';
                             } elseif($main->status == 1) {
                               $status = 'Verified';
-                              $button = "<td><a href='/home' class='profile-menu-1'>Download</a></td>";
+                              $button = "<td><a href='/home/' class='profile-menu-1'>Download</a></td>";
                             } else {
                               $status = 'pembayaran Kurang / Salah';
                               $button = "<td><a href='#' class='profile-menu-1'>Unverified</a></td>";
@@ -145,18 +145,22 @@
                         <td>{{ ($main->event == 1) ? 'Main Event' : 'Subevent' }}</td>
                         <td>{{ $main->kontak }}</td>
                         <td>{{ $status }}</td>
+
+                        <?php
+
+                        ?>
                         @php
                             if($main->status == 0) {
                               @endphp
-                                <td><a href="" class="profile-menu-1">Waiting</a></td>
+                                <td><a class="profile-menu-1">Waiting</a></td>
                               @php
                             } elseif($main->status == 1) {
                                 @endphp
-                                  <td><a href="/cetak-tiket" target="_blank" class="profile-menu-1">Download</a></td>
+                                  <td><a href='cetak-tiket/{{$main->id_pendaftaran}}/{{$main->nama}}' target='_blank' class='profile-menu-1' style='margin-top:10px'>Download</a></td>
                                 @php
                             } else {
                                 @endphp
-                                  <td><a href="" class="profile-menu-1">Unverified</a></td>
+                                  <td><a class="profile-menu-1">Unverified</a></td>
                                 @php
                             }
                         @endphp

@@ -119,6 +119,7 @@ NOTE : Yang maint event udah bener udah tak buat
 a. Select sesuai kolom yang udah ku tulis (User join peserta join pendaftaran)
 [NO, ID_PENDAFTARAN, NAMA, EMAIL, KONTAK, FAKULTAS, NIM TANGGAL PENDAFTARAN]
 b. Buat fitur ubah status_pendaftaran kayak sub event
+STATUS PENDAFTARAN
 0 = (baru masuk), belum datang
 1 = sudah datang
 Khusus ini Updatenya pake php yaa, Jangan pake js/json soalnya nanti di hari H proses rendernya penting
@@ -128,7 +129,8 @@ https://www.fundaofwebit.com/index.php/laravel-8/how-to-edit-update-data-in-lara
 GAMAS
 3. untuk admin menu pembayaran maint event (User join peserta join pendaftaran join pembayaran)
 a. Select sesuai kolom yang udah ku tulis
-b. Buat fitur ubah status_pendaftaran kayak sub event
+b. Buat fitur ubah status_pembayaran kayak sub event
+STATUS PEMBAYARANNYA
 0 = Unverified
 1 = Verified
 2 = Pembayaran Salah

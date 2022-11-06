@@ -197,7 +197,7 @@
             </div>
           </div>
           <div class="ticket__body">
-            <p class="ticket__route">Andika Surya Rahmad</p>
+            <p class="ticket__route">{{ $nama}}</p>
             <p class="ticket__description">SESSION OF TALKS </p>
             <div class="ticket__timing">
 				<center>
@@ -217,7 +217,7 @@
             </div>
             <p class="ticket__fine-print">This ticket cannot be transferred to another person</p>
             <p class="u-upper ticket__admit">Admit one person</p>
-			<p class="ticket__fine-print"><b>#ID_TIKET</b></p>
+			<p class="ticket__fine-print"><b>#TEDx{{ $id}}</b></p>
             <img class="ticket__barcode" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/barcode.png" alt="Fake barcode" />
           </div>
         </div>

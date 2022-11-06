@@ -101,17 +101,22 @@ class PesertaController extends Controller
             Pembayaran::create($validated_bayar);
             // dd($validated_bayar['bukti_bayar']);
             
-            return redirect('/home')->with('pesan', 'registrasi berhasil!');
+            return redirect('/status')->with('pesan', 'registrasi berhasil!');
         } else {
             return redirect('/regis-main')->with('daftar_gagal', 'Registrasi gagal! Cek kembali form anda');
         }
     }
 
-    public function cetak_tiket()
+    public function cetak_tiket($id, $nama)
     {
-    	// $pegawai = Pegawai::all();
- 
-    	$pdf = PDF::loadView('peserta.tiket')->setPaper('a4', 'potrait');
+        
+        $data = [
+			'id' => $id,
+            'nama' => $nama
+		];
+
+        // dd($data);
+    	$pdf = PDF::loadView('peserta.tiket', $data)->setPaper('a4', 'potrait');
     	return $pdf->download('tiket.pdf');
     }
 }

@@ -54,7 +54,7 @@ Route::post('/peserta-regis', [PesertaRegisterController::class, 'store']);
 Route::get('/tiket', function () {
     return view('peserta.tiket');
 });
-Route::get('/cetak-tiket', [PesertaController::class, 'cetak_tiket']);
+Route::get('/cetak-tiket/{id}/{nama}', [PesertaController::class, 'cetak_tiket']);
 
 
 
