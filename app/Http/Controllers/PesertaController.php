@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Peserta;
+// use Barryvdh\DomPDF\PDF;
+// use Barryvdh\DomPDF\PDF;
+// use Barryvdh\DomPDF\Facade as PDF;
 use App\Models\Pembayaran;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+use PDF;
 
 class PesertaController extends Controller
 {
@@ -62,6 +67,7 @@ class PesertaController extends Controller
         $validated_pend = $request->validate([
             // 'akun_ig' => ['required', 'max:255'],
             // 'link_gdrive' => ['required', 'max:255'],
+            'metode_bayar' => ['required'],
             'kontak' => ['required', 'max:255'],
             'event_id' => ['required'],
         ]);
@@ -69,6 +75,7 @@ class PesertaController extends Controller
         $validated_bayar = $request->validate([
             'institute' => ['required', 'max:255'],
             'age' => ['required'],
+            
             'bukti_bayar' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
@@ -97,5 +104,13 @@ class PesertaController extends Controller
         } else {
             return redirect('/regis-main')->with('daftar_gagal', 'Registrasi gagal! Cek kembali form anda');
         }
+    }
+
+    public function cetak_tiket()
+    {
+    	// $pegawai = Pegawai::all();
+ 
+    	$pdf = PDF::loadView('peserta.tiket')->setPaper('a4', 'potrait');
+    	return $pdf->download('tiket.pdf');
     }
 }

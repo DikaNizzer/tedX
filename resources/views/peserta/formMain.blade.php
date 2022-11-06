@@ -59,36 +59,47 @@
                     <input type="hidden" value="1" name="event_id">
                     <div class="form-group mt-3">
                       <label for="nama" class="form-control-label">Full Name</label>
-                      <input class="form-control peserta-form" type="text" name="nama" value="{{ old('nama') }}" id="nama">
+                      <input class="form-control peserta-form" type="text" name="nama" value="{{ old('nama') }}" id="nama" required>
                     </div>
                     <div class="form-group mt-3">
                       <label for="nim" class="form-control-label">Institute</label>
-                      <input class="form-control peserta-form" type="text" name="institute" value="{{ old('institute') }}" id="nim">
+                      <input class="form-control peserta-form" type="text" name="institute" value="{{ old('institute') }}" id="nim" required>
                     </div>
                     <div class="form-group mt-3">
                       <label for="fakultas" class="form-control-label">Faculty</label>
-                      <input class="form-control peserta-form" type="text" name="fakultas" value="{{ old('fakultas') }}" id="fakultas">
+                      <input class="form-control peserta-form" type="text" name="fakultas" value="{{ old('fakultas') }}" id="fakultas" required>
                     </div>
                     <div class="form-group mt-3">
                       <label for="nim" class="form-control-label">Student ID</label>
-                      <input class="form-control peserta-form" type="text" name="nim" value="{{ old('nim') }}" id="nim">
+                      <input class="form-control peserta-form" type="text" name="nim" value="{{ old('nim') }}" id="nim" required>
                     </div>
                     <div class="form-group mt-3">
                       <label for="nim" class="form-control-label">Age</label>
-                      <input class="form-control peserta-form" type="number" name="age" value="{{ old('age') }}" id="nim">
+                      <input class="form-control peserta-form" type="number" name="age" value="{{ old('age') }}" id="nim" required>
                     </div>
                     <div class="form-group mt-3">
                       <label for="angkatan">Batch</label>
-                      <select class="form-control peserta-form" name="angkatan" id="angkatan">
+                      <select class="form-control peserta-form" name="angkatan" id="angkatan" required>
                         <option value="18" {{ (old('angkatan') == "18") ? 'selected' : '' }}>2018</option>
                         <option value="19" {{ (old('angkatan') == "19") ? 'selected' : '' }}>2019</option>
                         <option value="20" {{ (old('angkatan') == "20") ? 'selected' : '' }}>2020</option>
                         <option value="21" {{ (old('angkatan') == "21") ? 'selected' : '' }}>2021</option>
+                        <option value="22" {{ (old('angkatan') == "22") ? 'selected' : '' }}>2022</option>
                       </select>
                     </div>
                     <div class="form-group mt-3">
                       <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
-                      <input class="form-control peserta-form" type="text" name="kontak" value="{{ old('kontak') }}" id="kontak">
+                      <input class="form-control peserta-form" type="text" name="kontak" value="{{ old('kontak') }}" id="kontak" required>
+                    </div>
+                    <div class="form-group mt-3">
+                      <label for="metode_bayar">Payment Methods</label>
+                      <select class="form-control peserta-form" name="metode_bayar" id="metode_bayar" required>
+                        <option value="BCA" {{ (old('metode_bayar') == "BCA") ? 'selected' : '' }}>BCA ~ 0882124655  ~ Dewi Ayu N. A. S.</option>
+                        <option value="BNI" {{ (old('metode_bayar') == "BNI") ? 'selected' : '' }}>BNI ~ 1148847032 ~ Alyssa De Quervain</option>
+                        <option value="BRI" {{ (old('metode_bayar') == "BRI") ? 'selected' : '' }}>BRI ~ 320101002599507 ~ Dewi Ayu N. A. S.</option>
+                        <option value="OVO" {{ (old('metode_bayar') == "OVO") ? 'selected' : '' }}>OVO ~ 6282140101971 ~ Alyssa De Quervain</option>
+                        <option value="OVO" {{ (old('metode_bayar') == "OVO") ? 'selected' : '' }}>DANA ~ 6285856884738 ~ Dewi Ayu N. A. S.</option>
+                      </select>
                     </div>
                     <div class="form-group mt-3">
                       <label for="alamat" class="form-control-label">Payment receipt </label>

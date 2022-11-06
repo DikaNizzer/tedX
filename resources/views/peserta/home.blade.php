@@ -48,7 +48,7 @@
               <p class="card-text">TEDx events include live speakers, live experiences, recorded TED Talks, etc</p>
             </div>
             <div class="card-body button">
-              <a href="/regis-main"><button class="btn-custom-mainev">Coming soon</button></a>
+              <a href="/regis-main"><button class="btn-custom-subev ">Coming soon</button></a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
@@ -71,8 +71,11 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
             <div class="card-body button">
               {{-- <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Registration</button> --}}
                 <div class="dropdown">
-                  <button class="btn-custom-subev dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{-- <button class="btn-custom-subev  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Registration
+                  </button> --}}
+                  <button class="btn-custom-subev disabled dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Closed
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/regis-lfls">Registration Form</a></li>

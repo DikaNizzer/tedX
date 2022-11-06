@@ -83,7 +83,7 @@
                         <tr>
                         <td scope="row">{{ $no++ }}</td>
                         <td>{{ $data->nama }}</td>
-                        <td>{{ ($data->pendaftaran->event_id == 1) ? 'subevent' : 'Subevent' }}</td>
+                        <td>{{ ($data->pendaftaran->event_id == 2) ? 'Sub event' : 'Maint Event' }}</td>
                         <td>{{ $data->pendaftaran->kontak }}</td>
                         <td>{{ $data->pendaftaran->link_gdrive}}</td>
                         <td>{{ $status }}</td>
@@ -142,7 +142,7 @@
                         <tr>
                         <td scope="row">{{ $no++ }}</td>
                         <td>{{ $main->nama }}</td>
-                        <td>{{ ($main->penstatus == 1) ? 'subevent' : 'Subevent' }}</td>
+                        <td>{{ ($main->event == 1) ? 'Main Event' : 'Subevent' }}</td>
                         <td>{{ $main->kontak }}</td>
                         <td>{{ $status }}</td>
                         @php
@@ -152,7 +152,7 @@
                               @php
                             } elseif($main->status == 1) {
                                 @endphp
-                                  <td><a href="/home" class="profile-menu-1">Download</a></td>
+                                  <td><a href="/cetak-tiket" target="_blank" class="profile-menu-1">Download</a></td>
                                 @php
                             } else {
                                 @endphp

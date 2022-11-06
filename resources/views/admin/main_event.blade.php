@@ -11,9 +11,12 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th>No</th>
                         <th>ID Pendaftaran</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Fakultas</th>           {{--  Dari Peserta --}}
+                        <th>NIM</th>                {{--  Dari Peserta --}}
                         <th>Kontak</th>
                         <th>Tanggal Pendaftaran</th>
                         <th>Status Pendaftaran</th>
@@ -23,6 +26,7 @@
                     <tbody class="table-border-bottom-0">
                         @foreach ($pendaftarans as $pendaftaran)
                             <tr>
+                              <td>1</td>
                               <td>IDPENDAFTARAN</td>
                             <td> <strong>{{$pendaftaran->peserta->nama}}</strong></td>
                             <td>{{$pendaftaran->peserta->user->email}}</td>

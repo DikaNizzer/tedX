@@ -117,7 +117,7 @@ NOTE : Yang maint event udah bener udah tak buat
 
 2. Untuk Admin menu pendaftaran maint event 
 a. Select sesuai kolom yang udah ku tulis (User join peserta join pendaftaran)
-[ID_PENDAFTARAN, NAMA, NIM, FAKULTAS, ANGKATAN EMAIL, STATUS, KONTAK]
+[NO, ID_PENDAFTARAN, NAMA, EMAIL, KONTAK, FAKULTAS, NIM TANGGAL PENDAFTARAN]
 b. Buat fitur ubah status_pendaftaran kayak sub event
 0 = (baru masuk), belum datang
 1 = sudah datang
@@ -126,7 +126,6 @@ b. Buat fitur ubah status_pendaftaran kayak sub event
 GAMAS
 3. untuk admin menu pembayaran maint event (User join peserta join pendaftaran join pembayaran)
 a. Select sesuai kolom yang udah ku tulis
-[ NAMA, EMAIL,TANGGAL PEMBAYARAN, STATUS_PEMBAYARAN, BUKTI BAYAR KONTAK]
 b. Buat fitur ubah status_pendaftaran kayak sub event
 0 = Unverified
 1 = Verified

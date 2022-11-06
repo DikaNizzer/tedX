@@ -42,7 +42,7 @@ class UserHomeController extends Controller
         //     $query->where('event_id' , '=', '2');
         //   }])->get();
         $userid = Auth::user()->id;
-        $mainevent = DB::select( DB::raw("SELECT pesertas.nama, pendaftarans.status as penstatus, pendaftarans.kontak, pembayarans.status
+        $mainevent = DB::select( DB::raw("SELECT pesertas.nama, pendaftarans.event_id as event, pendaftarans.kontak, pembayarans.status
                                     FROM pesertas join pendaftarans
                                     on(pesertas.id = pendaftarans.peserta_id)
                                     join pembayarans

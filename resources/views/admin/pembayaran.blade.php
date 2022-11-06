@@ -11,12 +11,17 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th>No</th>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>Tanggal Pembayaran</th>
-                        <th>Status Pembayaran</th>
-                        <th>Bukti Bayar</th>
-                        <th>Detail</th>
+                        <th>Umur</th>               {{--  Dari Pembayaran --}}
+                        <th>kontak</th>             {{--  Dari Pendaftaran --}}
+                        <th>Insititute</th>         {{--  Dari Pembayaran --}}
+                        <th>Angkatan</th>           {{--  Dari Peserta --}}
+                        <th>Metode Pembayaran</th>   {{--  Dari Pendaftaran --}}
+                        <th>Tanggal Pembayaran</th>   {{--  Dari Pembayaran --}}
+                        <th>Bukti Bayar</th>        {{--  Dari Pembayaran --}}
+                        <th>Status Pembayaran</th>  {{--  Dari Pembayaran --}}
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">

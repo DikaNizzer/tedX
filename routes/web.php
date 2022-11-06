@@ -50,6 +50,11 @@ Route::post('/peserta-logout', [PesertaLoginController::class, 'logout']);
 Route::post('/peserta-login', [PesertaLoginController::class, 'authenticate']);
 Route::post('/peserta-regis', [PesertaRegisterController::class, 'store']);
 
+// Coba Tiket
+Route::get('/tiket', function () {
+    return view('peserta.tiket');
+});
+Route::get('/cetak-tiket', [PesertaController::class, 'cetak_tiket']);
 
 
 
