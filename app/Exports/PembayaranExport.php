@@ -4,7 +4,6 @@ namespace App\Exports;
 
 use App\Models\Pembayaran;
 use Illuminate\Support\Facades\DB;
-use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithStyles;
@@ -12,9 +11,7 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class PembayaranExport implements FromArray, WithHeadings, WithStyles
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
+    
     public function array(): array
     {
         $pembayarans = DB::select(DB::raw("SELECT pembayarans.id as pembayaran_id, pesertas.nama, users.email, pembayarans.age, pendaftarans.kontak, 

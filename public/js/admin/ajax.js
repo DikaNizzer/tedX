@@ -91,3 +91,18 @@ $('body').on('change', '.status-pembayaran', function () {
     console.log("selesai")
   });
 });
+
+$('body').on('click', '.show-bukti-btn' , function () {
+  // console.log()
+  let url = "http://tedx.test/bukti_bayar/"+$(this).val();
+  console.log(url)
+  console.log($('#img-detail').attr("src"))
+    $('#img-detail').attr("src", url);
+    console.log($('#img-detail').attr("src"))
+});
+
+// $('body').on('click', '.show-bukti-btn', function () {
+//   console.log($('#img-detail').attr('src'))
+// });
+
+//http://tedx.test/bukti_bayar/2022110700441mil-elements.png

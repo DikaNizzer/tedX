@@ -41,8 +41,8 @@
                         <td>{{ $pembayaran->metode_bayar }}</td>
                         <td>{{ $pembayaran->created_at }}</td>
                         <td>
-                          <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                          data-bs-target="#modalCenter" >Bukti</button>
+                          <button type="button" class="btn rounded-pill btn-outline-info show-bukti-btn" data-bs-toggle="modal"
+                          data-bs-target="#modalShowBukti" value="{{ $pembayaran->bukti_bayar }}">Bukti</button>
                         </td>
                         <td>
                           <select class="btn rounded-pill btn-outline-warning status-pembayaran" data-id="{{ $pembayaran->pembayaran_id }}" aria-label="Default select example">
@@ -66,7 +66,7 @@
 </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+                        <div class="modal fade" id="modalShowBukti" tabindex="-1" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -79,44 +79,7 @@
                                 ></button>
                               </div>
                               <div class="modal-body">
-                                <div class="row">
-                                  <div class="col mb-3">
-                                    <label for="nameWithTitle" class="form-label">Insititute</label>
-                                    <input
-                                      type="text"
-                                      id="nameWithTitle"
-                                      class="form-control"
-                                      placeholder="Enter Name"
-                                      value="CUMAN BISA BACA"
-                                      readonly
-                                    />
-
-                                  </div>
-                                </div>
-                                <div class="row g-2">
-                                  <div class="col mb-0">
-                                    <label for="emailWithTitle" class="form-label">Umur</label>
-                                    <input
-                                      type="text"
-                                      id="emailWithTitle"
-                                      class="form-control"
-                                      placeholder="xxxx@xxx.xx"
-                                      value="CUMAN BISA BACA"
-                                      readonly
-                                    />
-                                  </div>
-                                  <div class="col mb-0">
-                                    <label for="dobWithTitle" class="form-label">Kontak</label>
-                                    <input
-                                      type="text"
-                                      id="dobWithTitle"
-                                      class="form-control"
-                                      placeholder="DD / MM / YY"
-                                      value="Form lainnya menyusul"
-                                      readonly
-                                    />
-                                  </div>
-                                </div>
+                                <img id="img-detail" width="500" src="{{ asset('bukti_bayar/2022110700441mil-elements.png') }}" alt="">
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
