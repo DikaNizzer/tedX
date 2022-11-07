@@ -1,6 +1,8 @@
 @include('templates.header')
 @include('templates.navbar')
 
+{{-- @dd($mainevent) --}}
+
 <section id="homePeserta" class="homePeserta">
   <div class="header">
     <div class="header-background"></div>

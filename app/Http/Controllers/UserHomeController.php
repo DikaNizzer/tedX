@@ -50,7 +50,7 @@ class UserHomeController extends Controller
                                     where pesertas.user_id = $userid and pendaftarans.event_id = 1;"));
         // dd($mainevent);
 
-       
+            
         return view('peserta.status',[
             'title' => 'TEDx Universitas Airlangga',
             'subevent' => $subevent,

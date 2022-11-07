@@ -53,3 +53,41 @@ $('body').on('change', '.status', function () {
     console.log("selesai")
   });
 });
+
+$('body').on('change', '.status-pembayaran', function () {
+  // console.log(this)
+  let statusVal = $(this).val();
+  let id = $(this).attr('data-id')
+  console.log(id)
+  console.log(statusVal)
+
+  // const data = {
+  //   status: statusVal,
+  // }
+  // console.log(data.status)
+
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+  $.ajax({
+    type: "PUT",
+    url: "/mainevent_bayar/"+id,
+    async: false,
+    data: {status: statusVal},
+    dataType: "json",
+    success: function (response) {
+      console.log(response)
+    }
+  })
+  .fail(function(error, textStatus, errorThrown) {
+    console.log(JSON.stringify(error));
+    alert(textStatus);
+    alert(errorThrown);
+  })
+  .always(function() {
+    console.log("selesai")
+  });
+});

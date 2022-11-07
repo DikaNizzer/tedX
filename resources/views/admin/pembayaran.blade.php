@@ -1,5 +1,5 @@
 @include('admin/admin_header')
-
+{{-- @dd($pembayarans[0]->peserta_id) --}}
  <div class="content-wrapper">
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
@@ -24,23 +24,35 @@
                         <th>Status Pembayaran</th>  {{--  Dari Pembayaran --}}
                       </tr>
                     </thead>
+                    @php
+                        $i = 1;
+                    @endphp
                     <tbody class="table-border-bottom-0">
+                      @foreach ($pembayarans as $pembayaran)
                       <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
-                        <td>Albert Cook</td>
-                        <td>
-                         email
-                        </td>
-                        <td><span class="badge bg-label-primary me-1">Verified</span></td>
-                        <td>
-                            <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                            data-bs-target="#modalCenter" >Bukti</button>
-                        </td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{ $i++; }}</strong></td>
+                        <td>{{ $pembayaran->nama }}</td>
+                        <td>{{ $pembayaran->email }}</td>
+                        <td>{{ $pembayaran->age }}</td>
+                        <td>{{ $pembayaran->kontak }}</td>
+                        <td>{{ $pembayaran->institute }}</td>
+                        <td>{{ $pembayaran->angkatan }}</td>
+                        <td>{{ $pembayaran->metode_bayar }}</td>
+                        <td>{{ $pembayaran->created_at }}</td>
                         <td>
                           <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                          data-bs-target="#modalCenter" >Info</button>
-                      </td>
+                          data-bs-target="#modalCenter" >Bukti</button>
+                        </td>
+                        <td>
+                          <select class="btn rounded-pill btn-outline-warning status-pembayaran" data-id="{{ $pembayaran->pembayaran_id }}" aria-label="Default select example">
+                            <option value="0" {{ ($pembayaran->status == 0) ? 'selected' : '' }}>Unverified</option>
+                            <option value="1" {{ ($pembayaran->status == 1) ? 'selected' : '' }}>Verified</option>
+                            <option value="2" {{ ($pembayaran->status == 2) ? 'selected' : '' }}>Pembayaran Salah</option>
+                          </select>
+                        </td>
+                        {{-- <td><span class="badge bg-label-primary me-1">{{ $pembayaran->age }}</span></td> --}}
                       </tr>
+                      @endforeach
 
 
                     </tbody>

@@ -12,6 +12,7 @@ use App\Http\Controllers\MaineventController;
 use App\Http\Controllers\PesertaLoginController;
 use App\Http\Controllers\PesertaRegisterController;
 use App\Http\Controllers\DashboardSubeventController;
+use App\Http\Controllers\DashboardPembayaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,6 +91,6 @@ Route::group(['middleware' => 'auth'], function() {
 // Mainevent
 Route::get('/mainevent', [MaineventController::class, 'index']);
 
-Route::get('/mainevent_bayar', function () {
-    return view('admin/pembayaran');
-});
+// Route::get('/mainevent_bayar', [DashboardPembayaranController::class, 'index']);
+
+Route::resource('/mainevent_bayar', DashboardPembayaranController::class);
