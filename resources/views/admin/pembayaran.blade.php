@@ -40,9 +40,13 @@
                         <td>{{ $pembayaran->angkatan }}</td>
                         <td>{{ $pembayaran->metode_bayar }}</td>
                         <td>{{ $pembayaran->created_at }}</td>
-                        <td>
+                        {{-- <td>
                           <button type="button" class="btn rounded-pill btn-outline-info show-bukti-btn" data-bs-toggle="modal"
                           data-bs-target="#modalShowBukti" value="{{ $pembayaran->bukti_bayar }}">Bukti</button>
+                        </td> --}}
+                        <td>
+                          <button type="button" onclick="window.open('image/{{ $pembayaran->bukti_bayar }}', '_blank')" class="btn rounded-pill btn-outline-info"
+                          >Bukti</button>
                         </td>
                         <td>
                           <select class="btn rounded-pill btn-outline-warning status-pembayaran" data-id="{{ $pembayaran->pembayaran_id }}" aria-label="Default select example">
