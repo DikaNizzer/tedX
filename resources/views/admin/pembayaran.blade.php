@@ -8,6 +8,7 @@
               <div class="card">
                 <h5 class="card-header">Striped rows</h5>
                 <div class="table-responsive text-nowrap">
+                  <a href="/exportspembayaran" class="btn btn-primary px-3">Export</a>
                   <table class="table table-striped">
                     <thead>
                       <tr>

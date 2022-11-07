@@ -11,6 +11,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MaineventController;
 use App\Http\Controllers\PesertaLoginController;
 use App\Http\Controllers\PesertaRegisterController;
+use App\Http\Controllers\PembayaranExportController;
 use App\Http\Controllers\DashboardSubeventController;
 use App\Http\Controllers\DashboardPembayaranController;
 
@@ -74,6 +75,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'cektipe:admin'], function() {
         Route::get('/dashboard', [DashboardController::class, 'index']);
         Route::resource('/subevents', DashboardSubeventController::class);
+        Route::resource('/mainevent_bayar', DashboardPembayaranController::class);
+        Route::get('/exportspembayaran', [PembayaranExportController::class, 'pembayaranExport']);
     });
 
     Route::group(['middleware' => 'cektipe:peserta'], function() {
@@ -93,4 +96,3 @@ Route::get('/mainevent', [MaineventController::class, 'index']);
 
 // Route::get('/mainevent_bayar', [DashboardPembayaranController::class, 'index']);
 
-Route::resource('/mainevent_bayar', DashboardPembayaranController::class);
