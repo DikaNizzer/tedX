@@ -84,7 +84,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'cektipe:peserta'], function() {
         Route::get('/home', [UserHomeController::class, 'index']);
     });
-    
+
 });
 
 // Route::get('/subevent', function () {
@@ -95,6 +95,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 // Mainevent
 Route::get('/mainevent', [MaineventController::class, 'index']);
+Route::put('/mainevent/{id}', [PesertaController::class, 'editstatus']);
 
 // Route::get('/mainevent_bayar', [DashboardPembayaranController::class, 'index']);
 

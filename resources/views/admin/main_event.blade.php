@@ -8,6 +8,11 @@
               <div class="card">
                 <h5 class="card-header">Pendaftaran Main Event</h5>
                 <div class="table-responsive text-nowrap">
+
+                    @if(session('status'))
+                        <div class="alert alert-success">{{ session('status') }}</div>
+                    @endif
+
                   <table class="table table-striped">
                     <thead>
                       <tr>
@@ -20,6 +25,7 @@
                         <th>Kontak</th>
                         <th>Tanggal Pendaftaran</th>
                         <th>Status Pendaftaran</th>
+                        <th>Edit Status</th>
                         {{-- <th>Detail</th> --}}
                       </tr>
                     </thead>
@@ -37,11 +43,11 @@
                             <td>{{$pendaftaran->peserta->nim}}</td>
                             <td>{{ $pendaftaran->kontak }}</td>
                             <td>{{$pendaftaran->peserta->user->created_at->diffForHumans()}}</td>
-                            <td><span class="badge bg-label-primary me-1"><?= $pendaftaran->status ?></span></td>
-                            {{-- <td>
-                                <button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
-                                data-bs-target="#modalCenter-{{ $pendaftaran->peserta->id }}">Info</button>
-                            </td> --}}
+                            <td><span class="badge bg-label-primary me-1 d-flex justify-content-center">{{ $pendaftaran->status }}</span></td>
+                            <td>
+                                <center><button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
+                                data-bs-target="#modalCenter-{{ $pendaftaran->peserta->id }}">Edit</button>
+                            </td>
                             </tr>
                         @endforeach
 
@@ -88,37 +94,19 @@
         ></button>
     </div>
     <div class="modal-body">
-        <div class="row">
+
+        <form class="row d-flex flex-column" action="/mainevent/{{ $pendaftaran->id }}" method="post">
+            @csrf
+            @method('put')
             <div class="col mb-3">
-                <label for="nameWithTitle" class="form-label">Kontak</label>
-                <input type="text" id="nameWithTitle" class="form-control" value={{$pendaftaran->peserta->nama}} readonly/>
+                <label for="nameWithTitle" class="form-label">Status</label>
+                <input type="text" name="status" class="form-control" value={{$pendaftaran->status}} />
             </div>
-        </div>
-        <div class="row g-2 mb-1">
-            <div class="col mb-0">
-                <label for="emailWithTitle" class="form-label">Fakultas</label>
-                <input type="text" id="emailWithTitle" class="form-control" value="{{$pendaftaran->peserta->fakultas}}" readonly/>
+            <button type="submit" class="btn btn-info ms-3" style="width: 150px">Simpan</button>
+            <div class="ms-2 mt-3">
+                0 = Unverified &nbsp; 1 = Verified
             </div>
-            <div class="col mb-0">
-                <label for="emailWithTitle" class="form-label">Angkatan</label>
-                <input type="text" id="emailWithTitle" class="form-control" value="{{$pendaftaran->peserta->angkatan}}" readonly/>
-            </div>
-        </div>
-        <div class="row g-2">
-            <div class="col mb-0">
-                <label for="emailWithTitle" class="form-label">Email</label>
-                <input type="text" id="emailWithTitle" class="form-control" value="{{$pendaftaran->peserta->user->email}}" readonly/>
-            </div>
-            <div class="col mb-0">
-                <label for="dobWithTitle" class="form-label">Waktu Pendaftaran</label>
-                <input type="text" id="dobWithTitle" class="form-control" value="{{$pendaftaran->peserta->created_at->diffForHumans()}}" readonly/>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-        Close
-        </button>
+        </form>
     </div>
     </div>
 </div>

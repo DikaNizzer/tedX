@@ -76,7 +76,7 @@ class PesertaController extends Controller
         $validated_bayar = $request->validate([
             'institute' => ['required', 'max:255'],
             'age' => ['required'],
-            
+
             'bukti_bayar' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
@@ -100,7 +100,7 @@ class PesertaController extends Controller
 
             Pembayaran::create($validated_bayar);
             // dd($validated_bayar['bukti_bayar']);
-            
+
             return redirect('/status')->with('pesan', 'registrasi berhasil!');
         } else {
             return redirect('/regis-main')->with('daftar_gagal', 'Registrasi gagal! Cek kembali form anda');
@@ -109,7 +109,7 @@ class PesertaController extends Controller
 
     public function cetak_tiket($id, $nama)
     {
-        
+
         $data = [
 			'id' => $id,
             'nama' => $nama
@@ -118,5 +118,14 @@ class PesertaController extends Controller
         // dd($data);
     	$pdf = PDF::loadView('peserta.tiket', $data)->setPaper('a4', 'potrait');
     	return $pdf->download('tiket.pdf');
+    }
+
+    public function editstatus(Request $request,$id){
+        $peserta = Pendaftaran::find($id);
+        $peserta->status = $request->input('status');
+        $peserta->update();
+
+        return redirect('/mainevent')->with('status', 'Status berhasil diubah');
+
     }
 }

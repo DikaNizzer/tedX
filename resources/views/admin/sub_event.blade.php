@@ -30,7 +30,7 @@
                           <td>{{$pendaftaran->peserta->angkatan}}</td>
                           <td>{{$pendaftaran->peserta->user->email}}</td>
                           <td>{{ date('d F Y', strtotime($pendaftaran->peserta->pendaftaran->created_at)); }}</td>
-                          
+
                           <td>
                             <select class="btn rounded-pill btn-outline-warning status" data-id="{{ $pendaftaran->peserta->id }}" aria-label="Default select example">
                               <option value="0" {{ ($pendaftaran->status == 0) ? 'selected' : '' }}>Unverified</option>
@@ -45,7 +45,7 @@
                         </tr>
                       @endforeach
 
-                      
+
 
                     </tbody>
                   </table>
@@ -56,7 +56,7 @@
     </div>
 </div>
 
-        <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="showModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -118,7 +118,7 @@
       </div>
       </div>
   </div>
-  </div>
-              
-  
+</div>
+
+
 @include('admin/admin_footer')
