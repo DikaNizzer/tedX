@@ -43,7 +43,14 @@
                             <td>{{$pendaftaran->peserta->nim}}</td>
                             <td>{{ $pendaftaran->kontak }}</td>
                             <td>{{$pendaftaran->peserta->user->created_at->diffForHumans()}}</td>
-                            <td><span class="badge bg-label-primary me-1 d-flex justify-content-center">{{ $pendaftaran->status }}</span></td>
+                            {{-- <td><span class="badge bg-label-primary me-1 d-flex justify-content-center">{{ $pendaftaran->status }}</span></td> --}}
+                            <td>
+                              <select class="btn rounded-pill btn-outline-warning status-pembayaran"  aria-label="Default select example">
+                                <option value="0" {{ ($pendaftaran->status == 0) ? 'selected' : '' }}>Belum Datang</option>
+                                <option value="1" {{ ($pendaftaran->status == 1) ? 'selected' : '' }}>Sudah Datang</option>
+                                {{-- <option value="2" {{ ($pembayaran->status == 2) ? 'selected' : '' }}>Pembayaran Salah</option> --}}
+                              </select>
+                            </td>
                             <td>
                                 <center><button type="button" class="btn rounded-pill btn-outline-info" data-bs-toggle="modal"
                                 data-bs-target="#modalCenter-{{ $pendaftaran->peserta->id }}">Edit</button>
@@ -99,13 +106,17 @@
             @csrf
             @method('put')
             <div class="col mb-3">
-                <label for="nameWithTitle" class="form-label">Status</label>
-                <input type="text" name="status" class="form-control" value={{$pendaftaran->status}} />
+                <label for="nameWithTitle" class="form-label">Status</label><br>
+                {{-- <input type="text" name="status" class="form-control" value={{$pendaftaran->status}} /> --}}
+                <select class="btn rounded-pill btn-outline-warning status-pembayaran" name="status" aria-label="Default select example">
+                  <option value="0" {{ ($pendaftaran->status == 0) ? 'selected' : '' }}>Belum Datang</option>
+                  <option value="1" {{ ($pendaftaran->status == 1) ? 'selected' : '' }}>Sudah Datang</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-info ms-3" style="width: 150px">Simpan</button>
-            <div class="ms-2 mt-3">
+            {{-- <div class="ms-2 mt-3">
                 0 = Unverified &nbsp; 1 = Verified
-            </div>
+            </div> --}}
         </form>
     </div>
     </div>

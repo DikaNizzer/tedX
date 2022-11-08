@@ -25,8 +25,8 @@ use Symfony\Component\Mime\RawMessage;
  */
 abstract class AbstractTransport implements TransportInterface
 {
-    private $dispatcher;
-    private $logger;
+    private ?EventDispatcherInterface $dispatcher;
+    private LoggerInterface $logger;
     private float $rate = 0;
     private float $lastSent = 0;
 
@@ -62,6 +62,7 @@ abstract class AbstractTransport implements TransportInterface
             $event = new MessageEvent($message, $envelope, (string) $this);
             $this->dispatcher->dispatch($event);
             $envelope = $event->getEnvelope();
+            $message = $event->getMessage();
         }
 
         $message = new SentMessage($message, $envelope);

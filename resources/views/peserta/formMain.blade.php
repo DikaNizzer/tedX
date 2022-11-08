@@ -64,13 +64,20 @@
                     <div class="form-group mt-3">
                       <label for="nim" class="form-control-label">Institute</label>
                       <input class="form-control peserta-form" type="text" name="institute" value="{{ old('institute') }}" id="nim" required>
+                      {{-- <select class="form-control peserta-form" name="institute" id="institute" required>
+                        <option value="Universitas Airlangga" >Universitas Airlangga</option>
+                        <option value="Umum" >Umum</option>
+                      </select> --}}
                     </div>
                     <div class="form-group mt-3">
                       <label for="fakultas" class="form-control-label">Faculty</label>
+                      <p style="font-size: 12; color:red"><i>Please fill this section with "-", if you're not student</i></p>
                       <input class="form-control peserta-form" type="text" name="fakultas" value="{{ old('fakultas') }}" id="fakultas" required>
+                      
                     </div>
                     <div class="form-group mt-3">
                       <label for="nim" class="form-control-label">Student ID</label>
+                      <p style="font-size: 12; color:red"><i>Please fill this section with "-", if you're not student</i></p>
                       <input class="form-control peserta-form" type="text" name="nim" value="{{ old('nim') }}" id="nim" required>
                     </div>
                     <div class="form-group mt-3">
@@ -80,6 +87,7 @@
                     <div class="form-group mt-3">
                       <label for="angkatan">Batch</label>
                       <select class="form-control peserta-form" name="angkatan" id="angkatan" required>
+                        <option value="-" {{ (old('angkatan') == "-") ? 'selected' : '' }}>-</option>
                         <option value="18" {{ (old('angkatan') == "18") ? 'selected' : '' }}>2018</option>
                         <option value="19" {{ (old('angkatan') == "19") ? 'selected' : '' }}>2019</option>
                         <option value="20" {{ (old('angkatan') == "20") ? 'selected' : '' }}>2020</option>
@@ -88,7 +96,7 @@
                       </select>
                     </div>
                     <div class="form-group mt-3">
-                      <label for="kontak" class="form-control-label">Contact info (id line/no wa) </label>
+                      <label for="kontak" class="form-control-label">Contact info (WhatsApp Number) </label>
                       <input class="form-control peserta-form" type="text" name="kontak" value="{{ old('kontak') }}" id="kontak" required>
                     </div>
                     <div class="form-group mt-3">

@@ -48,7 +48,8 @@
               <p class="card-text">TEDx events include live speakers, live experiences, recorded TED Talks, etc</p>
             </div>
             <div class="card-body button">
-              <a href="/regis-main"><button class="btn-custom-subev ">Coming soon</button></a>
+              {{-- <a href="/regis-main"><button class="btn-custom-subev ">Coming soon</button></a> --}}
+              <a data-bs-toggle="modal" data-bs-target="#mainModal"><button class="btn-custom-subev ">Register</button></a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
@@ -71,12 +72,12 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
             <div class="card-body button">
               {{-- <button class="btn-custom-subev" data-bs-toggle="modal" data-bs-target="#aturanModal">Registration</button> --}}
                 <div class="dropdown">
-                  <button class="btn-custom-subev  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{-- <button class="btn-custom-subev  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Registration
-                  </button>
-                  {{-- <button class="btn-custom-subev disabled dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Closed
                   </button> --}}
+                  <button class="btn-custom-subev disabled dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Closed
+                  </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/regis-lfls">Registration Form</a></li>
                     <li><a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#aturanModal">See Requirements</a></li>
@@ -96,6 +97,66 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
   </div>
   @include('templates.footer-user')
 </section>
+
+
+
+  {{-- MODAL ATURAN --}}
+<!-- Modal -->
+<div class="modal fade" id="mainModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	  <div class="modal-content auth-modal">
+		<div class="modal-header auth-header">
+		  <div class="row" style="padding:5px">
+			<div class="col-10">
+			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
+			</div>
+			<div class="col-2 justify-content-end">
+			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
+			</div>
+		  </div>
+		</div>
+		<div class="modal-body" style="padding:40px; padding-top:0">
+      <h5 style="text-align:center; font-size:14px; font-weight:700; margin-bottom:20px;">Main Event</h5>
+      <div class="row">
+        <div class="col-1">
+          <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+        </div>
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
+          Fill in your personal data on the form correctly
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-1">
+          <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+        </div>
+        <div class="col-11" style="text-align:justify; font-size:12px; padding-left:5%">
+          Make payment with the available methods: <b>(Rp. 89.000)</b>
+          <ol>
+            <li>BCA ~ 0882124655  ~ Dewi Ayu N. A. S.</li>
+            <li>BNI ~ 1148847032 ~ Alyssa De Quervain</li>
+            <li>BRI ~ 320101002599507 ~ Dewi Ayu N. A. S.</li>
+            <li>OVO ~ 6282140101971 ~ Alyssa De Quervain</li>
+            <li>DANA ~ 6285856884738 ~ Dewi Ayu N. A. S.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-1">
+          <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+        </div>
+        <div class="col-11" style="font-size:12px; padding-left:5%">
+          Upload proof of payment on the form provided
+        </div>
+      </div>
+
+
+		</div>
+      <center style="margin-bottom: 15px "><a href="/regis-main"><button class="btn-custom-subev ">Register Now</button></a></center>
+	  </div>
+	</div>
+  </div>
 
 
 {{-- MODAL ATURAN --}}

@@ -15,6 +15,7 @@
                         <th>No</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Kirim</th>
                         <th>Umur</th>               {{--  Dari Pembayaran --}}
                         <th>kontak</th>             {{--  Dari Pendaftaran --}}
                         <th>Insititute</th>         {{--  Dari Pembayaran --}}
@@ -34,6 +35,11 @@
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{ $i++; }}</strong></td>
                         <td>{{ $pembayaran->nama }}</td>
                         <td>{{ $pembayaran->email }}</td>
+                        <td>
+                          <a href = "mailto:{{ $pembayaran->email }}?subject = Feedback&body = Message">
+                            Kirim Pemberitahuan
+                            </a>
+                        </td>
                         <td>{{ $pembayaran->age }}</td>
                         <td>{{ $pembayaran->kontak }}</td>
                         <td>{{ $pembayaran->institute }}</td>

@@ -162,7 +162,7 @@
                                 @php
                             } else {
                                 @endphp
-                                  <td><a class="profile-menu-1">Unverified</a></td>
+                                  <td><a class="profile-menu-1">Pembayaran Salah</a></td>
                                 @php
                             }
                         @endphp
@@ -225,3 +225,10 @@
 	</div>
   </div>
 
+  <script>
+    let pesan = '{{ Session::get('pesan') }}'
+
+    if (pesan) {
+      alert(pesan)
+    }
+  </script>
