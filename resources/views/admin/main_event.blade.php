@@ -24,13 +24,18 @@
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
+                        @php
+                            $no = 1;
+                        @endphp
                         @foreach ($pendaftarans as $pendaftaran)
                             <tr>
-                              <td>1</td>
-                              <td>IDPENDAFTARAN</td>
+                              <td>{{ $no++ }}</td>
+                              <td>{{ $pendaftaran->id }}</td>
                             <td> <strong>{{$pendaftaran->peserta->nama}}</strong></td>
                             <td>{{$pendaftaran->peserta->user->email}}</td>
-                            <td>Kontak</td>
+                            <td>{{$pendaftaran->peserta->fakultas}}</td>
+                            <td>{{$pendaftaran->peserta->nim}}</td>
+                            <td>{{ $pendaftaran->kontak }}</td>
                             <td>{{$pendaftaran->peserta->user->created_at->diffForHumans()}}</td>
                             <td><span class="badge bg-label-primary me-1"><?= $pendaftaran->status ?></span></td>
                             {{-- <td>

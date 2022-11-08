@@ -35,13 +35,20 @@ class UserHomeController extends Controller
 
     public function status()
     {
-        $subevent = Peserta::where('user_id', Auth::user()->id)->with('pendaftaran')->get();
+        // $peserta = Peserta::where('user_id', Auth::user()->id)->with(['pendaftaran'=>function($query){
+        //             $query->where('event_id' , '=', '2');
+        //             }])->get();
+        $userid = Auth::user()->id;
+        $subevent = DB::select( DB::raw("SELECT pesertas.nama, pendaftarans.event_id as event, pendaftarans.kontak, pendaftarans.link_gdrive, pendaftarans.status
+                                        FROM pesertas join pendaftarans
+                                        on(pesertas.id = pendaftarans.peserta_id)
+                                        where pesertas.user_id = $userid and pendaftarans.event_id = 2;"));
+
+        // dd($subevent);
+        // Peserta::where('user_id', Auth::user()->id)->with('pendaftaran')->get();
 
         // QUERY DI BAWAH BISA MENGEMBALIKAN PESERTA YANG DAFTAR SUBEVENT TAPI MASIH BINGUNG NGE SELECTNYA
-        // $peserta = Peserta::where('user_id', Auth::user()->id)->with(['pendaftaran'=>function($query){
-        //     $query->where('event_id' , '=', '2');
-        //   }])->get();
-        $userid = Auth::user()->id;
+        // $userid = Auth::user()->id;
         $mainevent = DB::select( DB::raw("SELECT pendaftarans.id as id_pendaftaran, pesertas.nama, pendaftarans.event_id as event, pendaftarans.kontak, pembayarans.status
                                     FROM pesertas join pendaftarans
                                     on(pesertas.id = pendaftarans.peserta_id)
@@ -50,7 +57,7 @@ class UserHomeController extends Controller
                                     where pesertas.user_id = $userid and pendaftarans.event_id = 1;"));
         // dd($mainevent);
 
-            
+
         return view('peserta.status',[
             'title' => 'TEDx Universitas Airlangga',
             'subevent' => $subevent,

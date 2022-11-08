@@ -24,53 +24,53 @@ class DatabaseSeeder extends Seeder
 
 // INSERT INTO `tedx`.`users` (`email`, `type`, `password`)
 // VALUES ('peserta@gmail.com', 'peserta', '$2y$10$eU/fXO7XOS9b5w7vkkZmu.LXYt2PqNMG7EYPlfrwBFJDiy1t9H1gy');
-        User::create([
-            'email' => 'Ilham@gmail.com',
-            'type' => 'peserta',
-            'password' => Hash::make('123')
-        ]);
-        User::create([
-            'email' => 'Gamas@gmail.com',
-            'type' => 'peserta',
-            'password' => Hash::make('123')
-        ]);
-        User::create([
-            'email' => 'Mei@gmail.com',
-            'type' => 'peserta',
-            'password' => Hash::make('123')
-        ]);
-        User::create([
-            'email' => 'Hana@gmail.com',
-            'type' => 'peserta',
-            'password' => Hash::make('123')
-        ]);
+        // User::create([
+        //     'email' => 'Ilham@gmail.com',
+        //     'type' => 'peserta',
+        //     'password' => Hash::make('123')
+        // ]);
+        // User::create([
+        //     'email' => 'Gamas@gmail.com',
+        //     'type' => 'peserta',
+        //     'password' => Hash::make('123')
+        // ]);
+        // User::create([
+        //     'email' => 'Mei@gmail.com',
+        //     'type' => 'peserta',
+        //     'password' => Hash::make('123')
+        // ]);
+        // User::create([
+        //     'email' => 'Hana@gmail.com',
+        //     'type' => 'peserta',
+        //     'password' => Hash::make('123')
+        // ]);
 
 // INSERT INTO `tedx`.`pesertas` (`nama`, `fakultas`, `angkatan`, `user_id`)
 // VALUES ('peserta', 'vokasi', '20', '5');
-        Peserta::create([
-            'nama' => 'Ilham',
-            'fakultas' => 'Vokasi',
-            'angkatan' => '20',
-            'user_id' => 1
-        ]);
-        Peserta::create([
-            'nama' => 'Gamas',
-            'fakultas' => 'FEB',
-            'angkatan' => '21',
-            'user_id' => 2
-        ]);
-        Peserta::create([
-            'nama' => 'Mei',
-            'fakultas' => 'FST',
-            'angkatan' => '22',
-            'user_id' => 3
-        ]);
-        Peserta::create([
-            'nama' => 'Hana',
-            'fakultas' => 'FK',
-            'angkatan' => '19',
-            'user_id' => 4
-        ]);
+        // Peserta::create([
+        //     'nama' => 'Ilham',
+        //     'fakultas' => 'Vokasi',
+        //     'angkatan' => '20',
+        //     'user_id' => 1
+        // ]);
+        // Peserta::create([
+        //     'nama' => 'Gamas',
+        //     'fakultas' => 'FEB',
+        //     'angkatan' => '21',
+        //     'user_id' => 2
+        // ]);
+        // Peserta::create([
+        //     'nama' => 'Mei',
+        //     'fakultas' => 'FST',
+        //     'angkatan' => '22',
+        //     'user_id' => 3
+        // ]);
+        // Peserta::create([
+        //     'nama' => 'Hana',
+        //     'fakultas' => 'FK',
+        //     'angkatan' => '19',
+        //     'user_id' => 4
+        // ]);
 
 // INSERT INTO `tedx`.`events` (`nama_event`)
 // VALUES ('subevent'/'mainevent');
@@ -84,27 +84,27 @@ class DatabaseSeeder extends Seeder
 
 // INSERT INTO `tedx`.`pendaftarans` (`status`, `event_id`, `peserta_id`)
 // VALUES ('0', '2', '2');
-        Pendaftaran::create([
-            'status' => '0',
-            'event_id' => 2,
-            'peserta_id' => 1
-        ]);
+        // Pendaftaran::create([
+        //     'status' => '0',
+        //     'event_id' => 2,
+        //     'peserta_id' => 1
+        // ]);
 
-        Pendaftaran::create([
-            'status' => '0',
-            'event_id' => 2,
-            'peserta_id' => 2
-        ]);
-        Pendaftaran::create([
-            'status' => '0',
-            'event_id' => 2,
-            'peserta_id' => 3
-        ]);
-        Pendaftaran::create([
-            'status' => '0',
-            'event_id' => 1,
-            'peserta_id' => 4
-        ]);
+        // Pendaftaran::create([
+        //     'status' => '0',
+        //     'event_id' => 2,
+        //     'peserta_id' => 2
+        // ]);
+        // Pendaftaran::create([
+        //     'status' => '0',
+        //     'event_id' => 2,
+        //     'peserta_id' => 3
+        // ]);
+        // Pendaftaran::create([
+        //     'status' => '0',
+        //     'event_id' => 1,
+        //     'peserta_id' => 4
+        // ]);
 
 
         // \App\Models\User::factory()->create([

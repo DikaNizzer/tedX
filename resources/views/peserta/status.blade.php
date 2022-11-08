@@ -67,16 +67,16 @@
                 </tr>
               </thead>
               <tbody>
-                @if ($subevent->first())
+                @if ($subevent)
                     @php
                         $no = 1;
                     @endphp
                     @foreach ($subevent as $data)
 
                         @php
-                            if($data->pendaftaran->status == 0) {
+                            if($data->status == 0) {
                             $status = 'Unverified';
-                            } elseif($data->pendaftaran->status == 1) {
+                            } elseif($data->status == 1) {
                             $status = 'Verified';
                             } else {
                             $status = 'Berkas Kurang / Salah';
@@ -85,9 +85,9 @@
                         <tr>
                         <td scope="row">{{ $no++ }}</td>
                         <td>{{ $data->nama }}</td>
-                        <td>{{ ($data->pendaftaran->event_id == 2) ? 'Sub event' : 'Maint Event' }}</td>
-                        <td>{{ $data->pendaftaran->kontak }}</td>
-                        <td>{{ $data->pendaftaran->link_gdrive}}</td>
+                        <td>{{ ($data->event == 2) ? 'Sub event' : 'Main Event' }}</td>
+                        <td>{{ $data->kontak }}</td>
+                        <td>{{ $data->link_gdrive}}</td>
                         <td>{{ $status }}</td>
                         </tr>
                     @endforeach
@@ -95,7 +95,7 @@
               </tbody>
             </table>
            </div>
-                @if ($subevent->first() == null)
+                @if ($subevent == null)
                     <p class="text-center">Anda belum melakukan registrasi Sub Event</p>
                 @endif
                 {{-- End Body --}}
@@ -186,7 +186,7 @@
           </div>
         </div>
 
-        
+
       </div>
     </div>
   </div>
