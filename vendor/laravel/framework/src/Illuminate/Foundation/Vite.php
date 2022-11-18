@@ -575,10 +575,14 @@ class Vite implements Htmlable
             return;
         }
 
+        $attributes = $this->parseAttributes([
+            'nonce' => $this->cspNonce(),
+        ]);
+
         return new HtmlString(
             sprintf(
                 <<<'HTML'
-                <script type="module">
+                <script type="module" %s>
                     import RefreshRuntime from '%s'
                     RefreshRuntime.injectIntoGlobalHook(window)
                     window.$RefreshReg$ = () => {}
@@ -586,6 +590,7 @@ class Vite implements Htmlable
                     window.__vite_plugin_react_preamble_installed__ = true
                 </script>
                 HTML,
+                implode(' ', $attributes),
                 $this->hotAsset('@react-refresh')
             )
         );
@@ -710,7 +715,7 @@ class Vite implements Htmlable
      *
      * @return bool
      */
-    protected function isRunningHot()
+    public function isRunningHot()
     {
         return is_file($this->hotFile());
     }

@@ -4,7 +4,7 @@ let navbar = document.querySelector("nav");
 let scrolled = false;
 let collapseOn = false;
 $(window).scroll(function () {
-	if ($(this).scrollTop() > 60) {
+	if ($(this).scrollTop() > 70) {
 		$("nav").addClass("bg-dark shadow");
 		scrolled = true;
 	} else {

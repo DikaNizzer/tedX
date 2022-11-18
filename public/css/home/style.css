@@ -16,14 +16,18 @@ body {
 }
 
 
+.container{
+    padding:30px;
+}
+
 .home{
     width:100%;
     height:100%;
-    background: linear-gradient(359.42deg, #FF003D 5.77%, #250073 55.88%);
-    background-image: url('../../images/banner.png');
+    background: linear-gradient(180deg, #37203E 0%, #37213E 50%, #231527 100%);
+    /* background-image: url('../../images/banner.png'); */
 	/* background-size:100%; */
-	background-repeat: no-repeat;
-    background-size: cover;
+	/* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .homePeserta{
@@ -64,9 +68,9 @@ body {
     width:100%;
     height:auto;
     /* background-image: url('../../images/home-bg-01.png'); */
-    /* background-image: url('../../images/banner.png');
+    background-image: url('../../images/banner.png');
 	background-size:100%;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 }
 
 .home-header .row{
@@ -74,6 +78,24 @@ body {
     margin:auto;
     margin-top:7%
 }
+
+
+.home .gradient {
+	position: absolute;
+	height: 110px;
+	width: 130%;
+	left: 0px;
+	top: 90%;
+	background: linear-gradient(
+		180deg,
+		rgba(21, 0, 44, 0.027) 0%,
+		#37213ec8 40%,
+		#37213E 100%
+	);
+    z-index:5;
+}
+
+
 
 
 .btn-custom-profile{
@@ -87,17 +109,81 @@ body {
 
 
 
+
+.countdown{
+    z-index:10;   
+}
+
+.countdown h4{
+    font-family: "ubuntu";
+    color:#ffff;
+    font-size:36px;
+    font-weight:600;
+    text-align:center;
+}
+
+.countdown h6{
+    font-family: "ubuntu";
+    color:#ffff;
+    font-size:22px;
+    font-weight:500;
+    text-align:center;
+}
+
+
+.countdown-img{
+    height:80%;
+    width:auto;
+}
+
+
+
+.countdown li {
+    display: inline-block;
+    font-size: 12px;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    color:#ffff;
+    background-color: #000000;
+    width:auto;
+    height:auto;
+    border-radius:5px;
+  }
+  
+  .countdown li span {
+    display: block;
+    font-size: 16px;
+  }
+
+
+.registration-closed{
+    color:rgb(221, 221, 221);
+    font-size:18px;
+    background-color: #aeaeae;
+    height: 40px;
+    width:200px;
+    text-align:center;
+    padding:5px;
+    border-radius: 30px 0px 30px 30px;
+    
+}
+
+
 @media (max-width: 986px) {
 
 
     .home-header{
-        padding:10px
+        padding:10px;
+        background-size:cover;
+        padding:10px;
+    }
+
+
+    .home .gradient {
+        top: 110%;
     }
     
-	.home{
-		background-size:cover;
-        padding:10px;
-	}
 
     .home-header .row{
 		margin:5%;
