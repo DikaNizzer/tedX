@@ -53,7 +53,7 @@
 		<div class="modal-header auth-header">
 		  <div class="row" style="padding:5px">
 			<div class="col-10">
-			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
+			  <img src="images/tedxhitam.png" height="auto" width="60%" style="margin:5px" alt="">
 			</div>
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
@@ -98,7 +98,7 @@
 		<div class="modal-header auth-header">
 		  <div class="row" style="padding:5px">
 			<div class="col-10">
-			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
+			  <img src="images/tedxhitam.png" height="auto" width="60%" style="margin:5px" alt="">
 			</div>
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>

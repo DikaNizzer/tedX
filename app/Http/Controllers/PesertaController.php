@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Peserta;
 // use Barryvdh\DomPDF\PDF;
-// use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 // use Barryvdh\DomPDF\Facade as PDF;
 use App\Models\Pembayaran;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use PDF;
+// use PDF;
 
 class PesertaController extends Controller
 {
@@ -118,6 +118,12 @@ class PesertaController extends Controller
         // dd($data);
     	$pdf = PDF::loadView('peserta.tiket', $data)->setPaper('a4', 'potrait');
     	return $pdf->download('tiket.pdf');
+
+        
+        // $pdf = PDF::loadView('peserta.tiket', $data)->setOptions(['defaultFont' => 'sans-serif',
+        //                                                                                 'enable_remote' => true,
+        //                                                                                 'chroot'  => public_path('storage')]);
+        // return $pdf->download('tiket.pdf');
     }
 
     public function editstatus(Request $request,$id){
