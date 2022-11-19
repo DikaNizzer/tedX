@@ -8,7 +8,8 @@
 	<title><?= $title ?></title>
 	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="css/home/style.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+	{{-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> --}}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo+One|Lora">
 	<link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
