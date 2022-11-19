@@ -11,10 +11,10 @@
             @if (Auth::user())
                 <ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active link-light text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active link-danger text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light link-light text-center" href="/home"><b>Dashboard</b></a>
+                        <a class="nav-link text-light link-danger text-center" href="/home"><b>Dashboard</b></a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link text-light link-danger text-center" href=""><b>About</b></a>
@@ -32,12 +32,24 @@
             @else
                 <ul class="navbar-nav mb-3 mb-md-0  mt-2 mt-lg-0 pe-lg-4 gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active link-light text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active link-danger text-center" href="/" aria-current="page"><b>Home</b> <span class="visually-hidden">(current)</span></a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>Meet the Team</b></a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>About Us</b></a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>Event</b></a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link text-light link-danger text-center" href=""><b>Order Now</b></a>
                     </li>
                 </ul>
 				<div class="d-md-flex d-grid gap-2 d-md-block">
-					<button class="btn-custom-daftar" style="margin:auto" data-bs-toggle="modal" data-bs-target="#registerModal"> REGISTER</button>
-					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> LOGIN</button>
+					<button class="btn-custom-daftar" style="margin:auto" data-bs-toggle="modal" data-bs-target="#registerModal"> Register</button>
+					<button class="btn-custom-login" style="margin:auto" data-bs-toggle="modal" data-bs-target="#loginModal"> Login</button>
 				</div>
             @endif
 		</div>
@@ -77,7 +89,7 @@
 			  <input id="password_confirmation" name="password_confirmation" class="form-control auth-form" type="password" aria-label="default input example" required>
 			</div>
 
-			<center><button type="submit" class="register" style="margin:auto" > GET STARTED</button></center>
+			<center><button type="submit" class="register" style="margin:auto" > Register</button></center>
 		  </form>
 
 			  <h5 style="font-size:12px; text-align:center; margin-top:10px;">Already have an account? <span class="modal-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</span></h5>

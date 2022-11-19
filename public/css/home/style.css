@@ -3,7 +3,8 @@
 
 * {
 	margin: 0;
-    font-family: "ubuntu";
+    /* font-family:"Lora"; */
+    font-weight:500;
 }
 
 a{
@@ -12,7 +13,7 @@ a{
 
 body {
 	background:#ffff;
-	font-family : "ubuntu";
+    font-family:"Lora";
 }
 
 
@@ -41,7 +42,8 @@ body {
 
 .navbar{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
-    background:#ffffff00
+    background:#ffffff00;
+    font-family:"Lora";
 }
 
 .btn-custom-daftar {
@@ -52,17 +54,17 @@ body {
 	border-radius: 30px 0px 30px 30px;
     height:40px;
 	width:110px;
-	font-weight:700;
+	font-weight:500;
 }
 
 .btn-custom-login{
-    background:linear-gradient(180deg, #D90000 0%, #B606BA 100%);
+    background:#bd300c;
 	color: #ffff;
 	border-radius: 0px 30px 30px 30px;
     /* border: 2px solid linear-gradient(180deg, #D90000 0%, #B606BA 100%); */
 	height:40px;
 	width:110px;
-	font-weight:700;
+	font-weight:500;
     margin:auto;
 }
 
@@ -119,17 +121,17 @@ body {
 }
 
 .countdown h4{
-    font-family: "ubuntu";
+    font-family: "Russo One";
     color:#ffff;
     font-size:36px;
-    font-weight:600;
+    font-weight:500;
     text-align:center;
 }
 
 .countdown h6{
-    font-family: "ubuntu";
+    font-family:"Lora";
     color:#ffff;
-    font-size:22px;
+    font-size:16px;
     font-weight:500;
     text-align:center;
 }
@@ -212,20 +214,20 @@ body {
 
 
 .talk-card h5{
-    font-family:"Ubuntu";
+    font-family:"Russo One";
     font-size:22px;
-    font-weight:700;
+    font-weight:500;
 }
 
 .talk-card h6{
-    font-family:"Ubuntu";
+    font-family:"Lora";
     font-size:18px;
     font-weight:500;
     margin:0
 }
 
 .talk-card p{
-    font-family:"Ubuntu";
+    font-family:"Lora";
     font-size:12px;
     font-weight:500;
     margin-bottom:10px
@@ -254,19 +256,19 @@ body {
 }
 
 .theme h4{
-    font-family:"Ubuntu";
+    font-family:"Russo One";
     font-size:40px;
-    font-weight:600;
+    font-weight:400;
 }
 
 .theme h5{
-    font-family:"Ubuntu";
+    font-family:"Lora";
     font-size:24px;
     font-weight:400;
 }
 
 .theme p{
-    font-family:"Ubuntu";
+    font-family:"Lora";
     font-size:16px;
     font-weight:300;
     width:40%;
@@ -280,35 +282,7 @@ body {
  right: 25%;
 }
 
-.speaker-2{
-    z-index:9;
-    transform: rotate(4.64deg);
-    position: absolute;;
-    right:23%;
 
- }
-
-
- .speaker-3{
-    z-index:8;
-    transform: rotate(7.86deg);
-    position: absolute;
-    right:20%;
-
- }
-
-
- .speaker-1:hover{
-    transform: scale(1.1)
-   }
-
- .speaker-2:hover{
-    transform: scale(1.1) rotate(4.64deg);
-   }
-
- .speaker-3:hover{
-    transform: scale(1.1) rotate(7.86deg);
-   }
 
 
  .speaker-text{
@@ -337,15 +311,22 @@ body {
 }
 
 .student-speaker h5{
-    font-family:"Ubuntu";
+    font-family:"Russo One";
     font-size:34px;
-    font-weight:700;
+    font-weight:500;
     margin-bottom:0
 }
 
 .student-speaker h6{
-    font-family:"Ubuntu";
+    font-family:"Lora";
     font-size:20px;
+    font-weight:500;
+    margin:0
+}
+
+.student-speaker p{
+    font-family:"Lora";
+    font-size:16px;
     font-weight:500;
     margin:0
 }
@@ -354,10 +335,16 @@ body {
     height:350px;
     width:auto
 }
+
+.student-img:hover{
+    transform: scale(1.1);
+}
    
 
 
 @media (max-width: 986px) {
+
+
     .home-header{
         padding:10px;
         background-size:cover;
@@ -380,6 +367,7 @@ body {
 	}
 
     .home-header h5{
+        font-family:"Lora";
 		font-size: 14px;
 	}
 
@@ -412,20 +400,20 @@ body {
 
 
     .talk-card h5{
-        font-family:"Ubuntu";
+        font-family:"Russo One";
         font-size:18px;
-        font-weight:700;
+        font-weight:500;
     }
     
     .talk-card h6{
-        font-family:"Ubuntu";
+        font-family:"Lora";
         font-size:14px;
         font-weight:500;
         margin:0
     }
     
     .talk-card p{
-        font-family:"Ubuntu";
+        font-family:"Lora";
         font-size:10px;
         font-weight:500;
         margin-bottom:10px
@@ -439,6 +427,10 @@ body {
     .student-img{
         height:300px;
         width:auto
+    }
+
+    .student-img:hover{
+        transform: scale(1.1);
     }
 
     
@@ -455,8 +447,9 @@ body {
 
 .home-header h1{
     color:#ffff;
-    /* font-size:50px;
-    font-weight:700; */
+    font-family:"Russo One";
+    /* font-size:50px; */
+    font-weight:400;
 }
 
 
@@ -469,21 +462,23 @@ body {
 
 
 .get-started{
+    font-family:"Lora";
     margin-top:20px;
     width:200px;
     height:60px;
     color:#ffff;
     border-radius:0px 30px 30px 30px;
-    /* border: 2px solid #ffff; */
+    border: none;
     font-size:20px;
-    font-weight:700;
+    font-weight:400;
     text-align:center;
     padding:10px;
-    background:linear-gradient(180deg, #D90000 0%, #B606BA 100%);
+    background:#bd300c;
 }
 
 
 .register{
+    font-family:"Lora";
     width:80%;
     height:40px;
     color:#ffff;
@@ -491,10 +486,10 @@ body {
     border:none;
     margin:auto;
     font-size:14px;
-    font-weight:700;
+    font-weight:500;;
     text-align:center;
     padding:auto;
-    background:linear-gradient(180deg, #D90000 0%, #B606BA 100%);
+    background:#bd300c;
 }
 
 .modal-login{
@@ -505,7 +500,7 @@ body {
 
 .modal-login:hover{
     color:#dc0404;
-    font-weight:700;
+    font-weight:500;;
 }
 
 
@@ -513,7 +508,7 @@ body {
 .btn-custom-login:hover,
 .get-started:hover,
 .register:hover{
-    background: linear-gradient(180deg, #2400c6 0%, #f700ff 100%); 
+    background:#a72909;
     color:#ffffff;
     border:none;
 }
@@ -536,7 +531,7 @@ body {
     background-color: #00000000;
     color:#ffff;
     font-size:14px;
-    font-weight:700;
+    font-weight:500;;
     text-align:center
 }
 
@@ -662,7 +657,7 @@ body {
     /* border: 2px solid linear-gradient(180deg, #D90000 0%, #B606BA 100%); */
 	height:40px;
 	width: 150px;
-	font-weight:700;
+	font-weight:500;;
 }
 
 .disabled{
@@ -726,7 +721,7 @@ body {
 .footer-top h5{
     text-align:center;
     font-size:14px;
-    font-weight:700;
+    font-weight:500;
     justify-content:center;
     margin:auto;
 }
@@ -834,7 +829,8 @@ body {
     color:#ffffff;
     border:none;
     background: rgb(2,0,36);
-    background: linear-gradient(180deg, #7f62fe 0%, #f700ff 100%); 
+    /* background: linear-gradient(180deg, #7f62fe 0%, #f700ff 100%);  */
+    background:#a72909;
 }
 
 .register-option{
@@ -845,13 +841,14 @@ body {
     text-align:center;
     justify-content:center;
     align-content:center;
-    font-weight:700;
+    font-weight:500;;
     font-size:20px;
     margin:auto;
     margin-bottom:20px;
     padding:10px;
     /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 50%, rgba(0,212,255,1) 100%); */
-    background: linear-gradient(180deg, #6141f4 0%, #aa00b0 100%); 
+    /* background: linear-gradient(180deg, #6141f4 0%, #aa00b0 100%); 
+    background:#a72909; */
 }
 
 
@@ -923,14 +920,14 @@ body {
 
 
   .capt h5{
-    font-family:"Ubuntu";
+    font-family:"Russo One";
     font-size: 40px;
-    font-weight:700;
+    font-weight:400;
   }
 
 
   .capt p{
-    font-family:"Ubuntu";
+    font-family:"Lora";
     font-size: 16px;
     font-weight:500;
     width:90%;
@@ -958,3 +955,169 @@ body {
      position:absolute;
      z-index:20;
   }
+
+
+  .home-modal{
+	max-width:1000px;
+	width:auto;
+    padding:5px
+}
+
+
+.event-modal{
+	background-color: #ffff;
+    border-radius: 20px
+}
+
+
+
+.grab-button{
+    height:40px;
+    width:160px;
+    border-radius:50px;
+    color:#ffff;
+    background-color: #E52B1E;
+    padding:5px;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    display:flex
+}
+
+
+.grab-button:hover{
+    color:#ffff;
+    background-color: #9f1107;
+}
+
+.grab{
+    margin-bottom:10px; 
+    top:70%; 
+    position:absolute
+}
+
+.modal-event h5{
+    font-family:"Russo One";
+    font-size:24px;
+    font-weight:400;
+}
+
+.modal-event h6{
+    font-family:"Lora";
+    font-size:14px;
+    font-weight:500;
+}
+
+
+.modal-event p{
+    font-family:"Lora";
+    font-size:12px;
+    font-weight:500;
+    text-align:justify
+}
+
+@media (max-width: 986px) {
+
+    .grab{
+        margin-bottom:10px; 
+        top:100%; 
+        position:absolute
+    }
+}
+
+
+
+.carousel-control-prev{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:-5%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: none;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:-5%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: none;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+
+
+.carousel-control-prev-icon {
+    background-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="%231c1b1f" d="m12.3 15.3l-2.6-2.6q-.15-.15-.225-.325Q9.4 12.2 9.4 12t.075-.375q.075-.175.225-.325l2.6-2.6q.475-.475 1.087-.212q.613.262.613.937v5.15q0 .675-.613.937q-.612.263-1.087-.212Z"%2F%3E%3C%2Fsvg%3E');
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(180 12 12)"%3E%3Cpath fill="%231c1b1f" d="m12.3 15.3l-2.6-2.6q-.15-.15-.225-.325Q9.4 12.2 9.4 12t.075-.375q.075-.175.225-.325l2.6-2.6q.475-.475 1.087-.212q.613.262.613.937v5.15q0 .675-.613.937q-.612.263-1.087-.212Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  }
+
+
+
+  .dot2{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+}
+
+
+.dot2 [data-bs-target]{
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgb(180, 0, 0);
+  background-clip: padding-box;
+  border-radius:10px;
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
+}
+
+
+.dot2 .active{
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    border-radius:12px;
+}
