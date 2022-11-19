@@ -101,6 +101,7 @@
                     </div>
                     <div class="form-group mt-3">
                       <label for="metode_bayar">Payment Methods</label>
+                      <p style="font-size: 12; color:red"><i>Price : IDR 89.000/person</i></p>
                       <select class="form-control peserta-form" name="metode_bayar" id="metode_bayar" required>
                         <option value="BCA" {{ (old('metode_bayar') == "BCA") ? 'selected' : '' }}>BCA ~ 0882124655  ~ Dewi Ayu N. A. S.</option>
                         <option value="BNI" {{ (old('metode_bayar') == "BNI") ? 'selected' : '' }}>BNI ~ 1148847032 ~ Alyssa De Quervain</option>
@@ -152,7 +153,7 @@
 		<div class="modal-header auth-header">
 		  <div class="row" style="padding:5px">
 			<div class="col-10">
-			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
+			  <img src="images/tedxhitam.png" height="auto" width="60%" style="margin:5px" alt="">
 			</div>
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>

@@ -108,7 +108,7 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
 		<div class="modal-header auth-header">
 		  <div class="row" style="padding:5px">
 			<div class="col-10">
-			  <img src="images/dark-logo.png" height="auto" width="60%" style="margin:5px" alt="">
+			  <img src="images/tedxhitam.png" height="auto" width="60%" style="margin:5px" alt="">
 			</div>
 			<div class="col-2 justify-content-end">
 			  <button type="button" class="btn-close end-0" data-bs-dismiss="modal" aria-label="Close" style="margin:5px" ></button>
@@ -148,6 +148,15 @@ ideas about TEDxUniversitasAirlangga’s theme in 2022
         </div>
         <div class="col-11" style="font-size:12px; padding-left:5%">
           Upload proof of payment on the form provided
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-1">
+          <iconify-icon icon="fluent:note-pin-16-filled" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+        </div>
+        <div class="col-11" style="font-size:12px; padding-left:5%">
+          One account/identity can only be used for purchasing <b>ONE TICKET</b>
         </div>
       </div>
 
