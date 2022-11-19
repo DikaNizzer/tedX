@@ -1,8 +1,8 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md fixed-top transition-color pt-4 pb-4" >
+<nav class="navbar navbar-expand-md fixed-top transition-color" style="height:auto">
 	<div class="container">
 		<a class="navbar-brand" href="">
-			<img src="images/logo-ted.png" alt="logoted" width="auto" height="45">
+			<img src="images/logo-baru.png" alt="logoted" width="auto" height="30">
 		</a>
 		<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
