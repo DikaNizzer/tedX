@@ -29,7 +29,7 @@ use App\Http\Controllers\DashboardPembayaranController;
 
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-
+Route::get('/our-sponsor', [SponsorController::class, 'index']);
 
 
 // Peserta

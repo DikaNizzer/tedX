@@ -705,6 +705,75 @@ body {
 }
 
 
+.sponsor{
+    width: 100%;
+    height: auto;
+    background-image: url('../../images/banner.png');
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sponsor .headline{
+    margin: auto;
+    padding-top: 20%;
+    color: white;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.sponsor .headline h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.sponsor .headline p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sponsor .logo-sponsor img{
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .sponsor .headline{
+        padding-top: 20%;
+        margin-bottom: 5%;
+    }
+    .sponsor .headline h2{
+        font-size: 42px;
+    }
+    
+    .sponsor .headline p{
+        font-size: 24px;
+    }
+
+    .sponsor .logo-sponsor img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .sponsor .headline{
+        padding-top: 8%;
+        margin-bottom: 5%;
+    }
+    .sponsor .headline h2{
+        font-size: 56px;
+    }
+    
+    .sponsor .headline p{
+        font-size: 24px;
+    }
+
+    .sponsor .logo-sponsor img{
+        width: 100%;
+    }
+}
 
 
 
