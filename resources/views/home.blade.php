@@ -27,7 +27,7 @@
          @endif  
         </div>
         <div class="col-lg-6 d-flex justify-content-center" style="margin-left:3%">
-          <img src="images/home-image.png"class="img-fluid home-img" style="margin:auto; height:auto width:100%; ">
+          <img src="images/desainmain.png"class="img-fluid home-img" style="margin:auto; height:auto width:100%; ">
         </div>
       </div> 
 
@@ -41,16 +41,8 @@
             <div class="col-lg-6">
               <center>
               <h4>Looking for <br> Local Speakers</h4>
-              <img src="images/component.png" class="countdown-img mt-4 mb-2" alt="">
+              <img src="images/lfls2.png" class="countdown-img mt-4 mb-2" alt="" data-bs-toggle="modal" data-bs-target="#subevent">
               <h6>Registration closed at:</h6>
-              {{-- <div id="count">
-                <ul>
-                  <li><span id="days"></span>days</li>
-                  <li><span id="hours"></span>Hours</li>
-                  <li><span id="minutes"></span>Minutes</li>
-                  <li><span id="seconds"></span>Seconds</li>
-                </ul>
-              </div> --}}
               <div class="registration-closed mb-4">
                 Closed
               </div>
@@ -59,7 +51,7 @@
             <div class="col-lg-6 ">
               <center>
               <h4>Main Event</h4>
-              <img src="images/component.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#mainEvent" alt="">
+              <img src="images/desainmain2.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#mainEvent" alt="">
               <h6>Saturday, 26th November 20222</h6>
               <div id="count" >
                 <ul style="margin:0">
@@ -80,24 +72,35 @@
       <div class="container" data-aos="fade_up">
         <h5 class="mt-4">GRAND THEME</h5>
         <h4 class="mt-2 mb-4">Epiphany on Ephemeral</h4>
-        <p class="mb-4">Our main theme for this year is Epiphany on Ephemeral. 
-          Epiphany is associated with life-changing realisation, and 
-          things that don’t last forever are ephemeral.</p>
+        <p class="mb-4 ">
+          Epiphany is associated with a life-changing realization and things that don't last forever are ephemeral.
+        </p>
+        <p class="mb-4">
+          It starts from the fact that our life is dynamic, sometimes we’ve been through the happiest moment and 
+          sometimes we have to accept that we lost something that we never expected. That’s all part of the ups and 
+          downs in our life. Like it or not, we have to live it. That’s why we believe that this phenomenon needs to 
+          be shared to level up our awareness and readiness as humans to face this. Starting from ourselves first, 
+          we hope this value will be spread then as wide as possible like the tagline of TEDx itself. 
+          How society will respond is up to them to see this phenomenon from their views, we believe that every way is unique.
+        </p>
           <h5 style="margin-top:100px">SUBTHEME</h5>
           <div class="row mt-2 mb-4">
             <div class="col-lg-4">
-              <img src="images/component.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#themeModal" alt="">
+              <img src="images/health2.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#themeModal" alt="">
+              <h3> ROOT </h3>
             </div>
             <div class="col-lg-4">
-              <img src="images/component.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#themeModal" alt="">
+              <img src="images/education2.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#themeModal" alt="">
+              <h3> TRUNK  </h3>
             </div>
             <div class="col-lg-4">
-              <img src="images/component.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#themeModal" alt="">
+              <img src="images/work2.png" class="countdown-img mt-4 mb-2" data-bs-toggle="modal" data-bs-target="#themeModal" alt="">
+              <h3> CROWN  </h3>
             </div>
           </div>
 
 
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="margin-top:10%;">          
+          {{-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true" style="margin-top:10%;">          
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row d-flex align-items-center justify-content-center">
@@ -163,13 +166,16 @@
               </div>
             </div>
           </div>
-      </div>
+      </div> --}}
     </section>
 
 
     <section id="topic" class="topic">  
+
+      
       <div class="container" > 
-       <div class="row d-flex justify-content-end">
+
+       {{-- <div class="row d-flex justify-content-end">
         <div class="col-lg-5 d-flex justify-content-center">
           <div class="talk-card">
            <div class="row ">
@@ -199,37 +205,43 @@
            </div>
         </div>    
        </div>
+       
        <div class="row">
-        <div class="col-lg-5 d-flex justify-content-center">
-          <div class="talk-card">
-            <div class="row">
-             <div class="col-4">
-               <img src="images/talk.png" class="talk-img d-flex align-items-end" alt="">  
-             </div>
-             <div class="col-8">
-               <h5 class="mb-3">Topic of The Talk</h5>
-               <h6>John Doe</h6>
-               <p>Executive Director</p>
-             </div>
-            </div>
-           </div>
-        </div> 
-        <div class="col-lg-5 d-flex justify-content-center">
-          <div class="talk-card">
-            <div class="row">
-             <div class="col-4">
-               <img src="images/talk.png" class="talk-img d-flex align-items-end" alt="">  
-             </div>
-             <div class="col-8">
-               <h5 class="mb-3">Topic of The Talk</h5>
-               <h6>John Doe</h6>
-               <p>Executive Director</p>
-             </div>
-            </div>
-           </div>
-        </div> 
-       </div>
 
+        <div class="col-lg-5 d-flex justify-content-center">
+          <div class="talk-card">
+            <div class="row">
+             <div class="col-4">
+               <img src="images/talk.png" class="talk-img d-flex align-items-end" alt="">  
+             </div>
+             <div class="col-8">
+               <h5 class="mb-3">Topic of The Talk</h5>
+               <h6>John Doe</h6>
+               <p>Executive Director</p>
+             </div>
+            </div>
+           </div>
+        </div> 
+
+        <div class="col-lg-5 d-flex justify-content-center">
+          <div class="talk-card">
+            <div class="row">
+             <div class="col-4">
+               <img src="images/talk.png" class="talk-img d-flex align-items-end" alt="">  
+             </div>
+             <div class="col-8">
+               <h5 class="mb-3">Topic of The Talk</h5>
+               <h6>John Doe</h6>
+               <p>Executive Director</p>
+             </div>
+            </div>
+           </div>
+        </div> 
+
+       </div> --}}
+
+
+       {{-- Judul --}}
        <div class="student-speaker">
         <div class="row student mb-4">
           <div class="col">
@@ -238,6 +250,8 @@
           </div> 
         </div>
           
+
+        {{-- DIPAKE --}}
         <div class="row d-flex justify-content-center mt-4">
           <div class="col-lg-4 ">
            <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
@@ -254,7 +268,69 @@
            </div>
           </div>
         </div>
+        {{-- END --}}
        </div>
+
+        {{-- Judul --}}
+        <div class="student-speaker">
+          <div class="row student mb-4">
+            <div class="col">
+              <h5 class="text-end">Student Speakers</h5><br>
+              <h6>Brief description about the content of this section</h6>
+            </div> 
+          </div>
+            
+  
+          {{-- DIPAKE --}}
+          <div class="row d-flex justify-content-center mt-4">
+            <div class="col-lg-4 ">
+              <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+              <div style="padding-right:20%; padding-left:10%">
+              <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
+              <p class="text-center">John Doe</p>
+              </div>
+            </div>
+            <div class="col-lg-4 ">
+              <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+              <div style="padding-right:20%; padding-left:10%">
+              <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
+              <p class="text-center">John Doe</p>
+              </div>
+            </div>
+          </div>
+          {{-- END --}}
+          </div>
+
+                 {{-- Judul --}}
+       <div class="student-speaker">
+        <div class="row student mb-4">
+          <div class="col">
+            <h5 class="text-end">Student Speakers</h5><br>
+            <h6>Brief description about the content of this section</h6>
+          </div> 
+        </div>
+          
+
+        {{-- DIPAKE --}}
+        <div class="row d-flex justify-content-center mt-4">
+          <div class="col-lg-4 ">
+           <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+           <div style="padding-right:20%; padding-left:10%">
+            <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
+            <p class="text-center">John Doe</p>
+           </div>
+          </div>
+          <div class="col-lg-4 ">
+            <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+           <div style="padding-right:20%; padding-left:10%">
+            <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
+            <p class="text-center">John Doe</p>
+           </div>
+          </div>
+        </div>
+        {{-- END --}}
+       </div>
+
       
       </div>   
     </section>
@@ -264,7 +340,79 @@
 
 
 
+{{-- MODAL SUBEVENT --}}
+<div class="modal fade" id="subevent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+			<div class="modal-content event-modal">
+				<div class="modal-header auth-header" style="padding:20px">
+          <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+          <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+				</div>
+				<div class="modal-body modal-event" style="padding:5%">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
 
+              <div class="carousel-item active">
+                <div class="row" style="padding:20px;">
+                  <div class="col-lg-4 d-flex justify-content-center">
+                    <img src="images/lfls2.png" alt="">
+                  </div>
+                  <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                    <h6>SUB EVENT</h6>
+                    <h5>Looking For Local Speakers</h5>
+                    <p>
+                      A competition that focuses on finding potential student speakers who are able and want to spread their 
+                      ideas about TEDxUniversitasAirlangga’s theme in 2022. Selected speakers in this competition will have a 
+                      chance to take part in the main event of TEDxUniversitasAirlangga 2022
+                    </p>
+                    {{-- <div class="grab">
+                      <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                      <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                    </div> --}}
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row" style="padding:20px;">
+                  <div class="col-lg-4 d-flex justify-content-center">
+                    <img src="images/lfls2.png" alt="">
+                  </div>
+                  <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                    <h6>SUB EVENT</h6>
+                    <h5>Wanderlust</h5>
+                    <p>
+                      A medium to display various works of experience that can be felt by humans with their five senses. 
+                      The existence of wanderlust can help to maximize the public’s understanding of TEDxUniversitasAirlangga's 
+                      theme this year.
+                    </p>
+                    {{-- <div class="grab">
+                      <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                      <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                    </div> --}}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="carousel-indicators dot2" style="margin-top:10px">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{{-- END SUBEVENT --}}
 
 
 {{------------------------------
@@ -283,28 +431,16 @@ MODAL MAIN EVENT
               <div class="carousel-item active">
                 <div class="row" style="padding:20px;">
                   <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="images/component.png" alt="">
+                    <img src="images/desainmain.png" alt="">
                   </div>
                   <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
                     <h6>MAIN EVENT</h6>
-                    <h5>Education: The Pillar of Life</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae iste ratione laboriosam doloribus hic minus harum odio sit. Placeat velit quo vero error aliquam incidunt fuga voluptatibus, minima inventore earum.</p>
-                    <div class="grab">
-                      <p>Find out at TEDUniversitasAirlangga 2022.</p>
-                      <a href="" type="button" class="grab-button">Grab the ticket now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row" style="padding:20px;">
-                  <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="images/component.png" alt="">
-                  </div>
-                  <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
-                    <h6>MAIN EVENT</h6>
-                    <h5>Health: The Basis of Everything</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae iste ratione laboriosam doloribus hic minus harum odio sit. Placeat velit quo vero error aliquam incidunt fuga voluptatibus, minima inventore earum.</p>
+                    <h5>SESSION OF TALKS</h5>
+                    <p>
+                      TEDx events include live speakers (18 minutes speech from the keynote speakers), 
+                      Live experiences (Wanderlust, mini games, and Q&A session for all participants), 
+                      recorded TEDx Talks (video clip of some previous TEDxTalks video), etc.
+                    </p>
                     <div class="grab">
                       <p>Find out at TEDUniversitasAirlangga 2022.</p>
                       <a href="" type="button" class="grab-button">Grab the ticket now</a>
@@ -313,7 +449,7 @@ MODAL MAIN EVENT
                 </div>
               </div>
             </div>
-            <div class="carousel-indicators dot2" style="margin-top:10px">
+            {{-- <div class="carousel-indicators dot2" style="margin-top:10px">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
@@ -324,7 +460,7 @@ MODAL MAIN EVENT
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
-            </button>
+            </button> --}}
           </div>
 				</div>
 			</div>
@@ -348,28 +484,16 @@ MODAL SUBTHEME
               <div class="carousel-item active">
                 <div class="row" style="padding:20px;">
                   <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="images/component.png" alt="">
+                    <img src="images/health2.png" alt="">
                   </div>
                   <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
                     <h6>SUBTHEME</h6>
-                    <h5>Health: The Basis of Everything</h5>
-                    <p>As humans, we are born with body and soul to be able to survive individually or in groups. Both of these are crucial components for humans, so it’s important for humans to be able to maintain them. There are many ways that humans can do it, but humans can only plan. What if all the efforts that humans have done produce unexpected results? This is the fruit of the uncertainty in life that will always be faced, how does the health sector respond to this?</p>
-                    <div class="grab">
-                      <p>Find out at TEDUniversitasAirlangga 2022.</p>
-                      <a href="" type="button" class="grab-button">Grab the ticket now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row" style="padding:20px;">
-                  <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="images/component.png" alt="">
-                  </div>
-                  <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
-                    <h6>SUBTHEME</h6>
-                    <h5>Education: The Pillar of Life</h5>
-                    <p>Cambridge dictionary defines education as the process of teaching or learning. Teaching means activities that give someone knowledge or to train someone. Learning is defined as the activity of obtaining knowledge. As humans, we can do both things through various sources, formal or informal ways. Consciously or not, humans in the journey of their lives have learned from the experiences that occurred in their lives, whether planned events or not, all of which have the values and shape us as we are today. So, is it still relevant to have a plan in life when sometimes our plans do not happen? How does the field of education view this phenomenon?
+                    <h5>ROOT : HEALTH AS THE BASIS OF HUMAN</h5>
+                    <p>
+                      As humans, we are born with body and soul to be able to survive individually or in groups. 
+                      Both of these are crucial components for humans, so it’s important for humans to be able to 
+                      maintain them to build a strong foundation for their life. What if all the efforts that humans 
+                      have done produce unexpected results? How does the health sector respond to this?
                     </p>
                     <div class="grab">
                       <p>Find out at TEDUniversitasAirlangga 2022.</p>
@@ -381,12 +505,36 @@ MODAL SUBTHEME
               <div class="carousel-item">
                 <div class="row" style="padding:20px;">
                   <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="images/component.png" alt="">
+                    <img src="images/education2.png" alt="">
                   </div>
                   <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
                     <h6>SUBTHEME</h6>
-                    <h5>Work: Trust the Possibility</h5>
-                    <p>The changing era that continues to occur has an impact on several sectors of life, one of which is the world of work which every year also experiences an uncertain era shift. It is important for humans to realize that they are also expected to be able to follow in their own way. However, is it enough for humans to simply keep up with the times without the belief in themselves that they are able to believe in the possibility in the midst of the uncertainty and impossibility that occurs?
+                    <h5>TRUNK : EDUCATION AS THE PILLAR OF LIFE</h5>
+                    <p>There’s no limit to talk about education. We define education here as part of learning, 
+                      both in formal and informal ways. From now on, we can get the essentials of education through 
+                      many kinds of ways aligned with the shifting of the era. How does the field of education view this phenomenon?
+                    </p>
+                    <div class="grab">
+                      <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                      <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row" style="padding:20px;">
+                  <div class="col-lg-4 d-flex justify-content-center">
+                    <img src="images/work2.png" alt="">
+                  </div>
+                  <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                    <h6>SUBTHEME</h6>
+                    <h5>CROWN : TRUST THE POSSIBILITY IN WORK-LIFE</h5>
+                    <p>
+                      The changing era that continues to occur has an impact on several sectors of life, one of which is the 
+                      world of work which every year also experiences an uncertain era shift. It is important for humans to realize 
+                      that they are also expected to be able to follow in their own way. However, is it enough for humans to simply 
+                      keep up with the times without the belief in themselves that they are able to believe in the possibility amid 
+                      the uncertainty and impossibility that occurs?
                     </p>
                     <div class="grab">
                       <p>Find out at TEDUniversitasAirlangga 2022.</p>

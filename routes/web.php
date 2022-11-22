@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SubeventController;
 use App\Http\Controllers\UserHomeController;

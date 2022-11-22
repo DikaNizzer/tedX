@@ -271,7 +271,7 @@ body {
     font-family:"Lora";
     font-size:16px;
     font-weight:300;
-    width:40%;
+    width:70%;
     margin:auto
 }
 
@@ -300,7 +300,7 @@ body {
 
 .student-speaker{
     position:relative;
-    z-index:23;
+    /* z-index:23; */
     color:#ffff;
     margin-top:10%;
 }
@@ -311,6 +311,7 @@ body {
 }
 
 .student-speaker h5{
+    text-align: center;
     font-family:"Russo One";
     font-size:34px;
     font-weight:500;
@@ -706,12 +707,14 @@ body {
 
 
 .sponsor{
+    height: 100%;
     width: 100%;
-    height: auto;
+    /* height: auto; */
     background-image: url('../../images/banner.png');
 	background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
+    /* background-size:contain; */
 }
 
 .sponsor .headline{
