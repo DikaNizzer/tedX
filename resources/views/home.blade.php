@@ -285,14 +285,14 @@
           {{-- DIPAKE --}}
           <div class="row d-flex justify-content-center mt-4">
             <div class="col-lg-4 ">
-              <center> <img src="images/speakers/HendiPratama_Final.png" class="countdown-img" alt=""></center>
+              <center> <img src="images/speakers/HendiPratama_Final.png"  data-bs-toggle="modal" data-bs-target="#hendi" class="countdown-img" alt=""></center>
               <div style="padding-right:20%; padding-left:10%">
               <h5 class="text-end mt-4" style="font-size:20px">Dr. Hendi Pratama, S.Pd., M.A.</h5>
               <p class="text-center">Senior Lecturer, Academician, and Founder @Edutrans.id</p>
               </div>
             </div>
             <div class="col-lg-4 ">
-              <center> <img src="images/speakers/RoyNovri_Final.png" class="countdown-img" alt=""></center>
+              <center> <img src="images/speakers/RoyNovri_Final.png" data-bs-toggle="modal" data-bs-target="#roy" class="countdown-img" alt=""></center>
               <div style="padding-right:20%; padding-left:10%">
               <h5 class="text-end mt-4" style="font-size:20px">Roy Novri</h5>
               <p class="text-center">Undergraduate Student of Faculty of Medicine
@@ -316,14 +316,14 @@
         {{-- DIPAKE --}}
         <div class="row d-flex justify-content-center mt-4">
           <div class="col-lg-4 ">
-           <center> <img src="images/speakers/Sunarto_Final.png" class="countdown-img" alt=""></center>
+           <center> <img src="images/speakers/Sunarto_Final.png" data-bs-toggle="modal" data-bs-target="#sunarto" class="countdown-img" alt=""></center>
            <div style="padding-right:20%; padding-left:10%">
             <h5 class="text-end mt-4" style="font-size:20px">Sunarto</h5>
             <p class="text-center">Chairman of Artax</p>
            </div>
           </div>
           <div class="col-lg-4 ">
-            <center> <img src="images/speakers/AnnisaNugrahani_Final.png" class="countdown-img" alt=""></center>
+            <center> <img src="images/speakers/AnnisaNugrahani_Final.png" data-bs-toggle="modal" data-bs-target="#salsa" class="countdown-img" alt=""></center>
            <div style="padding-right:20%; padding-left:10%">
             <h5 class="text-end mt-4" style="font-size:20px">Annisa Salsabilla
             </h5>
@@ -671,10 +671,149 @@ MODAL SPEAKER
       </div>
     </div>
 
+  {{--  Dr. Hendi  --}}
+  <div class="modal fade" id="hendi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+        <div class="modal-content event-modal">
+          <div class="modal-header auth-header" style="padding:20px">
+            <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+            <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+          </div>
+          <div class="modal-body modal-event" style="padding:5%">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row" style="padding:20px;">
+                    <div class="col-lg-4 d-flex justify-content-center">
+                      <img src="images/speakers/HendiPratama_Final.png" alt="">
+                    </div>
+                    <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                      <h6>SPEAKER</h6>
+                      <h5>Trunk : Education As The Pillar of Life</h5>
+                      <p>
+                        Mr. Hendi Pratama, probably well known as a lecturer yet also a famous content creator on TikTok, with approximately 252K followers. With his Master of Art degree from The University of Queensland and Doctor of Philosophy degree from University Sebelas Maret, he has contributed a lot in Indonesia's education field. Beside his experiences on the formal education, as a lecturer and the vice rector for planning and partnership at Semarang State University, Mr. Hendi is also the founder of an informal education platform called @Edutrans.id. Edutrans.id itself, committed to help educators and learners to undergo transformational education. Mr. Hendi also had the experiences as a delegation member, either for an exchange program or an international conferences. He has also published several international journals and has released a few books. His expertise are in linguistics, pragmatics, implicatures and politeness,
+                      </p>
+                      {{-- <div class="grab">
+                        <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                        <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                      </div> --}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+     {{--  Roy  --}}
+  <div class="modal fade" id="roy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+        <div class="modal-content event-modal">
+          <div class="modal-header auth-header" style="padding:20px">
+            <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+            <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+          </div>
+          <div class="modal-body modal-event" style="padding:5%">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row" style="padding:20px;">
+                    <div class="col-lg-4 d-flex justify-content-center">
+                      <img src="images/speakers/RoyNovri_Final.png" alt="">
+                    </div>
+                    <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                      <h6>SPEAKER</h6>
+                      <h5>Trunk : Education As The Pillar of Life</h5>
+                      <p>
+                        Roy Novri is an undergraduate student of Faculty of Medicine. He is a executive board of community outreach in Asian Medication Students Association or AMSA in 2021. He is also a speaker at several events such as the speaker of Bonding CO AMSA-Unair 2022, speaker of Bincang Jalur Perguruan Tinggi 2022, and the speaker of Masuk Kampus FK Event 2022 etc. He is the delegate of Airlangga University medical student outbond in Japan at 2022. He has also participated and wrote several researches.
+                      </p>
+                      <div class="grab">
+                        <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                        <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+     {{--  Sunarto  --}}
+     <div class="modal fade" id="sunarto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+          <div class="modal-content event-modal">
+            <div class="modal-header auth-header" style="padding:20px">
+              <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+              <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+            </div>
+            <div class="modal-body modal-event" style="padding:5%">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row" style="padding:20px;">
+                      <div class="col-lg-4 d-flex justify-content-center">
+                        <img src="images/speakers/Sunarto_Final.png" alt="">
+                      </div>
+                      <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                        <h6>SPEAKER</h6>
+                        <h5>CROWN : TRUST THE POSSIBILITY IN WORK-LIFE</h5>
+                        <p>
+                          The world will always experience a constant shift and it impacts many sectors in the world, one of which the working world. In order to survive it is not enough for us to simply follow these changes, we need to believe in ourselves. Especially, facing the uncertainty and impossibility that could happen. Mr. Sunarto an accomplished leader, has led his company to strive until today. Throughout his career, he has experienced many hardships facing the constant shift of the working world. His experience building his company amidst these constant shifts of the world is truly remarkable. The innovations and ideas that he invested in his company managed to overcome the hardship and impossibilities. He managed to survive with his own beliefs and ideas, and that's what we truly need in order to survive.
+                        </p>
+                        {{-- <div class="grab">
+                          <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                          <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                        </div> --}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
+           {{--  Sunarto  --}}
+     <div class="modal fade" id="salsa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+          <div class="modal-content event-modal">
+            <div class="modal-header auth-header" style="padding:20px">
+              <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+              <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+            </div>
+            <div class="modal-body modal-event" style="padding:5%">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row" style="padding:20px;">
+                      <div class="col-lg-4 d-flex justify-content-center">
+                        <img src="images/speakers/AnnisaNugrahani_Final.png" alt="">
+                      </div>
+                      <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                        <h6>SPEAKER</h6>
+                        <h5>CROWN : TRUST THE POSSIBILITY IN WORK-LIFE</h5>
+                        <p>
+                          Annisa Salsabilla Dwi Nugrahani is an undergraduate student of Faculty of Medicine. She was awarded as the Most outstanding student of Faculty of Medicine 2021 and recently, as the Most Outstanding Student of Universitas Airlangga 2022. She has been featured in more than 30 international, national, and local events as a guest speaker. She has taken part in 4 abroad exchange, in Australia, Thailand, Malaysia, and even United Kingdom. She has also participated in several researches, such as beta-thalassemia, moraxella, and many else.
+                        </p>
+                        <div class="grab">
+                          <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                          <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <script>
 
