@@ -245,26 +245,27 @@
        <div class="student-speaker">
         <div class="row student mb-4">
           <div class="col">
-            <h5 class="text-end">Student Speakers</h5><br>
-            <h6>Brief description about the content of this section</h6>
+            <h5 class="text-center">Our Speakers</h5><br>
+            <h6>ROOT : HEALTH AS THE BASIS OF HUMAN</h6>
           </div> 
         </div>
           
 
         {{-- DIPAKE --}}
         <div class="row d-flex justify-content-center mt-4">
-          <div class="col-lg-4 ">
-           <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+          <div class="col-lg-6 ">
+           <center> <img src="images/speakers/DrBrahmana_Final.png" data-bs-toggle="modal" data-bs-target="#drbrahma" class="countdown-img" alt=""></center>
            <div style="padding-right:20%; padding-left:10%">
-            <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
-            <p class="text-center">John Doe</p>
+            <h5 class="text-center mt-4" style="font-size:20px">Dr. dr. Brahmana Askandar Tjokroprawiro, SpOG (K)-Onk</h5>
+            <p class="text-center">Obstetricians and Gynecological Oncologists
+            </p>
            </div>
           </div>
-          <div class="col-lg-4 ">
-            <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+          <div class="col-lg-6 ">
+            <center> <img src="images/speakers/AnnisaAxelta_Final.png" data-bs-toggle="modal" data-bs-target="#axel" class="countdown-img" alt=""></center>
            <div style="padding-right:20%; padding-left:10%">
-            <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
-            <p class="text-center">John Doe</p>
+            <h5 class="text-center mt-4" style="font-size:20px">Annisa Axelta, M.Psi., Psikolog</h5>
+            <p class="text-center">Adult Clinical Psychologist</p>
            </div>
           </div>
         </div>
@@ -275,8 +276,8 @@
         <div class="student-speaker">
           <div class="row student mb-4">
             <div class="col">
-              <h5 class="text-end">Student Speakers</h5><br>
-              <h6>Brief description about the content of this section</h6>
+              <h5 class="text-center">Our Speakers</h5><br>
+              <h6>TRUNK : EDUCATION AS THE PILLAR OF LIFE</h6>
             </div> 
           </div>
             
@@ -284,17 +285,18 @@
           {{-- DIPAKE --}}
           <div class="row d-flex justify-content-center mt-4">
             <div class="col-lg-4 ">
-              <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+              <center> <img src="images/speakers/HendiPratama_Final.png" class="countdown-img" alt=""></center>
               <div style="padding-right:20%; padding-left:10%">
-              <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
-              <p class="text-center">John Doe</p>
+              <h5 class="text-end mt-4" style="font-size:20px">Dr. Hendi Pratama, S.Pd., M.A.</h5>
+              <p class="text-center">Senior Lecturer, Academician, and Founder @Edutrans.id</p>
               </div>
             </div>
             <div class="col-lg-4 ">
-              <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+              <center> <img src="images/speakers/RoyNovri_Final.png" class="countdown-img" alt=""></center>
               <div style="padding-right:20%; padding-left:10%">
-              <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
-              <p class="text-center">John Doe</p>
+              <h5 class="text-end mt-4" style="font-size:20px">Roy Novri</h5>
+              <p class="text-center">Undergraduate Student of Faculty of Medicine
+              </p>
               </div>
             </div>
           </div>
@@ -305,8 +307,8 @@
        <div class="student-speaker">
         <div class="row student mb-4">
           <div class="col">
-            <h5 class="text-end">Student Speakers</h5><br>
-            <h6>Brief description about the content of this section</h6>
+            <h5 class="text-center">Our Speakers</h5><br>
+            <h6>CROWN : TRUST THE POSSIBILITY IN WORK-LIFE</h6>
           </div> 
         </div>
           
@@ -314,17 +316,19 @@
         {{-- DIPAKE --}}
         <div class="row d-flex justify-content-center mt-4">
           <div class="col-lg-4 ">
-           <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+           <center> <img src="images/speakers/Sunarto_Final.png" class="countdown-img" alt=""></center>
            <div style="padding-right:20%; padding-left:10%">
-            <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
-            <p class="text-center">John Doe</p>
+            <h5 class="text-end mt-4" style="font-size:20px">Sunarto</h5>
+            <p class="text-center">Chairman of Artax</p>
            </div>
           </div>
           <div class="col-lg-4 ">
-            <center> <img src="images/speaker-1.png" class="countdown-img" alt=""></center>
+            <center> <img src="images/speakers/AnnisaNugrahani_Final.png" class="countdown-img" alt=""></center>
            <div style="padding-right:20%; padding-left:10%">
-            <h5 class="text-end mt-4" style="font-size:20px">Topic of the talk</h5>
-            <p class="text-center">John Doe</p>
+            <h5 class="text-end mt-4" style="font-size:20px">Annisa Salsabilla
+            </h5>
+            <p class="text-center">Undergraduate Student of Faculty of Medicine
+            </p>
            </div>
           </div>
         </div>
@@ -592,8 +596,80 @@ MODAL SUBTHEME
 	</div>
   </div>
 
+{{------------------------------
+MODAL SPEAKER
+--------------------------------}}
+{{-- DR BRAHMA --}}
+<div class="modal fade" id="drbrahma" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+			<div class="modal-content event-modal">
+				<div class="modal-header auth-header" style="padding:20px">
+          <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+          <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+				</div>
+				<div class="modal-body modal-event" style="padding:5%">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row" style="padding:20px;">
+                  <div class="col-lg-4 d-flex justify-content-center">
+                    <img src="images/speakers/DrBrahmana_Final.png" alt="">
+                  </div>
+                  <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                    <h6>SPEAKER</h6>
+                    <h5>Root: Health as the Basis of Human</h5>
+                    <p>
+                      Health has a close relations with uncertainty, considering that disease doesn’t look at who you are or how old are you, youths need to grow and increase their awareness about how important it is to maintain physical health whether in the short term or the long term. The discussion about Physical Health will be presented by Dr. dr. Brahmana Askandar Tjokroprawiro, SpOG (K)-Onk as General Chair of the Indonesian Association of Gynecological Oncologists and Chair of the Surabaya Doctors Association. dr. Brahmana has a lot of experience in the health sector especially cancer as one of the most dangerous diseases in the world. dr. Brahmana will explain how important it is to take care of yourself to avoid illness to achieve a bright future.
+                    </p>
+                    <div class="grab">
+                      <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                      <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
+  {{-- ANNISA AXEL --}}
+  <div class="modal fade" id="axel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable home-modal">
+        <div class="modal-content event-modal">
+          <div class="modal-header auth-header" style="padding:20px">
+            <img src="images/tedxhitam.png" alt="" height="30px" width="auto">
+            <span> <button type="button" class="btn-close close-syarat" data-bs-dismiss="modal" aria-label="Close"></button></span>	
+          </div>
+          <div class="modal-body modal-event" style="padding:5%">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row" style="padding:20px;">
+                    <div class="col-lg-4 d-flex justify-content-center">
+                      <img src="images/speakers/AnnisaAxelta_Final.png" alt="">
+                    </div>
+                    <div class="col-lg-8" style="padding-left:2%; padding-right:5%">
+                      <h6>SPEAKER</h6>
+                      <h5>Root: Health as the Basis of Human</h5>
+                      <p>
+                        Most of the young people in Indonesia are currently excluded due to their limited understanding of mental health. Nowadays, mental health is always the hottest issue that is often discussed everywhere, even everything that happens in the youth’s life is most likely associated with mental health problems. In response to this, TEDxUniversitasAirlangga presents a special discussion related to mental health with Annisa Axelta. As we know, Annisa Axelta is Adult Clinical Psychologist. The woman who is familiarly called Annisa started her career as a psychologist who later became active in giving pieces of advice about how to be grateful and enjoy life as it should be. Annisa Axelta has been teaching and running online movements with digital learning tools to be able to consistently access mental health education.  Utilizing her social media platforms, such as Instagram, Annisa Axelta actively shares information about the importance of raising awareness of mental health among the youths through @futureparentsproject. We can say that Annisa Axelta is one of the people that have a central role in orchestrating the emergence of mental health among the youths. No wonder Annisa Axelta through @futureparentsproject also has many loyal followers who listen to every suggestion and advice she issues to the youths so they can live a better life as human.
+                      </p>
+                      {{-- <div class="grab">
+                        <p>Find out at TEDUniversitasAirlangga 2022.</p>
+                        <a href="" type="button" class="grab-button">Grab the ticket now</a>
+                      </div> --}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
