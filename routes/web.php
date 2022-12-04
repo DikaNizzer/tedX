@@ -30,6 +30,8 @@ use App\Http\Controllers\DashboardPembayaranController;
 
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
 Route::get('/our-sponsor', [SponsorController::class, 'index']);
 
 

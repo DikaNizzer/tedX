@@ -6,9 +6,17 @@
     {{-- <h5>This independent TEDx event is operated under lincense from TED</h5> --}}
     
 <center>
-  <iconify-icon icon="mdi:instagram" style="color: #9c0202;" width="30" height="30"></iconify-icon>
-  <iconify-icon icon="mdi:linkedin" style="color: #9c0202;" width="30" height="30"></iconify-icon>
-  <iconify-icon icon="iconoir:tiktok" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+  <a href="https://instagram.com/tedxuniversitasairlangga?igshid=MTg0ZDhmNDA="> 
+    <iconify-icon icon="mdi:instagram" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+  </a>
+  <a href="https://www.linkedin.com/company/tedxuniversitasairlangga/">
+    <iconify-icon icon="mdi:linkedin" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+  </a>
+
+  <a href="https://vt.tiktok.com/ZSRo3UHj1/" > 
+    <iconify-icon icon="iconoir:tiktok" style="color: #9c0202;" width="30" height="30"></iconify-icon>
+
+  </a>
 
 </center>
   </div>

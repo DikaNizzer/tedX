@@ -21,4 +21,20 @@ class HomeController extends Controller
         // return view('templates.footer');
         return view('home', $data);
     }
+
+    public function about(){
+        $data = [
+			'title' => 'TEDxUniversitasAirlangga',
+		];
+
+        
+
+        
+        
+        // return view('templates.header', $data);
+        // return view('templates.navbar');
+        // return view('templates.footer');
+        return view('about', $data);
+    }
+
 }

@@ -38,7 +38,7 @@
                         <a class="nav-link text-light link-danger text-center" href=""><b>Meet the Team</b></a>
                     </li>
 					<li class="nav-item">
-                        <a class="nav-link text-light link-danger text-center" href=""><b>About Us</b></a>
+                        <a class="nav-link text-light link-danger text-center" href="/about"><b>About Us</b></a>
                     </li>
 					<li class="nav-item">
                         <a class="nav-link text-light link-danger text-center" href=""><b>Event</b></a>

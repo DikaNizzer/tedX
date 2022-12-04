@@ -49,7 +49,10 @@
             </div>
             <div class="card-body button">
               {{-- <a href="/regis-main"><button class="btn-custom-subev ">Coming soon</button></a> --}}
-              <a data-bs-toggle="modal" data-bs-target="#mainModal"><button class="btn-custom-subev ">Register</button></a>
+              {{-- <a data-bs-toggle="modal" data-bs-target="#mainModal"><button class="btn-custom-subev ">Register</button></a> --}}
+              <button class="btn-custom-subev disabled dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Closed
+              </button>
             </div>
             <div class="card-footer">
               <small class="text-muted">Registration: {{date('d F Y', strtotime(NOW()))}}</small>
